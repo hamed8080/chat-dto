@@ -1,0 +1,254 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapSearchResponse"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapSearchResponse\/items"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:7ChatDTO17MapSearchResponseC5itemsSayAA0C4ItemCGSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "items"
+      },
+      {
+        "kind" : "text",
+        "text" : ": ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7ChatDTO7MapItemC",
+        "text" : "MapItem"
+      },
+      {
+        "kind" : "text",
+        "text" : "]?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ChatDTO"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "items"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "items"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapItem",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7ChatDTO7MapItemC",
+              "text" : "MapItem"
+            },
+            {
+              "kind" : "text",
+              "text" : "]?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/chatdto\/mapsearchresponse\/items"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ChatDTO/documentation/ChatDTO": {
+  "abstract" : [
+    {
+      "text" : "ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ChatDTO",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto"
+},
+"doc://ChatDTO/documentation/ChatDTO/MapItem": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MapItem"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapItem",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MapItem"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MapItem",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/mapitem"
+},
+"doc://ChatDTO/documentation/ChatDTO/MapSearchResponse": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MapSearchResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapSearchResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MapSearchResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MapSearchResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/mapsearchresponse"
+},
+"doc://ChatDTO/documentation/ChatDTO/MapSearchResponse/items": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "items"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7ChatDTO7MapItemC",
+      "text" : "MapItem"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapSearchResponse\/items",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "items",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/mapsearchresponse\/items"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
+}
+}
+}

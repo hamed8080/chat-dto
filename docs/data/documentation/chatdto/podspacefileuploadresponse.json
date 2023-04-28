@@ -1,0 +1,544 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:7ChatDTO26PodspaceFileUploadResponseV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "PodspaceFileUploadResponse"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ChatDTO"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "PodspaceFileUploadResponse"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "PodspaceFileUploadResponse"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "PodspaceFileUploadResponse"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/Se"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/init(from:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/error",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/errorType",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/message",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/path",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/reference",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/result",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/status",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/timestamp"
+      ],
+      "title" : "Instance Properties"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/chatdto\/podspacefileuploadresponse"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ChatDTO/Se": {
+  "identifier" : "doc:\/\/ChatDTO\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/documentation/ChatDTO": {
+  "abstract" : [
+    {
+      "text" : "ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ChatDTO",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto"
+},
+"doc://ChatDTO/documentation/ChatDTO/PodspaceFileUploadResponse": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PodspaceFileUploadResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PodspaceFileUploadResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PodspaceFileUploadResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/podspacefileuploadresponse"
+},
+"doc://ChatDTO/documentation/ChatDTO/PodspaceFileUploadResponse/error": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "error"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/error",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "error",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/podspacefileuploadresponse\/error"
+},
+"doc://ChatDTO/documentation/ChatDTO/PodspaceFileUploadResponse/errorType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "errorType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7ChatDTO15FileUploadErrorO",
+      "text" : "FileUploadError"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/errorType",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "errorType",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/podspacefileuploadresponse\/errortype"
+},
+"doc://ChatDTO/documentation/ChatDTO/PodspaceFileUploadResponse/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/podspacefileuploadresponse\/init(from:)"
+},
+"doc://ChatDTO/documentation/ChatDTO/PodspaceFileUploadResponse/message": {
+  "abstract" : [
+    {
+      "text" : "For when a error rise and detail more",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "message"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/message",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "message",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/podspacefileuploadresponse\/message"
+},
+"doc://ChatDTO/documentation/ChatDTO/PodspaceFileUploadResponse/path": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/path",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "path",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/podspacefileuploadresponse\/path"
+},
+"doc://ChatDTO/documentation/ChatDTO/PodspaceFileUploadResponse/reference": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "reference"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/reference",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "reference",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/podspacefileuploadresponse\/reference"
+},
+"doc://ChatDTO/documentation/ChatDTO/PodspaceFileUploadResponse/result": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "result"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7ChatDTO18UploadFileResponseC",
+      "text" : "UploadFileResponse"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/result",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "result",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/podspacefileuploadresponse\/result"
+},
+"doc://ChatDTO/documentation/ChatDTO/PodspaceFileUploadResponse/status": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "status"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/status",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "status",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/podspacefileuploadresponse\/status"
+},
+"doc://ChatDTO/documentation/ChatDTO/PodspaceFileUploadResponse/timestamp": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "timestamp"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse\/timestamp",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "timestamp",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/podspacefileuploadresponse\/timestamp"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
+}
+}
+}

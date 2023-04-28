@@ -1,0 +1,254 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UploadFileResponse"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UploadFileResponse\/owner"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:7ChatDTO18UploadFileResponseC5ownerAA0D5OwnerVSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "owner"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7ChatDTO9FileOwnerV",
+        "text" : "FileOwner"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ChatDTO"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "owner"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "let"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "owner"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileOwner",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7ChatDTO9FileOwnerV",
+              "text" : "FileOwner"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/chatdto\/uploadfileresponse\/owner"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ChatDTO/documentation/ChatDTO": {
+  "abstract" : [
+    {
+      "text" : "ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ChatDTO",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto"
+},
+"doc://ChatDTO/documentation/ChatDTO/FileOwner": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "FileOwner"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileOwner",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "FileOwner"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileOwner",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/fileowner"
+},
+"doc://ChatDTO/documentation/ChatDTO/UploadFileResponse": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UploadFileResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UploadFileResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UploadFileResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UploadFileResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/uploadfileresponse"
+},
+"doc://ChatDTO/documentation/ChatDTO/UploadFileResponse/owner": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "owner"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7ChatDTO9FileOwnerV",
+      "text" : "FileOwner"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UploadFileResponse\/owner",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "owner",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/uploadfileresponse\/owner"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
+}
+}
+}

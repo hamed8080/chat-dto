@@ -1,0 +1,305 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapSearch"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapSearch\/init(count:items:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:7ChatDTO9MapSearchC5count5itemsACSi_SayAA0C4ItemCGtcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "count"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "items"
+      },
+      {
+        "kind" : "text",
+        "text" : ": ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7ChatDTO7MapItemC",
+        "text" : "MapItem"
+      },
+      {
+        "kind" : "text",
+        "text" : "])"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ChatDTO"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(count:items:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "count"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Si",
+              "text" : "Int"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "items"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapItem",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7ChatDTO7MapItemC",
+              "text" : "MapItem"
+            },
+            {
+              "kind" : "text",
+              "text" : "])"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/chatdto\/mapsearch\/init(count:items:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ChatDTO/documentation/ChatDTO": {
+  "abstract" : [
+    {
+      "text" : "ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ChatDTO",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto"
+},
+"doc://ChatDTO/documentation/ChatDTO/MapItem": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MapItem"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapItem",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MapItem"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MapItem",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/mapitem"
+},
+"doc://ChatDTO/documentation/ChatDTO/MapSearch": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MapSearch"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapSearch",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MapSearch"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MapSearch",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/mapsearch"
+},
+"doc://ChatDTO/documentation/ChatDTO/MapSearch/init(count:items:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "count"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "items"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7ChatDTO7MapItemC",
+      "text" : "MapItem"
+    },
+    {
+      "kind" : "text",
+      "text" : "])"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapSearch\/init(count:items:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(count:items:)",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/mapsearch\/init(count:items:)"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
+}
+}
+}

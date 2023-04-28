@@ -1,0 +1,3628 @@
+{
+  "abstract" : [
+    {
+      "text" : "ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ChatDTO\/documentation\/ChatDTO"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "ChatDTO",
+    "images" : [
+      {
+        "identifier" : "icon.png",
+        "type" : "icon"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ChatDTO"
+      }
+    ],
+    "platforms" : [
+      {
+        "introducedAt" : "10.0",
+        "name" : "iOS"
+      },
+      {
+        "introducedAt" : "12",
+        "name" : "macOS"
+      }
+    ],
+    "role" : "collection",
+    "roleHeading" : "Framework",
+    "symbolKind" : "module",
+    "title" : "ChatDTO"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AddBotCommandRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AddContactRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AddParticipantRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AddTagParticipantsRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AllThreads",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AssistantAction",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AssistantsRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AuditorRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/BatchDeleteMessageRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/BlockRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/BlockUnblockAssistantRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/BlockedAssistantsRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/BlockedListRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Bot",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/BotInfo",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ChangeThreadTypeRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ContactNotSeenDurationRespoonse",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ContactResponse",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ContactsRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/CreateBotRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/CreateTagRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/CreateThreadMessage",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/CreateThreadRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/CreateThreadWithMessage",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/DeactiveAssistantRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/DeleteMessageRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/DeleteTagRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/DevicesResposne",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/EditMessageRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/EditTagRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/GeneralSubjectIdRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/GetHistoryRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/GetTagParticipantsRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/GetUserBotsRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/IsThreadNamePublicRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/JoinPublicThreadRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/LeaveThreadRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Location",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/LocationMessageRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapItem",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapReverse",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapReverseRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapRoutingRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapRoutingResponse",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapSearch",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapSearchRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapSearchResponse",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapStaticImageRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MentionRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MessageDeliverRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MessageDeliveredUsersRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MessageResponse",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MessageSeenByUsersRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MessageSeenRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MutualGroupsRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/NotSeenDurationRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PinUnpinMessageRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/RegisterAssistantRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/RemoveBotCommandRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/RemoveContactResponse",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/RemoveContactsRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/RemoveParticipantsRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/RemoveTagParticipantsRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ReplyMessageRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/RolesRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SafeLeaveThreadRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SendSignalMessageRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SendStatusPingRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SendTextMessageRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Thing",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ThreadParticipantsRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ThreadsRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ThreadsUnreadCountRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UnBlockRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UnreadMessageCountRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UpdateChatProfile",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UpdateContactRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UpdateThreadInfoRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UploadFileRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UploadFileResponse",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UploadImageRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UserInfoRequest",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UserLastSeenDuration",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UserRoleRequest"
+      ],
+      "title" : "Classes"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Coordinate",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Device",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Distance",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Duration",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileOwner",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/LastSeenMessageResponse",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Leg",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/OverviewPolyline",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PublicThreadNameAvailableResponse",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Route",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SearchMetadataCriteria",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Step",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SystemEventMessageModel",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ThreadLastActivity",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UnreadCount"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MessageResposneState",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StatusPingType"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/chatdto"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ChatDTO/documentation/ChatDTO": {
+  "abstract" : [
+    {
+      "text" : "ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ChatDTO",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto"
+},
+"doc://ChatDTO/documentation/ChatDTO/AddBotCommandRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AddBotCommandRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AddBotCommandRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AddBotCommandRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AddBotCommandRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/addbotcommandrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/AddContactRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AddContactRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AddContactRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AddContactRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AddContactRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/addcontactrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/AddParticipantRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AddParticipantRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AddParticipantRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AddParticipantRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AddParticipantRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/addparticipantrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/AddTagParticipantsRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AddTagParticipantsRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AddTagParticipantsRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AddTagParticipantsRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AddTagParticipantsRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/addtagparticipantsrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/AllThreads": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AllThreads"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AllThreads",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AllThreads"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AllThreads",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/allthreads"
+},
+"doc://ChatDTO/documentation/ChatDTO/AssistantAction": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AssistantAction"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AssistantAction",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AssistantAction"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AssistantAction",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/assistantaction"
+},
+"doc://ChatDTO/documentation/ChatDTO/AssistantsRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AssistantsRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AssistantsRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AssistantsRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AssistantsRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/assistantsrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/AuditorRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AuditorRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/AuditorRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AuditorRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AuditorRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/auditorrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/BatchDeleteMessageRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BatchDeleteMessageRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/BatchDeleteMessageRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BatchDeleteMessageRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "BatchDeleteMessageRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/batchdeletemessagerequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/BlockRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BlockRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/BlockRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BlockRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "BlockRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/blockrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/BlockUnblockAssistantRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BlockUnblockAssistantRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/BlockUnblockAssistantRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BlockUnblockAssistantRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "BlockUnblockAssistantRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/blockunblockassistantrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/BlockedAssistantsRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BlockedAssistantsRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/BlockedAssistantsRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BlockedAssistantsRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "BlockedAssistantsRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/blockedassistantsrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/BlockedListRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BlockedListRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/BlockedListRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BlockedListRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "BlockedListRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/blockedlistrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/Bot": {
+  "abstract" : [
+    {
+      "text" : "A bot object.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Bot"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Bot",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Bot"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Bot",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/bot"
+},
+"doc://ChatDTO/documentation/ChatDTO/BotInfo": {
+  "abstract" : [
+    {
+      "text" : "Bot more information.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BotInfo"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/BotInfo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BotInfo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "BotInfo",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/botinfo"
+},
+"doc://ChatDTO/documentation/ChatDTO/ChangeThreadTypeRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ChangeThreadTypeRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ChangeThreadTypeRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ChangeThreadTypeRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ChangeThreadTypeRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/changethreadtyperequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/ContactNotSeenDurationRespoonse": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ContactNotSeenDurationRespoonse"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ContactNotSeenDurationRespoonse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ContactNotSeenDurationRespoonse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ContactNotSeenDurationRespoonse",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/contactnotseendurationrespoonse"
+},
+"doc://ChatDTO/documentation/ChatDTO/ContactResponse": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ContactResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ContactResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ContactResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ContactResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/contactresponse"
+},
+"doc://ChatDTO/documentation/ChatDTO/ContactsRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ContactsRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ContactsRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ContactsRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ContactsRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/contactsrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/Coordinate": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Coordinate"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Coordinate",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Coordinate"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Coordinate",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/coordinate"
+},
+"doc://ChatDTO/documentation/ChatDTO/CreateBotRequest": {
+  "abstract" : [
+    {
+      "text" : "Create bot request.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CreateBotRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/CreateBotRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CreateBotRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CreateBotRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/createbotrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/CreateTagRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CreateTagRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/CreateTagRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CreateTagRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CreateTagRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/createtagrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/CreateThreadMessage": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CreateThreadMessage"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/CreateThreadMessage",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CreateThreadMessage"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CreateThreadMessage",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/createthreadmessage"
+},
+"doc://ChatDTO/documentation/ChatDTO/CreateThreadRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CreateThreadRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/CreateThreadRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CreateThreadRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CreateThreadRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/createthreadrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/CreateThreadWithMessage": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CreateThreadWithMessage"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/CreateThreadWithMessage",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CreateThreadWithMessage"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CreateThreadWithMessage",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/createthreadwithmessage"
+},
+"doc://ChatDTO/documentation/ChatDTO/DeactiveAssistantRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DeactiveAssistantRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/DeactiveAssistantRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DeactiveAssistantRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DeactiveAssistantRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/deactiveassistantrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/DeleteMessageRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DeleteMessageRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/DeleteMessageRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DeleteMessageRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DeleteMessageRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/deletemessagerequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/DeleteTagRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DeleteTagRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/DeleteTagRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DeleteTagRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DeleteTagRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/deletetagrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/Device": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Device"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Device",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Device"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Device",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/device"
+},
+"doc://ChatDTO/documentation/ChatDTO/DevicesResposne": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DevicesResposne"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/DevicesResposne",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DevicesResposne"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "DevicesResposne",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/devicesresposne"
+},
+"doc://ChatDTO/documentation/ChatDTO/Distance": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Distance"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Distance",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Distance"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Distance",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/distance"
+},
+"doc://ChatDTO/documentation/ChatDTO/Duration": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Duration"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Duration",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Duration"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Duration",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/duration"
+},
+"doc://ChatDTO/documentation/ChatDTO/EditMessageRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "EditMessageRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/EditMessageRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "EditMessageRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EditMessageRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/editmessagerequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/EditTagRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "EditTagRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/EditTagRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "EditTagRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "EditTagRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/edittagrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/FileOwner": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "FileOwner"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileOwner",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "FileOwner"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileOwner",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/fileowner"
+},
+"doc://ChatDTO/documentation/ChatDTO/FileRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "FileRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "FileRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/filerequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/FileUploadError": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "FileUploadError"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "FileUploadError"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileUploadError",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/fileuploaderror"
+},
+"doc://ChatDTO/documentation/ChatDTO/ForwardMessageRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ForwardMessageRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ForwardMessageRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ForwardMessageRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/forwardmessagerequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/GeneralSubjectIdRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GeneralSubjectIdRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/GeneralSubjectIdRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GeneralSubjectIdRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "GeneralSubjectIdRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/generalsubjectidrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/GetHistoryRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GetHistoryRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/GetHistoryRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GetHistoryRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "GetHistoryRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/gethistoryrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/GetTagParticipantsRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GetTagParticipantsRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/GetTagParticipantsRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GetTagParticipantsRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "GetTagParticipantsRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/gettagparticipantsrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/GetUserBotsRequest": {
+  "abstract" : [
+    {
+      "text" : "The request to fetch the list of user bots.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GetUserBotsRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/GetUserBotsRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GetUserBotsRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "GetUserBotsRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/getuserbotsrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/ImageRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ImageRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ImageRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ImageRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/imagerequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/ImageSize": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ImageSize"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ImageSize"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ImageSize",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/imagesize"
+},
+"doc://ChatDTO/documentation/ChatDTO/IsThreadNamePublicRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "IsThreadNamePublicRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/IsThreadNamePublicRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "IsThreadNamePublicRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "IsThreadNamePublicRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/isthreadnamepublicrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/JoinPublicThreadRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "JoinPublicThreadRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/JoinPublicThreadRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "JoinPublicThreadRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "JoinPublicThreadRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/joinpublicthreadrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/LastSeenMessageResponse": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LastSeenMessageResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/LastSeenMessageResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LastSeenMessageResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LastSeenMessageResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/lastseenmessageresponse"
+},
+"doc://ChatDTO/documentation/ChatDTO/LeaveThreadRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LeaveThreadRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/LeaveThreadRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LeaveThreadRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LeaveThreadRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/leavethreadrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/Leg": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Leg"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Leg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Leg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Leg",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/leg"
+},
+"doc://ChatDTO/documentation/ChatDTO/Location": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Location"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Location",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Location"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Location",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/location"
+},
+"doc://ChatDTO/documentation/ChatDTO/LocationMessageRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LocationMessageRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/LocationMessageRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LocationMessageRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LocationMessageRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/locationmessagerequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/MapItem": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MapItem"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapItem",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MapItem"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MapItem",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/mapitem"
+},
+"doc://ChatDTO/documentation/ChatDTO/MapReverse": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MapReverse"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapReverse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MapReverse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MapReverse",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/mapreverse"
+},
+"doc://ChatDTO/documentation/ChatDTO/MapReverseRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MapReverseRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapReverseRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MapReverseRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MapReverseRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/mapreverserequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/MapRoutingRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MapRoutingRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapRoutingRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MapRoutingRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MapRoutingRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/maproutingrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/MapRoutingResponse": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MapRoutingResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapRoutingResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MapRoutingResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MapRoutingResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/maproutingresponse"
+},
+"doc://ChatDTO/documentation/ChatDTO/MapSearch": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MapSearch"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapSearch",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MapSearch"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MapSearch",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/mapsearch"
+},
+"doc://ChatDTO/documentation/ChatDTO/MapSearchRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MapSearchRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapSearchRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MapSearchRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MapSearchRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/mapsearchrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/MapSearchResponse": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MapSearchResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapSearchResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MapSearchResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MapSearchResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/mapsearchresponse"
+},
+"doc://ChatDTO/documentation/ChatDTO/MapStaticImageRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MapStaticImageRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MapStaticImageRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MapStaticImageRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MapStaticImageRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/mapstaticimagerequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/MentionRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MentionRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MentionRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MentionRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MentionRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/mentionrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/MessageDeliverRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MessageDeliverRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MessageDeliverRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MessageDeliverRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MessageDeliverRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/messagedeliverrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/MessageDeliveredUsersRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MessageDeliveredUsersRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MessageDeliveredUsersRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MessageDeliveredUsersRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MessageDeliveredUsersRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/messagedeliveredusersrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/MessageResponse": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MessageResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MessageResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MessageResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MessageResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/messageresponse"
+},
+"doc://ChatDTO/documentation/ChatDTO/MessageResposneState": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MessageResposneState"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MessageResposneState",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MessageResposneState"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MessageResposneState",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/messageresposnestate"
+},
+"doc://ChatDTO/documentation/ChatDTO/MessageSeenByUsersRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MessageSeenByUsersRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MessageSeenByUsersRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MessageSeenByUsersRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MessageSeenByUsersRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/messageseenbyusersrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/MessageSeenRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MessageSeenRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MessageSeenRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MessageSeenRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MessageSeenRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/messageseenrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/MutualGroupsRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MutualGroupsRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/MutualGroupsRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MutualGroupsRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "MutualGroupsRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/mutualgroupsrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/NotSeenDurationRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "NotSeenDurationRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/NotSeenDurationRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "NotSeenDurationRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "NotSeenDurationRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/notseendurationrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/OverviewPolyline": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "OverviewPolyline"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/OverviewPolyline",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "OverviewPolyline"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "OverviewPolyline",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/overviewpolyline"
+},
+"doc://ChatDTO/documentation/ChatDTO/PinUnpinMessageRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PinUnpinMessageRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PinUnpinMessageRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PinUnpinMessageRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PinUnpinMessageRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/pinunpinmessagerequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/PodspaceFileUploadResponse": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PodspaceFileUploadResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PodspaceFileUploadResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PodspaceFileUploadResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PodspaceFileUploadResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/podspacefileuploadresponse"
+},
+"doc://ChatDTO/documentation/ChatDTO/PublicThreadNameAvailableResponse": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PublicThreadNameAvailableResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/PublicThreadNameAvailableResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PublicThreadNameAvailableResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PublicThreadNameAvailableResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/publicthreadnameavailableresponse"
+},
+"doc://ChatDTO/documentation/ChatDTO/RegisterAssistantRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RegisterAssistantRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/RegisterAssistantRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RegisterAssistantRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RegisterAssistantRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/registerassistantrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/RemoveBotCommandRequest": {
+  "abstract" : [
+    {
+      "text" : "Remove the bot commands request.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RemoveBotCommandRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/RemoveBotCommandRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RemoveBotCommandRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RemoveBotCommandRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/removebotcommandrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/RemoveContactResponse": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RemoveContactResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/RemoveContactResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RemoveContactResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RemoveContactResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/removecontactresponse"
+},
+"doc://ChatDTO/documentation/ChatDTO/RemoveContactsRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RemoveContactsRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/RemoveContactsRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RemoveContactsRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RemoveContactsRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/removecontactsrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/RemoveParticipantsRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RemoveParticipantsRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/RemoveParticipantsRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RemoveParticipantsRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RemoveParticipantsRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/removeparticipantsrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/RemoveTagParticipantsRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RemoveTagParticipantsRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/RemoveTagParticipantsRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RemoveTagParticipantsRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RemoveTagParticipantsRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/removetagparticipantsrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/ReplyMessageRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ReplyMessageRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ReplyMessageRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ReplyMessageRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ReplyMessageRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/replymessagerequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/RolesRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RolesRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/RolesRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RolesRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RolesRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/rolesrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/Route": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Route"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Route",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Route"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Route",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/route"
+},
+"doc://ChatDTO/documentation/ChatDTO/SafeLeaveThreadRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SafeLeaveThreadRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SafeLeaveThreadRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SafeLeaveThreadRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SafeLeaveThreadRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/safeleavethreadrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/SearchMetadataCriteria": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SearchMetadataCriteria"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SearchMetadataCriteria",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SearchMetadataCriteria"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SearchMetadataCriteria",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/searchmetadatacriteria"
+},
+"doc://ChatDTO/documentation/ChatDTO/SendSignalMessageRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SendSignalMessageRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SendSignalMessageRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SendSignalMessageRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SendSignalMessageRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/sendsignalmessagerequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/SendStatusPingRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SendStatusPingRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SendStatusPingRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SendStatusPingRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SendStatusPingRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/sendstatuspingrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/SendTextMessageRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SendTextMessageRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SendTextMessageRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SendTextMessageRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SendTextMessageRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/sendtextmessagerequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SignalMessageType"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SignalMessageType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SignalMessageType",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype"
+},
+"doc://ChatDTO/documentation/ChatDTO/StartStopBotRequest": {
+  "abstract" : [
+    {
+      "text" : "Start or stop a bot request.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "StartStopBotRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "StartStopBotRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "StartStopBotRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/startstopbotrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/StatusPingType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "StatusPingType"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StatusPingType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "StatusPingType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "StatusPingType",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/statuspingtype"
+},
+"doc://ChatDTO/documentation/ChatDTO/Step": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Step"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Step",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Step"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Step",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/step"
+},
+"doc://ChatDTO/documentation/ChatDTO/SystemEventMessageModel": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SystemEventMessageModel"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SystemEventMessageModel",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SystemEventMessageModel"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SystemEventMessageModel",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/systemeventmessagemodel"
+},
+"doc://ChatDTO/documentation/ChatDTO/Thing": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Thing"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/Thing",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Thing"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Thing",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/thing"
+},
+"doc://ChatDTO/documentation/ChatDTO/ThreadLastActivity": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ThreadLastActivity"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ThreadLastActivity",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ThreadLastActivity"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ThreadLastActivity",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/threadlastactivity"
+},
+"doc://ChatDTO/documentation/ChatDTO/ThreadParticipantsRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ThreadParticipantsRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ThreadParticipantsRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ThreadParticipantsRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ThreadParticipantsRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/threadparticipantsrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/ThreadsRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ThreadsRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ThreadsRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ThreadsRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ThreadsRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/threadsrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/ThreadsUnreadCountRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ThreadsUnreadCountRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ThreadsUnreadCountRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ThreadsUnreadCountRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ThreadsUnreadCountRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/threadsunreadcountrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/UnBlockRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UnBlockRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UnBlockRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UnBlockRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UnBlockRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/unblockrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/UnreadCount": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UnreadCount"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UnreadCount",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UnreadCount"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UnreadCount",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/unreadcount"
+},
+"doc://ChatDTO/documentation/ChatDTO/UnreadMessageCountRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UnreadMessageCountRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UnreadMessageCountRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UnreadMessageCountRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UnreadMessageCountRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/unreadmessagecountrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/UpdateChatProfile": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UpdateChatProfile"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UpdateChatProfile",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UpdateChatProfile"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UpdateChatProfile",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/updatechatprofile"
+},
+"doc://ChatDTO/documentation/ChatDTO/UpdateContactRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UpdateContactRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UpdateContactRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UpdateContactRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UpdateContactRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/updatecontactrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/UpdateThreadInfoRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UpdateThreadInfoRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UpdateThreadInfoRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UpdateThreadInfoRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UpdateThreadInfoRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/updatethreadinforequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/UploadFileRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UploadFileRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UploadFileRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UploadFileRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UploadFileRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/uploadfilerequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/UploadFileResponse": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UploadFileResponse"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UploadFileResponse",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UploadFileResponse"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UploadFileResponse",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/uploadfileresponse"
+},
+"doc://ChatDTO/documentation/ChatDTO/UploadImageRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UploadImageRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UploadImageRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UploadImageRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UploadImageRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/uploadimagerequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/UserInfoRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UserInfoRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UserInfoRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UserInfoRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UserInfoRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/userinforequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/UserLastSeenDuration": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UserLastSeenDuration"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UserLastSeenDuration",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UserLastSeenDuration"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UserLastSeenDuration",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/userlastseenduration"
+},
+"doc://ChatDTO/documentation/ChatDTO/UserRoleRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "UserRoleRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/UserRoleRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UserRoleRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UserRoleRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/userrolerequest"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
+}
+}
+}

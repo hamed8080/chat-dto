@@ -1,0 +1,573 @@
+{
+  "abstract" : [
+    {
+      "text" : "Start or stop a bot request.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:7ChatDTO19StartStopBotRequestC",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "class"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "StartStopBotRequest"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ChatDTO"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "StartStopBotRequest"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Class",
+    "symbolKind" : "class",
+    "title" : "StartStopBotRequest"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "final"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "class"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "StartStopBotRequest"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/8ChatCore22UniqueIdManagerRequestC"
+      ],
+      "kind" : "relationships",
+      "title" : "Inherits From",
+      "type" : "inheritsFrom"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/8ChatCore0A8SendableP",
+        "doc:\/\/ChatDTO\/8ChatCore15SubjectProtocolP",
+        "doc:\/\/ChatDTO\/8ChatCore16UniqueIdProtocolP",
+        "doc:\/\/ChatDTO\/SE"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/init(botName:threadId:uniqueId:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/botName",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/chatMessageType",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/content",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/subjectId",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/threadId"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/encode(to:)"
+      ],
+      "title" : "Instance Methods"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/Encodable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/chatdto\/startstopbotrequest"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ChatDTO/8ChatCore0A8SendableP": {
+  "identifier" : "doc:\/\/ChatDTO\/8ChatCore0A8SendableP",
+  "title" : "ChatCore.ChatSendable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/8ChatCore15SubjectProtocolP": {
+  "identifier" : "doc:\/\/ChatDTO\/8ChatCore15SubjectProtocolP",
+  "title" : "ChatCore.SubjectProtocol",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/8ChatCore16UniqueIdProtocolP": {
+  "identifier" : "doc:\/\/ChatDTO\/8ChatCore16UniqueIdProtocolP",
+  "title" : "ChatCore.UniqueIdProtocol",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/8ChatCore22UniqueIdManagerRequestC": {
+  "identifier" : "doc:\/\/ChatDTO\/8ChatCore22UniqueIdManagerRequestC",
+  "title" : "ChatCore.UniqueIdManagerRequest",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/SE": {
+  "identifier" : "doc:\/\/ChatDTO\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/documentation/ChatDTO": {
+  "abstract" : [
+    {
+      "text" : "ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ChatDTO",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto"
+},
+"doc://ChatDTO/documentation/ChatDTO/StartStopBotRequest": {
+  "abstract" : [
+    {
+      "text" : "Start or stop a bot request.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "StartStopBotRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "StartStopBotRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "StartStopBotRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/startstopbotrequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/StartStopBotRequest/Encodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/Encodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Encodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/startstopbotrequest\/encodable-implementations"
+},
+"doc://ChatDTO/documentation/ChatDTO/StartStopBotRequest/botName": {
+  "abstract" : [
+    {
+      "text" : "The name of the bot.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "botName"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/botName",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "botName",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/startstopbotrequest\/botname"
+},
+"doc://ChatDTO/documentation/ChatDTO/StartStopBotRequest/chatMessageType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "chatMessageType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8ChatCore0A14MessageVOTypesO",
+      "text" : "ChatMessageVOTypes"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/chatMessageType",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "chatMessageType",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/startstopbotrequest\/chatmessagetype"
+},
+"doc://ChatDTO/documentation/ChatDTO/StartStopBotRequest/content": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "content"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/content",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "content",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/startstopbotrequest\/content"
+},
+"doc://ChatDTO/documentation/ChatDTO/StartStopBotRequest/encode(to:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "encode"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "to"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7EncoderP",
+      "text" : "Encoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/encode(to:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "encode(to:)",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/startstopbotrequest\/encode(to:)"
+},
+"doc://ChatDTO/documentation/ChatDTO/StartStopBotRequest/init(botName:threadId:uniqueId:)": {
+  "abstract" : [
+    {
+      "text" : "The initializer.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "botName"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "threadId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "uniqueId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/init(botName:threadId:uniqueId:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(botName:threadId:uniqueId:)",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/startstopbotrequest\/init(botname:threadid:uniqueid:)"
+},
+"doc://ChatDTO/documentation/ChatDTO/StartStopBotRequest/subjectId": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "subjectId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/subjectId",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "subjectId",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/startstopbotrequest\/subjectid"
+},
+"doc://ChatDTO/documentation/ChatDTO/StartStopBotRequest/threadId": {
+  "abstract" : [
+    {
+      "text" : "The id of the thread you want to stop this bot.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "threadId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/StartStopBotRequest\/threadId",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "threadId",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/startstopbotrequest\/threadid"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
+}
+}
+}

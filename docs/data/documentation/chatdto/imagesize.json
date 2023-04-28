@@ -1,0 +1,457 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:7ChatDTO9ImageSizeO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ImageSize"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ChatDTO"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "ImageSize"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "ImageSize"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "ImageSize"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/s12CaseIterableP",
+        "doc:\/\/ChatDTO\/SE",
+        "doc:\/\/ChatDTO\/SQ",
+        "doc:\/\/ChatDTO\/SH",
+        "doc:\/\/ChatDTO\/s12IdentifiableP",
+        "doc:\/\/ChatDTO\/SY"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/ACTUAL",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/LARG",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/MEDIUM",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/SMALL"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/id-6xjp1"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/Encodable-Implementations",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/Equatable-Implementations",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/Identifiable-Implementations",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/chatdto\/imagesize"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ChatDTO/SE": {
+  "identifier" : "doc:\/\/ChatDTO\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/SH": {
+  "identifier" : "doc:\/\/ChatDTO\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/SQ": {
+  "identifier" : "doc:\/\/ChatDTO\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/SY": {
+  "identifier" : "doc:\/\/ChatDTO\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/documentation/ChatDTO": {
+  "abstract" : [
+    {
+      "text" : "ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ChatDTO",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto"
+},
+"doc://ChatDTO/documentation/ChatDTO/ImageSize": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ImageSize"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ImageSize"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ImageSize",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/imagesize"
+},
+"doc://ChatDTO/documentation/ChatDTO/ImageSize/ACTUAL": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ACTUAL"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/ACTUAL",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ImageSize.ACTUAL",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/imagesize\/actual"
+},
+"doc://ChatDTO/documentation/ChatDTO/ImageSize/Encodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/Encodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Encodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/imagesize\/encodable-implementations"
+},
+"doc://ChatDTO/documentation/ChatDTO/ImageSize/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/imagesize\/equatable-implementations"
+},
+"doc://ChatDTO/documentation/ChatDTO/ImageSize/Identifiable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/Identifiable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Identifiable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/imagesize\/identifiable-implementations"
+},
+"doc://ChatDTO/documentation/ChatDTO/ImageSize/LARG": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LARG"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/LARG",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ImageSize.LARG",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/imagesize\/larg"
+},
+"doc://ChatDTO/documentation/ChatDTO/ImageSize/MEDIUM": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MEDIUM"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/MEDIUM",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ImageSize.MEDIUM",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/imagesize\/medium"
+},
+"doc://ChatDTO/documentation/ChatDTO/ImageSize/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/imagesize\/rawrepresentable-implementations"
+},
+"doc://ChatDTO/documentation/ChatDTO/ImageSize/SMALL": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SMALL"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/SMALL",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ImageSize.SMALL",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/imagesize\/small"
+},
+"doc://ChatDTO/documentation/ChatDTO/ImageSize/id-6xjp1": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7ChatDTO9ImageSizeO",
+      "text" : "ImageSize"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/id-6xjp1",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/imagesize\/id-6xjp1"
+},
+"doc://ChatDTO/documentation/ChatDTO/ImageSize/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ImageSize\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/imagesize\/init(rawvalue:)"
+},
+"doc://ChatDTO/s12CaseIterableP": {
+  "identifier" : "doc:\/\/ChatDTO\/s12CaseIterableP",
+  "title" : "Swift.CaseIterable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/s12IdentifiableP": {
+  "identifier" : "doc:\/\/ChatDTO\/s12IdentifiableP",
+  "title" : "Swift.Identifiable",
+  "type" : "unresolvable"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
+}
+}
+}

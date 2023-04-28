@@ -1,0 +1,680 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:7ChatDTO21ForwardMessageRequestC",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "class"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ForwardMessageRequest"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ChatDTO"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "ForwardMessageRequest"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Class",
+    "symbolKind" : "class",
+    "title" : "ForwardMessageRequest"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "final"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "class"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "ForwardMessageRequest"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/8ChatCore22UniqueIdManagerRequestC"
+      ],
+      "kind" : "relationships",
+      "title" : "Inherits From",
+      "type" : "inheritsFrom"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/8ChatCore0A8SendableP",
+        "doc:\/\/ChatDTO\/8ChatCore17PlainTextSendableP",
+        "doc:\/\/ChatDTO\/8ChatCore9QueueableP",
+        "doc:\/\/ChatDTO\/8ChatCore15SubjectProtocolP",
+        "doc:\/\/ChatDTO\/8ChatCore16UniqueIdProtocolP",
+        "doc:\/\/ChatDTO\/SE"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/init(fromThreadId:threadId:messageIds:uniqueIds:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/chatMessageType",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/content",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/fromThreadId",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/messageIds",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/queueTime",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/subjectId",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/threadId",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/typeCode",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/uniqueIds"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/Encodable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/chatdto\/forwardmessagerequest"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ChatDTO/8ChatCore0A8SendableP": {
+  "identifier" : "doc:\/\/ChatDTO\/8ChatCore0A8SendableP",
+  "title" : "ChatCore.ChatSendable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/8ChatCore15SubjectProtocolP": {
+  "identifier" : "doc:\/\/ChatDTO\/8ChatCore15SubjectProtocolP",
+  "title" : "ChatCore.SubjectProtocol",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/8ChatCore16UniqueIdProtocolP": {
+  "identifier" : "doc:\/\/ChatDTO\/8ChatCore16UniqueIdProtocolP",
+  "title" : "ChatCore.UniqueIdProtocol",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/8ChatCore17PlainTextSendableP": {
+  "identifier" : "doc:\/\/ChatDTO\/8ChatCore17PlainTextSendableP",
+  "title" : "ChatCore.PlainTextSendable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/8ChatCore22UniqueIdManagerRequestC": {
+  "identifier" : "doc:\/\/ChatDTO\/8ChatCore22UniqueIdManagerRequestC",
+  "title" : "ChatCore.UniqueIdManagerRequest",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/8ChatCore9QueueableP": {
+  "identifier" : "doc:\/\/ChatDTO\/8ChatCore9QueueableP",
+  "title" : "ChatCore.Queueable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/SE": {
+  "identifier" : "doc:\/\/ChatDTO\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/documentation/ChatDTO": {
+  "abstract" : [
+    {
+      "text" : "ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ChatDTO",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto"
+},
+"doc://ChatDTO/documentation/ChatDTO/ForwardMessageRequest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ForwardMessageRequest"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ForwardMessageRequest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ForwardMessageRequest",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/forwardmessagerequest"
+},
+"doc://ChatDTO/documentation/ChatDTO/ForwardMessageRequest/Encodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/Encodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Encodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/forwardmessagerequest\/encodable-implementations"
+},
+"doc://ChatDTO/documentation/ChatDTO/ForwardMessageRequest/chatMessageType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "chatMessageType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8ChatCore0A14MessageVOTypesO",
+      "text" : "ChatMessageVOTypes"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/chatMessageType",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "chatMessageType",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/forwardmessagerequest\/chatmessagetype"
+},
+"doc://ChatDTO/documentation/ChatDTO/ForwardMessageRequest/content": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "content"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/content",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "content",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/forwardmessagerequest\/content"
+},
+"doc://ChatDTO/documentation/ChatDTO/ForwardMessageRequest/fromThreadId": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "fromThreadId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/fromThreadId",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "fromThreadId",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/forwardmessagerequest\/fromthreadid"
+},
+"doc://ChatDTO/documentation/ChatDTO/ForwardMessageRequest/init(fromThreadId:threadId:messageIds:uniqueIds:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "fromThreadId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "threadId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "messageIds"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "], "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "uniqueIds"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "])"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/init(fromThreadId:threadId:messageIds:uniqueIds:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(fromThreadId:threadId:messageIds:uniqueIds:)",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/forwardmessagerequest\/init(fromthreadid:threadid:messageids:uniqueids:)"
+},
+"doc://ChatDTO/documentation/ChatDTO/ForwardMessageRequest/messageIds": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "messageIds"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/messageIds",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "messageIds",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/forwardmessagerequest\/messageids"
+},
+"doc://ChatDTO/documentation/ChatDTO/ForwardMessageRequest/queueTime": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "queueTime"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/queueTime",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "queueTime",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/forwardmessagerequest\/queuetime"
+},
+"doc://ChatDTO/documentation/ChatDTO/ForwardMessageRequest/subjectId": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "subjectId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/subjectId",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "subjectId",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/forwardmessagerequest\/subjectid"
+},
+"doc://ChatDTO/documentation/ChatDTO/ForwardMessageRequest/threadId": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "threadId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/threadId",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "threadId",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/forwardmessagerequest\/threadid"
+},
+"doc://ChatDTO/documentation/ChatDTO/ForwardMessageRequest/typeCode": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "typeCode"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/typeCode",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "typeCode",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/forwardmessagerequest\/typecode"
+},
+"doc://ChatDTO/documentation/ChatDTO/ForwardMessageRequest/uniqueIds": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "uniqueIds"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/ForwardMessageRequest\/uniqueIds",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "uniqueIds",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/forwardmessagerequest\/uniqueids"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
+}
+}
+}

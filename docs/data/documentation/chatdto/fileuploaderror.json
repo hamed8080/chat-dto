@@ -1,0 +1,427 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:7ChatDTO15FileUploadErrorO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "FileUploadError"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ChatDTO"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "FileUploadError"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "FileUploadError"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "FileUploadError"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/SQ",
+        "doc:\/\/ChatDTO\/SH",
+        "doc:\/\/ChatDTO\/SY"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/fileNotSent",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/forbidden",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/insufficientSpace",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/noContent",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/notFound",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/unauthorized"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/Equatable-Implementations",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/chatdto\/fileuploaderror"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ChatDTO/SH": {
+  "identifier" : "doc:\/\/ChatDTO\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/SQ": {
+  "identifier" : "doc:\/\/ChatDTO\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/SY": {
+  "identifier" : "doc:\/\/ChatDTO\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/documentation/ChatDTO": {
+  "abstract" : [
+    {
+      "text" : "ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ChatDTO",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto"
+},
+"doc://ChatDTO/documentation/ChatDTO/FileUploadError": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "FileUploadError"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "FileUploadError"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "FileUploadError",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/fileuploaderror"
+},
+"doc://ChatDTO/documentation/ChatDTO/FileUploadError/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/fileuploaderror\/equatable-implementations"
+},
+"doc://ChatDTO/documentation/ChatDTO/FileUploadError/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/fileuploaderror\/rawrepresentable-implementations"
+},
+"doc://ChatDTO/documentation/ChatDTO/FileUploadError/fileNotSent": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "fileNotSent"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/fileNotSent",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "FileUploadError.fileNotSent",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/fileuploaderror\/filenotsent"
+},
+"doc://ChatDTO/documentation/ChatDTO/FileUploadError/forbidden": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "forbidden"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/forbidden",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "FileUploadError.forbidden",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/fileuploaderror\/forbidden"
+},
+"doc://ChatDTO/documentation/ChatDTO/FileUploadError/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/fileuploaderror\/init(rawvalue:)"
+},
+"doc://ChatDTO/documentation/ChatDTO/FileUploadError/insufficientSpace": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "insufficientSpace"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/insufficientSpace",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "FileUploadError.insufficientSpace",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/fileuploaderror\/insufficientspace"
+},
+"doc://ChatDTO/documentation/ChatDTO/FileUploadError/noContent": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "noContent"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/noContent",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "FileUploadError.noContent",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/fileuploaderror\/nocontent"
+},
+"doc://ChatDTO/documentation/ChatDTO/FileUploadError/notFound": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notFound"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/notFound",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "FileUploadError.notFound",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/fileuploaderror\/notfound"
+},
+"doc://ChatDTO/documentation/ChatDTO/FileUploadError/unauthorized": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "unauthorized"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/FileUploadError\/unauthorized",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "FileUploadError.unauthorized",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/fileuploaderror\/unauthorized"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
+}
+}
+}

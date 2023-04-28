@@ -1,0 +1,562 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:7ChatDTO17SignalMessageTypeO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "SignalMessageType"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ChatDTO"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "SignalMessageType"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "SignalMessageType"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "SignalMessageType"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/8Additive13SafeDecodableP",
+        "doc:\/\/ChatDTO\/s12CaseIterableP",
+        "doc:\/\/ChatDTO\/Se",
+        "doc:\/\/ChatDTO\/SE",
+        "doc:\/\/ChatDTO\/SQ",
+        "doc:\/\/ChatDTO\/SH",
+        "doc:\/\/ChatDTO\/s12IdentifiableP",
+        "doc:\/\/ChatDTO\/SY"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/isTyping",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/recordVoice",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/unknown",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/uploadFile",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/uploadPicture",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/uploadSound",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/uploadVideo"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/id-mcpc"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/Decodable-Implementations",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/Encodable-Implementations",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/Equatable-Implementations",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/Identifiable-Implementations",
+        "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/chatdto\/signalmessagetype"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ChatDTO/8Additive13SafeDecodableP": {
+  "identifier" : "doc:\/\/ChatDTO\/8Additive13SafeDecodableP",
+  "title" : "Additive.SafeDecodable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/SE": {
+  "identifier" : "doc:\/\/ChatDTO\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/SH": {
+  "identifier" : "doc:\/\/ChatDTO\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/SQ": {
+  "identifier" : "doc:\/\/ChatDTO\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/SY": {
+  "identifier" : "doc:\/\/ChatDTO\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/Se": {
+  "identifier" : "doc:\/\/ChatDTO\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/documentation/ChatDTO": {
+  "abstract" : [
+    {
+      "text" : "ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ChatDTO",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SignalMessageType"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SignalMessageType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SignalMessageType",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType/Decodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/Decodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Decodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype\/decodable-implementations"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType/Encodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/Encodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Encodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype\/encodable-implementations"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype\/equatable-implementations"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType/Identifiable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/Identifiable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Identifiable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype\/identifiable-implementations"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype\/rawrepresentable-implementations"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType/id-mcpc": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7ChatDTO17SignalMessageTypeO",
+      "text" : "SignalMessageType"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/id-mcpc",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype\/id-mcpc"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype\/init(rawvalue:)"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType/isTyping": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "isTyping"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/isTyping",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "SignalMessageType.isTyping",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype\/istyping"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType/recordVoice": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "recordVoice"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/recordVoice",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "SignalMessageType.recordVoice",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype\/recordvoice"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType/unknown": {
+  "abstract" : [
+    {
+      "text" : "Only when can’t decode a type.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "unknown"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/unknown",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "SignalMessageType.unknown",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype\/unknown"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType/uploadFile": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "uploadFile"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/uploadFile",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "SignalMessageType.uploadFile",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype\/uploadfile"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType/uploadPicture": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "uploadPicture"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/uploadPicture",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "SignalMessageType.uploadPicture",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype\/uploadpicture"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType/uploadSound": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "uploadSound"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/uploadSound",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "SignalMessageType.uploadSound",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype\/uploadsound"
+},
+"doc://ChatDTO/documentation/ChatDTO/SignalMessageType/uploadVideo": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "uploadVideo"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatDTO\/documentation\/ChatDTO\/SignalMessageType\/uploadVideo",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "SignalMessageType.uploadVideo",
+  "type" : "topic",
+  "url" : "\/documentation\/chatdto\/signalmessagetype\/uploadvideo"
+},
+"doc://ChatDTO/s12CaseIterableP": {
+  "identifier" : "doc:\/\/ChatDTO\/s12CaseIterableP",
+  "title" : "Swift.CaseIterable",
+  "type" : "unresolvable"
+},
+"doc://ChatDTO/s12IdentifiableP": {
+  "identifier" : "doc:\/\/ChatDTO\/s12IdentifiableP",
+  "title" : "Swift.Identifiable",
+  "type" : "unresolvable"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
+}
+}
+}
