@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name         = "ChatDTO"
   s.version      = "1.0.0"
   s.summary      = "ChatDTO"
-  s.description  = "ChatDTO is a set of UI extensions and custom views."
+  s.description  = "ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only."
   s.homepage     = "https://pubgi.fanapsoft.ir/chat/ios/chat-dto"
   s.license      = "MIT"
   s.author       = { "Hamed Hosseini" => "hamed8080@gmail.com" }

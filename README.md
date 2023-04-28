@@ -1,5 +1,6 @@
 # ChatDTO
-ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only.
+
+<h5>ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only.</h5>
 
 <img src="https://github.com/hamed8080/chat-dto/raw/main/images/icon.png"  width="164" height="164">
 
@@ -27,8 +28,8 @@ pod 'ChatDTO'
 ```
 <br/>
 
-## [Documentation](https://hamed8080.gitlab.io/chat-dto/chat-dto/chatdto/documentation/chatdto/)
-For more information about how to use ChatDTO visit [Documentation](https://hamed8080.gitlab.io/chat-dto/chatdto/documentation/chatdto/) 
+## [Documentation](https://hamed8080.github.io/chat-dto/chatdto/documentation/chatdto/)
+For more information about how to use ChatDTO visit [Documentation](https://hamed8080.github.io/chat-dto/documentation/chatdto/) 
 <br/>
 <br/>
 
