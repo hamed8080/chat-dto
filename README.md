@@ -28,7 +28,7 @@ pod 'ChatDTO'
 ```
 <br/>
 
-## [Documentation](https://hamed8080.github.io/chat-dto/chatdto/documentation/chatdto/)
+## [Documentation](https://hamed8080.github.io/chat-dto/documentation/chatdto/)
 For more information about how to use ChatDTO visit [Documentation](https://hamed8080.github.io/chat-dto/documentation/chatdto/) 
 <br/>
 <br/>
