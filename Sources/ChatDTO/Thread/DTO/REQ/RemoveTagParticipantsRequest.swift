@@ -1,23 +1,33 @@
 //
 // RemoveTagParticipantsRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 import ChatModels
 
-public final class RemoveTagParticipantsRequest: UniqueIdManagerRequest, ChatSendable, SubjectProtocol {
+public struct RemoveTagParticipantsRequest: Encodable, UniqueIdProtocol {
     public var tagId: Int
     public var tagParticipants: [TagParticipant]
-    public var subjectId: Int { tagId }
-    public var content: String? { tagParticipants.jsonString }
-    public var chatMessageType: ChatMessageVOTypes = .removeTagParticipants
+    public var uniqueId: String
 
-    public init(tagId: Int, tagParticipants: [TagParticipant], uniqueId: String? = nil) {
+    public init(tagId: Int, tagParticipants: [TagParticipant], uniqueId: String = UUID().uuidString) {
         self.tagId = tagId
         self.tagParticipants = tagParticipants
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
+    }
+
+    private enum CodingKeys: CodingKey {
+        case tagId
+        case tagParticipants
+        case uniqueId
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.tagId, forKey: .tagId)
+        try container.encode(self.tagParticipants, forKey: .tagParticipants)
+        try container.encode(self.uniqueId, forKey: .uniqueId)
     }
 }

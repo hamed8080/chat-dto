@@ -1,10 +1,11 @@
 //
 // PodspaceFileUploadResponse.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/2/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
+
 public struct PodspaceFileUploadResponse: Decodable {
     public let status: Int
     public let path: String?
@@ -17,6 +18,27 @@ public struct PodspaceFileUploadResponse: Decodable {
 
     public var errorType: FileUploadError? {
         FileUploadError(rawValue: status)
+    }
+
+    private enum CodingKeys: CodingKey {
+        case status
+        case path
+        case error
+        case message
+        case result
+        case timestamp
+        case reference
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.status = try container.decode(Int.self, forKey: .status)
+        self.path = try container.decodeIfPresent(String.self, forKey: .path)
+        self.error = try container.decodeIfPresent(String.self, forKey: .error)
+        self.message = try container.decodeIfPresent(String.self, forKey: .message)
+        self.result = try container.decodeIfPresent(UploadFileResponse.self, forKey: .result)
+        self.timestamp = try container.decodeIfPresent(String.self, forKey: .timestamp)
+        self.reference = try container.decodeIfPresent(String.self, forKey: .reference)
     }
 }
 

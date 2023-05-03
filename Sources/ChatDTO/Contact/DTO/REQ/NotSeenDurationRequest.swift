@@ -1,21 +1,18 @@
 //
 // NotSeenDurationRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
-import Additive
 import Foundation
-import ChatCore
 
-public final class NotSeenDurationRequest: UniqueIdManagerRequest, ChatSendable {
+public struct NotSeenDurationRequest: Encodable, UniqueIdProtocol {
     public let userIds: [Int]
-    public var chatMessageType: ChatMessageVOTypes = .getNotSeenDuration
-    public var content: String? { jsonString }
+    public var uniqueId: String
 
-    public init(userIds: [Int], uniqueId: String? = nil) {
+    public init(userIds: [Int], uniqueId: String = UUID().uuidString) {
         self.userIds = userIds
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

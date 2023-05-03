@@ -1,13 +1,13 @@
 //
 // AssistantAction.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/2/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 import ChatModels
 
-public final class AssistantAction: Decodable {
+public struct AssistantAction: Decodable {
     public var actionName: String?
     public var actionTime: UInt?
     public var actionType: Int?
@@ -20,7 +20,7 @@ public final class AssistantAction: Decodable {
         case participantVO
     }
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try? decoder.container(keyedBy: CodingKeys.self)
         actionName = try container?.decodeIfPresent(String.self, forKey: .actionName)
         actionTime = try container?.decodeIfPresent(UInt.self, forKey: .actionTime)

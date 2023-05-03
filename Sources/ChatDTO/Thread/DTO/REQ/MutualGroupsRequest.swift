@@ -1,25 +1,23 @@
 //
 // MutualGroupsRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 import ChatModels
 
-public final class MutualGroupsRequest: UniqueIdManagerRequest, ChatSendable {
+public struct MutualGroupsRequest: Encodable, UniqueIdProtocol {
     public let count: Int
     public let offset: Int
     public let toBeUserVO: Invitee
-    public var content: String? { jsonString }
-    public var chatMessageType: ChatMessageVOTypes = .mutualGroups
+    public var uniqueId: String
 
-    public init(toBeUser: Invitee, count: Int = 25, offset: Int = 0, uniqueId: String? = nil) {
+    public init(toBeUser: Invitee, count: Int = 25, offset: Int = 0, uniqueId: String = UUID().uuidString) {
         self.count = count
         self.offset = offset
         toBeUserVO = toBeUser
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

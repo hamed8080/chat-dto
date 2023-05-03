@@ -1,32 +1,29 @@
 //
 // MentionRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class MentionRequest: UniqueIdManagerRequest, ChatSendable, SubjectProtocol {
+public struct MentionRequest: Encodable, UniqueIdProtocol {
     public var count: Int = 25
     public var offset: Int = 0
     public let threadId: Int
     public let onlyUnreadMention: Bool
-    public var content: String? { jsonString }
-    public var subjectId: Int { threadId }
-    public var chatMessageType: ChatMessageVOTypes = .getHistory
+    public var uniqueId: String
 
     public init(threadId: Int,
                 onlyUnreadMention: Bool,
                 count: Int = 25,
                 offset: Int = 0,
-                uniqueId: String? = nil)
+                uniqueId: String = UUID().uuidString)
     {
         self.count = count
         self.offset = offset
         self.threadId = threadId
         self.onlyUnreadMention = onlyUnreadMention
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

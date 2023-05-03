@@ -1,11 +1,11 @@
 //
-// MapRoutingRequest.swift
-// Copyright (c) 2022 Chat
+// Coordinate.swift
+// Copyright (c) 2022 ChatDTO
 //
 // Created by Hamed Hosseini on 12/14/22
 
+
 import Foundation
-import ChatCore
 
 public struct Coordinate: Codable {
     public let lat: Double
@@ -17,16 +17,17 @@ public struct Coordinate: Codable {
     }
 }
 
-public final class MapRoutingRequest: UniqueIdManagerRequest, Encodable {
+public struct MapRoutingRequest: Encodable, UniqueIdProtocol {
     public var alternative: Bool = true
     private let destination: Coordinate
     private let origin: Coordinate
+    public var uniqueId: String
 
-    public init(alternative: Bool?, origin: Coordinate, destination: Coordinate, uniqueId: String? = nil) {
+    public init(alternative: Bool?, origin: Coordinate, destination: Coordinate, uniqueId: String = UUID().uuidString) {
         self.alternative = alternative ?? true
         self.destination = origin
         self.origin = destination
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

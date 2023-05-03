@@ -1,32 +1,40 @@
 //
 // MapStaticImageRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/16/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class MapStaticImageRequest: UniqueIdManagerRequest, Encodable {
+public struct MapStaticImageRequest: Encodable, UniqueIdProtocol {
     public var key: String?
     public var center: String
     public var height: Int = 500
     public var type: String = "standard-night"
     public var width: Int = 800
     public var zoom: Int = 15
+    public var uniqueId: String
 
     public init(center: Coordinate,
                 key: String? = nil,
                 height: Int = 500,
                 width: Int = 800,
                 zoom: Int = 15,
-                type: String = "standard-night")
+                type: String = "standard-night",
+                uniqueId: String = UUID().uuidString
+    )
     {
         self.center = "\(center.lat),\(center.lng)"
         self.type = type
         self.height = height
         self.width = width
         self.zoom = zoom
+        self.key = key
+        self.uniqueId = uniqueId
+    }
+
+    public init(request: MapStaticImageRequest, key: String?) {
+        self = request
         self.key = key
     }
 

@@ -1,18 +1,19 @@
 //
 // RemoveContactResponse.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/2/22
+// Created by Hamed Hosseini on 12/14/22
+
 
 import Foundation
-public final class RemoveContactResponse: Decodable {
+public struct RemoveContactResponse: Decodable {
     public var deteled: Bool
 
     private enum CodingKeys: String, CodingKey {
         case result
     }
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         deteled = try container.decodeIfPresent(Bool.self, forKey: .result) ?? false
     }

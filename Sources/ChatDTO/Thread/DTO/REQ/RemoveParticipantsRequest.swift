@@ -1,28 +1,38 @@
 //
 // RemoveParticipantsRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class RemoveParticipantsRequest: UniqueIdManagerRequest, ChatSendable, SubjectProtocol {
+public struct RemoveParticipantsRequest: Encodable, UniqueIdProtocol {
     public let participantIds: [Int]
     public let threadId: Int
-    public var content: String? { participantIds.jsonString }
-    public var chatMessageType: ChatMessageVOTypes = .removeParticipant
-    public var subjectId: Int { threadId }
+    public var uniqueId: String
 
-    public init(participantId: Int, threadId: Int, uniqueId: String? = nil) {
+    public init(participantId: Int, threadId: Int, uniqueId: String = UUID().uuidString) {
         self.threadId = threadId
         participantIds = [participantId]
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
-    public init(participantIds: [Int], threadId: Int, uniqueId: String? = nil) {
+    public init(participantIds: [Int], threadId: Int, uniqueId: String = UUID().uuidString) {
         self.threadId = threadId
         self.participantIds = participantIds
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
+    }
+
+    private enum CodingKeys: CodingKey {
+        case participantIds
+        case threadId
+        case uniqueId
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.participantIds, forKey: .participantIds)
+        try container.encode(self.threadId, forKey: .threadId)
+        try container.encode(self.uniqueId, forKey: .uniqueId)
     }
 }

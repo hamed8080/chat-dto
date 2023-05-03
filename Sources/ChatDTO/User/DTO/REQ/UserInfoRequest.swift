@@ -1,17 +1,24 @@
 //
 // UserInfoRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class UserInfoRequest: UniqueIdManagerRequest, ChatSendable {
-    public var chatMessageType: ChatMessageVOTypes = .userInfo
-    public var content: String?
+public struct UserInfoRequest: Encodable, UniqueIdProtocol {
+    public var uniqueId: String
 
-    public override init(uniqueId: String? = nil) {
-        super.init(uniqueId: uniqueId)
+    public init(uniqueId: String = UUID().uuidString) {
+        self.uniqueId = uniqueId
+    }
+
+    private enum CodingKeys: CodingKey {
+        case uniqueId
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.uniqueId, forKey: .uniqueId)
     }
 }

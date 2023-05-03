@@ -1,13 +1,12 @@
 //
 // UpdateContactRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
 // Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class UpdateContactRequest: UniqueIdManagerRequest, Encodable, BodyRequestProtocol {
+public struct UpdateContactRequest: Encodable, UniqueIdProtocol {
     public let cellphoneNumber: String
     public let email: String
     public let firstName: String
@@ -15,6 +14,7 @@ public final class UpdateContactRequest: UniqueIdManagerRequest, Encodable, Body
     public let lastName: String
     public let username: String
     internal var typeCode: String?
+    public var uniqueId: String
 
     public init(cellphoneNumber: String,
                 email: String,
@@ -22,7 +22,7 @@ public final class UpdateContactRequest: UniqueIdManagerRequest, Encodable, Body
                 id: Int,
                 lastName: String,
                 username: String,
-                uniqueId: String? = nil)
+                uniqueId: String = UUID().uuidString)
     {
         self.cellphoneNumber = cellphoneNumber
         self.email = email
@@ -30,7 +30,7 @@ public final class UpdateContactRequest: UniqueIdManagerRequest, Encodable, Body
         self.id = id
         self.lastName = lastName
         self.username = username
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

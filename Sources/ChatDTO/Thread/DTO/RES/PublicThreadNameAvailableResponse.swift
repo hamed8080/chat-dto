@@ -1,10 +1,11 @@
 //
 // PublicThreadNameAvailableResponse.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/2/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
+
 public struct PublicThreadNameAvailableResponse: Decodable {
     private let uniqueName: String?
     public var name: String?
@@ -17,7 +18,7 @@ public struct PublicThreadNameAvailableResponse: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         uniqueName = try container.decodeIfPresent(String.self, forKey: .uniqueName)
         if let data = uniqueName?.data(using: .utf8),
-           let dictionary = try? JSONDecoder.instance.decode([String: String].self, from: data)
+           let dictionary = try? JSONDecoder().decode([String: String].self, from: data)
         {
             name = dictionary["name"]
         }

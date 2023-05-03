@@ -1,24 +1,22 @@
 //
 // MessageDeliveredUsersRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
 // Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class MessageDeliveredUsersRequest: UniqueIdManagerRequest, ChatSendable {
+public struct MessageDeliveredUsersRequest: Encodable, UniqueIdProtocol {
     public let messageId: Int
     public let offset: Int
     public let count: Int
-    public var content: String? { jsonString }
-    public var chatMessageType: ChatMessageVOTypes = .messageDeliveredToParticipants
+    public var uniqueId: String
 
-    public init(messageId: Int, count: Int = 25, offset: Int = 0, uniqueId: String? = nil) {
+    public init(messageId: Int, count: Int = 25, offset: Int = 0, uniqueId: String = UUID().uuidString) {
         self.messageId = messageId
         self.offset = offset
         self.count = count
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

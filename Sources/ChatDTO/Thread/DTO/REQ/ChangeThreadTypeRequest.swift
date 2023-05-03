@@ -1,26 +1,24 @@
 //
 // ChangeThreadTypeRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 import ChatModels
 
-public final class ChangeThreadTypeRequest: UniqueIdManagerRequest, ChatSendable, SubjectProtocol {
+public struct ChangeThreadTypeRequest: Encodable, UniqueIdProtocol {
     public let uniqueName: String?
     public var threadId: Int
     public var type: ThreadTypes
     public var subjectId: Int { threadId }
-    public var chatMessageType: ChatMessageVOTypes = .changeThreadType
-    public var content: String? { jsonString }
+    public var uniqueId: String
 
-    public init(threadId: Int, type: ThreadTypes, uniqueName: String? = nil, uniqueId: String? = nil) {
+    public init(threadId: Int, type: ThreadTypes, uniqueName: String? = nil, uniqueId: String = UUID().uuidString) {
         self.type = type
         self.threadId = threadId
         self.uniqueName = uniqueName
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

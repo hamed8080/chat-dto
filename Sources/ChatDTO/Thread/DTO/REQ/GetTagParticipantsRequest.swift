@@ -1,20 +1,28 @@
 //
 // GetTagParticipantsRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class GetTagParticipantsRequest: UniqueIdManagerRequest, ChatSendable, SubjectProtocol {
+public struct GetTagParticipantsRequest: Encodable, UniqueIdProtocol {
     public var id: Int
-    public var subjectId: Int { id }
-    public var chatMessageType: ChatMessageVOTypes = .getTagParticipants
-    public var content: String?
+    public var uniqueId: String
 
-    public init(id: Int, uniqueId: String? = nil) {
+    public init(id: Int, uniqueId: String = UUID().uuidString) {
         self.id = id
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
+    }
+
+    private enum CodingKeys: CodingKey {
+        case id
+        case uniqueId
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.id, forKey: .id)
+        try container.encode(self.uniqueId, forKey: .uniqueId)
     }
 }

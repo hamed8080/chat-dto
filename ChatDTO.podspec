@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ChatDTO"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "ChatDTO"
   s.description  = "ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only."
   s.homepage     = "https://pubgi.fanapsoft.ir/chat/ios/chat-dto"
@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://pubgi.fanapsoft.ir/chat/ios/chat-dto", :tag => s.version }
   s.source_files = "Sources/ChatDTO/**/*.{h,swift,xcdatamodeld,m,momd}"
   s.frameworks  = "Foundation"
-  s.dependency "ChatModels" , '~> 1.0.0'
+  s.dependency "ChatModels" , '~> 1.0.1'
 end

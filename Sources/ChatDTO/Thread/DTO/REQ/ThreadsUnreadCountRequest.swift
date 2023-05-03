@@ -1,21 +1,18 @@
 //
-// ThreadsRequest.swift
-// Copyright (c) 2022 Chat
+// ThreadsUnreadCountRequest.swift
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
-import Async
 import Foundation
-import ChatCore
 
-public final class ThreadsUnreadCountRequest: UniqueIdManagerRequest, ChatSendable {
+public struct ThreadsUnreadCountRequest: Encodable, UniqueIdProtocol {
     public let threadIds: [Int]
-    public var chatMessageType: ChatMessageVOTypes = .threadsUnreadCount
-    public var content: String? { threadIds.jsonString }
+    public var uniqueId: String
 
-    public init(threadIds: [Int], uniqueId: String? = nil) {
+    public init(threadIds: [Int], uniqueId: String = UUID().uuidString) {
         self.threadIds = threadIds
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     public func encode(to _: Encoder) throws {}

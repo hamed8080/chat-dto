@@ -1,23 +1,20 @@
 //
 // PinUnpinMessageRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class PinUnpinMessageRequest: UniqueIdManagerRequest, ChatSendable, SubjectProtocol {
+public struct PinUnpinMessageRequest: Encodable, UniqueIdProtocol {
     public let messageId: Int
     public let notifyAll: Bool
-    public var chatMessageType: ChatMessageVOTypes = .pinMessage
-    public var subjectId: Int { messageId }
-    public var content: String? { jsonString }
+    public var uniqueId: String
 
-    public init(messageId: Int, notifyAll: Bool = false, uniqueId: String? = nil) {
+    public init(messageId: Int, notifyAll: Bool = false, uniqueId: String = UUID().uuidString) {
         self.messageId = messageId
         self.notifyAll = notifyAll
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

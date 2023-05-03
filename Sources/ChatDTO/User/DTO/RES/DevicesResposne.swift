@@ -1,8 +1,8 @@
 //
-// DevicesResposne.swift
-// Copyright (c) 2022 Chat
+// Device.swift
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/2/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 
@@ -18,11 +18,55 @@ public struct Device: Decodable {
     public var os: String?
     public var osVersion: String?
     public var uid: String?
+
+    private enum CodingKeys: CodingKey {
+        case agent
+        case browser
+        case current
+        case deviceType
+        case id
+        case ip
+        case language
+        case lastAccessTime
+        case os
+        case osVersion
+        case uid
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.agent = try container.decodeIfPresent(String.self, forKey: .agent)
+        self.browser = try container.decodeIfPresent(String.self, forKey: .browser)
+        self.current = try container.decodeIfPresent(Bool.self, forKey: .current)
+        self.deviceType = try container.decodeIfPresent(String.self, forKey: .deviceType)
+        self.id = try container.decodeIfPresent(Int.self, forKey: .id)
+        self.ip = try container.decodeIfPresent(String.self, forKey: .ip)
+        self.language = try container.decodeIfPresent(String.self, forKey: .language)
+        self.lastAccessTime = try container.decodeIfPresent(Int.self, forKey: .lastAccessTime)
+        self.os = try container.decodeIfPresent(String.self, forKey: .os)
+        self.osVersion = try container.decodeIfPresent(String.self, forKey: .osVersion)
+        self.uid = try container.decodeIfPresent(String.self, forKey: .uid)
+    }
 }
 
-public class DevicesResposne: Decodable {
+public struct DevicesResposne: Decodable {
     public let devices: [Device]?
     public let offset: Int?
     public let size: Int?
     public let total: Int?
+
+    private enum CodingKeys: CodingKey {
+        case devices
+        case offset
+        case size
+        case total
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.devices = try container.decodeIfPresent([Device].self, forKey: .devices)
+        self.offset = try container.decodeIfPresent(Int.self, forKey: .offset)
+        self.size = try container.decodeIfPresent(Int.self, forKey: .size)
+        self.total = try container.decodeIfPresent(Int.self, forKey: .total)
+    }
 }

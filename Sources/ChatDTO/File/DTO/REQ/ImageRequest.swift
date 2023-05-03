@@ -1,35 +1,28 @@
 //
 // ImageRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/16/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public enum ImageSize: String, Encodable, Identifiable, CaseIterable {
-    public var id: Self { self }
-    case SMALL
-    case MEDIUM
-    case LARG
-    case ACTUAL
-}
-
-public final class ImageRequest: UniqueIdManagerRequest, Encodable {
+public struct ImageRequest: Encodable, UniqueIdProtocol {
     public let hashCode: String
     public var forceToDownloadFromServer: Bool
     public let quality: Float?
     public let size: ImageSize?
     public let crop: Bool?
     public let checkUserGroupAccess: Bool
+    public var uniqueId: String
 
-    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false, quality: Float? = nil, size: ImageSize? = nil, crop: Bool? = nil) {
+    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false, quality: Float? = nil, size: ImageSize? = nil, crop: Bool? = nil, uniqueId: String = UUID().uuidString) {
         self.hashCode = hashCode
         self.forceToDownloadFromServer = forceToDownloadFromServer
         self.size = size
         self.crop = crop
         self.quality = quality ?? 1
         self.checkUserGroupAccess = checkUserGroupAccess
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

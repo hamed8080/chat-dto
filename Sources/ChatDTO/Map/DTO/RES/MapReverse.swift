@@ -1,12 +1,12 @@
 //
 // MapReverse.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/2/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 
-open class MapReverse: Codable {
+public struct MapReverse: Codable {
     public var address: String?
     public var city: String?
     public var neighbourhood: String?
@@ -25,7 +25,7 @@ open class MapReverse: Codable {
         case state
     }
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         address = (try? container.decodeIfPresent(String.self, forKey: .address)) ?? nil
         city = (try? container.decodeIfPresent(String.self, forKey: .city)) ?? nil

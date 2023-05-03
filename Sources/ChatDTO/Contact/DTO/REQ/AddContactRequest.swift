@@ -1,13 +1,12 @@
 //
 // AddContactRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
 // Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class AddContactRequest: UniqueIdManagerRequest, Encodable {
+public struct AddContactRequest: Encodable, UniqueIdProtocol {
     public var cellphoneNumber: String?
     public var email: String?
     public var firstName: String?
@@ -15,13 +14,14 @@ public final class AddContactRequest: UniqueIdManagerRequest, Encodable {
     public var ownerId: Int?
     public var username: String?
     public var typeCode: String?
+    public var uniqueId: String
 
     public init(cellphoneNumber: String? = nil,
                 email: String? = nil,
                 firstName: String? = nil,
                 lastName: String? = nil,
                 ownerId: Int? = nil,
-                uniqueId: String? = nil)
+                uniqueId: String = UUID().uuidString)
     {
         self.cellphoneNumber = cellphoneNumber
         self.email = email
@@ -29,7 +29,7 @@ public final class AddContactRequest: UniqueIdManagerRequest, Encodable {
         self.lastName = lastName
         self.ownerId = ownerId
         username = nil
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     /// Add Contact with username
@@ -38,7 +38,7 @@ public final class AddContactRequest: UniqueIdManagerRequest, Encodable {
                 lastName: String? = nil,
                 ownerId: Int? = nil,
                 username: String? = nil,
-                uniqueId: String? = nil)
+                uniqueId: String = UUID().uuidString)
     {
         cellphoneNumber = nil
         self.email = email
@@ -46,7 +46,7 @@ public final class AddContactRequest: UniqueIdManagerRequest, Encodable {
         self.lastName = lastName
         self.ownerId = ownerId
         self.username = username
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

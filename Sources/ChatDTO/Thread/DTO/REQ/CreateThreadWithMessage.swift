@@ -1,60 +1,80 @@
 //
 // CreateThreadWithMessage.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/2/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 import ChatModels
-import ChatCore
 
-public final class CreateThreadWithMessage: CreateThreadRequest {
+public struct CreateThreadWithMessage: Encodable, UniqueIdProtocol {
+    public let description: String?
+    public let image: String?
+    public let invitees: [Invitee]?
+    public let metadata: String?
+    public let title: String
+    public let type: ThreadTypes?
+    public let uniqueName: String? // only for public thread
+    public var uniqueId: String
     public var message: CreateThreadMessage
 
-    public init(description: String?,
-                image: String?,
-                invitees: [Invitee],
-                metadata: String?,
-                title: String,
-                type: ThreadTypes?,
-                uniqueName: String?,
-                message: CreateThreadMessage)
-    {
+    init(description: String?,
+         image: String?,
+         invitees: [Invitee]?,
+         metadata: String?,
+         title: String,
+         type: ThreadTypes?,
+         uniqueName: String?,
+         uniqueId: String = UUID().uuidString,
+         message: CreateThreadMessage) {
+        self.description = description
+        self.image = image
+        self.invitees = invitees
+        self.metadata = metadata
+        self.title = title
+        self.type = type
+        self.uniqueName = uniqueName
+        self.uniqueId = uniqueId
         self.message = message
-        super.init(description: description,
-                   image: image,
-                   invitees: invitees,
-                   metadata: metadata,
-                   title: title,
-                   type: type,
-                   uniqueName: uniqueName,
-                   uniqueId: nil)
     }
 
     private enum CodingKeys: String, CodingKey {
         case message
+        case title
+        case image
+        case description
+        case metadata
+        case uniqueName
+        case type
+        case invitees
     }
 
-    override public func encode(to encoder: Encoder) throws {
-        try super.encode(to: encoder)
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encodeIfPresent(message, forKey: .message)
+        try container.encodeIfPresent(title, forKey: .title)
+        try container.encodeIfPresent(image, forKey: .image)
+        try container.encodeIfPresent(description, forKey: .description)
+        try container.encodeIfPresent(metadata, forKey: .metadata)
+        try container.encodeIfPresent(uniqueName, forKey: .uniqueName)
+        try container.encodeIfPresent(type, forKey: .type)
+        try container.encodeIfPresent(invitees, forKey: .invitees)
     }
 }
 
-public final class CreateThreadMessage: Encodable {
+public struct CreateThreadMessage: Encodable {
     public let forwardedMessageIds: [String]?
     public var forwardedUniqueIds: [String]?
     public let repliedTo: Int?
     public let text: String?
-    public let messageType: MessageType
+    public let messageType: ChatModels.MessageType
     var metadata: String?
     public let systemMetadata: String?
 
     public init(forwardedMessageIds: [String]? = nil,
                 repliedTo: Int? = nil,
                 text: String? = nil,
-                messageType: MessageType,
+                messageType: ChatModels.MessageType,
                 systemMetadata: String? = nil)
     {
         self.forwardedMessageIds = forwardedMessageIds

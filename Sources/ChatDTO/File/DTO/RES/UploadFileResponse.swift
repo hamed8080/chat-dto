@@ -1,12 +1,12 @@
 //
 // UploadFileResponse.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/2/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 
-public final class UploadFileResponse: Decodable {
+public struct UploadFileResponse: Decodable {
     public let name: String?
     public let hash: String?
     public let parentHash: String?
@@ -20,6 +20,37 @@ public final class UploadFileResponse: Decodable {
 
     public let owner: FileOwner?
     public let uploader: FileOwner?
+
+    private enum CodingKeys: CodingKey {
+        case name
+        case hash
+        case parentHash
+        case created
+        case updated
+        case `extension`
+        case size
+        case type
+        case actualHeight
+        case actualWidth
+        case owner
+        case uploader
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.name = try container.decodeIfPresent(String.self, forKey: .name)
+        self.hash = try container.decodeIfPresent(String.self, forKey: .hash)
+        self.parentHash = try container.decodeIfPresent(String.self, forKey: .parentHash)
+        self.created = try container.decodeIfPresent(Int64.self, forKey: .created)
+        self.updated = try container.decodeIfPresent(Int64.self, forKey: .updated)
+        self.extension = try container.decodeIfPresent(String.self, forKey: .extension)
+        self.size = try container.decodeIfPresent(Int64.self, forKey: .size)
+        self.type = try container.decodeIfPresent(String.self, forKey: .type)
+        self.actualHeight = try container.decodeIfPresent(Int64.self, forKey: .actualHeight)
+        self.actualWidth = try container.decodeIfPresent(Int64.self, forKey: .actualWidth)
+        self.owner = try container.decodeIfPresent(FileOwner.self, forKey: .owner)
+        self.uploader = try container.decodeIfPresent(FileOwner.self, forKey: .uploader)
+    }
 }
 
 public struct FileOwner: Decodable {
@@ -28,4 +59,21 @@ public struct FileOwner: Decodable {
     public let ssoId: Int?
     public let avatar: String?
     public let roles: [String]
+
+    private enum CodingKeys: CodingKey {
+        case username
+        case name
+        case ssoId
+        case avatar
+        case roles
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.username = try container.decodeIfPresent(String.self, forKey: .username)
+        self.name = try container.decodeIfPresent(String.self, forKey: .name)
+        self.ssoId = try container.decodeIfPresent(Int.self, forKey: .ssoId)
+        self.avatar = try container.decodeIfPresent(String.self, forKey: .avatar)
+        self.roles = try container.decode([String].self, forKey: .roles)
+    }
 }

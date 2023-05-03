@@ -1,14 +1,13 @@
 //
 // CreateThreadRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 import ChatModels
 
-public class CreateThreadRequest: UniqueIdManagerRequest, ChatSendable {
+public struct CreateThreadRequest: Encodable, UniqueIdProtocol {
     public let description: String?
     public let image: String?
     public let invitees: [Invitee]?
@@ -16,8 +15,7 @@ public class CreateThreadRequest: UniqueIdManagerRequest, ChatSendable {
     public let title: String
     public let type: ThreadTypes?
     public let uniqueName: String? // only for public thread
-    public var chatMessageType: ChatMessageVOTypes = .createThread
-    public var content: String? { jsonString }
+    public var uniqueId: String
 
     public init(description: String? = nil,
                 image: String? = nil,
@@ -26,7 +24,7 @@ public class CreateThreadRequest: UniqueIdManagerRequest, ChatSendable {
                 title: String,
                 type: ThreadTypes? = nil,
                 uniqueName: String? = nil,
-                uniqueId: String? = nil)
+                uniqueId: String = UUID().uuidString)
     {
         self.description = description
         self.image = image
@@ -35,7 +33,7 @@ public class CreateThreadRequest: UniqueIdManagerRequest, ChatSendable {
         self.title = title
         self.type = type
         self.uniqueName = uniqueName
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

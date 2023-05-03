@@ -1,13 +1,13 @@
 //
 // EditMessageRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
 // Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
+import ChatModels
 
-public final class EditMessageRequest: UniqueIdManagerRequest, Queueable, PlainTextSendable, ReplyProtocol, MetadataProtocol, SubjectProtocol, MessageTypeProtocol {
+public struct EditMessageRequest: Encodable, UniqueIdProtocol {
     public var queueTime: Date = .init()
     public var messageType: MessageType
     public let repliedTo: Int?
@@ -15,9 +15,7 @@ public final class EditMessageRequest: UniqueIdManagerRequest, Queueable, PlainT
     public let textMessage: String
     public let metadata: String?
     public let threadId: Int
-    public var content: String? { textMessage }
-    public var subjectId: Int { messageId }
-    public var chatMessageType: ChatMessageVOTypes = .editMessage
+    public var uniqueId: String
     public var typeCode: String?
 
     public init(threadId: Int,
@@ -26,7 +24,7 @@ public final class EditMessageRequest: UniqueIdManagerRequest, Queueable, PlainT
                 textMessage: String,
                 repliedTo: Int? = nil,
                 metadata: String? = nil,
-                uniqueId: String? = nil)
+                uniqueId: String = UUID().uuidString)
     {
         self.threadId = threadId
         self.messageType = messageType
@@ -34,6 +32,31 @@ public final class EditMessageRequest: UniqueIdManagerRequest, Queueable, PlainT
         self.messageId = messageId
         self.textMessage = textMessage
         self.metadata = metadata
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
+    }
+
+    private enum CodingKeys: CodingKey {
+        case queueTime
+        case messageType
+        case repliedTo
+        case messageId
+        case textMessage
+        case metadata
+        case threadId
+        case uniqueId
+        case typeCode
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.queueTime, forKey: .queueTime)
+        try container.encode(self.messageType, forKey: .messageType)
+        try container.encodeIfPresent(self.repliedTo, forKey: .repliedTo)
+        try container.encode(self.messageId, forKey: .messageId)
+        try container.encode(self.textMessage, forKey: .textMessage)
+        try container.encodeIfPresent(self.metadata, forKey: .metadata)
+        try container.encode(self.threadId, forKey: .threadId)
+        try container.encodeIfPresent(self.uniqueId, forKey: .uniqueId)
+        try container.encodeIfPresent(self.typeCode, forKey: .typeCode)
     }
 }

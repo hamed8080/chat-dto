@@ -1,35 +1,32 @@
 //
 // UpdateThreadInfoRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class UpdateThreadInfoRequest: UniqueIdManagerRequest, ChatSendable, SubjectProtocol {
+public struct UpdateThreadInfoRequest: Encodable, UniqueIdProtocol {
     public let description: String?
     public var metadata: String?
     public var threadImage: UploadImageRequest?
     public let threadId: Int
     public let title: String?
-    public var subjectId: Int { threadId }
-    public var chatMessageType: ChatMessageVOTypes = .updateThreadInfo
-    public var content: String? { jsonString }
+    public var uniqueId: String
 
     public init(description: String? = nil,
                 metadata: String? = nil,
                 threadId: Int,
                 threadImage: UploadImageRequest? = nil,
                 title: String,
-                uniqueId: String? = nil)
+                uniqueId: String = UUID().uuidString)
     {
         self.description = description
         self.metadata = metadata
         self.threadId = threadId
         self.threadImage = threadImage
         self.title = title
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

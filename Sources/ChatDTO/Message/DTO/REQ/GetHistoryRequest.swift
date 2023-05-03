@@ -1,13 +1,12 @@
 //
 // GetHistoryRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class GetHistoryRequest: UniqueIdManagerRequest, ChatSendable, SubjectProtocol {
+public struct GetHistoryRequest: Encodable, UniqueIdProtocol {
     public let threadId: Int
     public var offset: Int
     public var count: Int
@@ -34,10 +33,7 @@ public final class GetHistoryRequest: UniqueIdManagerRequest, ChatSendable, Subj
     public var historyEndTime: UInt?
     public var readOnly: Bool = false
     public var newMessages: Bool?
-
-    public var chatMessageType: ChatMessageVOTypes = .getHistory
-    public var subjectId: Int { threadId }
-    public var content: String? { jsonString }
+    public var uniqueId: String
 
     /// - Parameters:
     ///   - readOnly: This property prevent to write to cache when you only need to view messages of a thread pass true if you need to only view messages.
@@ -67,7 +63,7 @@ public final class GetHistoryRequest: UniqueIdManagerRequest, ChatSendable, Subj
                 historyEndTime: UInt? = nil,
                 readOnly: Bool = false,
                 newMessages: Bool? = nil,
-                uniqueId: String? = nil)
+                uniqueId: String = UUID().uuidString)
     {
         self.threadId = threadId
         self.count = count ?? 25
@@ -95,7 +91,7 @@ public final class GetHistoryRequest: UniqueIdManagerRequest, ChatSendable, Subj
         self.historyEndTime = historyEndTime
         self.readOnly = readOnly
         self.newMessages = newMessages
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

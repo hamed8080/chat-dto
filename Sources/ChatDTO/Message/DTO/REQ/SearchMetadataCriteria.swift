@@ -1,8 +1,8 @@
 //
 // SearchMetadataCriteria.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/2/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 
@@ -42,5 +42,34 @@ public struct SearchMetadataCriteria: Codable {
         self.or = or
         self.not = not
         self.isNumber = isNumber
+    }
+
+    private enum CodingKeys: CodingKey {
+        case field
+        case `is`
+        case has
+        case gt
+        case gte
+        case lt
+        case lte
+        case and
+        case or
+        case not
+        case isNumber
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encodeIfPresent(self.field, forKey: .field)
+        try container.encodeIfPresent(self.is, forKey: .is)
+        try container.encodeIfPresent(self.has, forKey: .has)
+        try container.encodeIfPresent(self.gt, forKey: .gt)
+        try container.encodeIfPresent(self.gte, forKey: .gte)
+        try container.encodeIfPresent(self.lt, forKey: .lt)
+        try container.encodeIfPresent(self.lte, forKey: .lte)
+        try container.encodeIfPresent(self.and, forKey: .and)
+        try container.encodeIfPresent(self.or, forKey: .or)
+        try container.encodeIfPresent(self.not, forKey: .not)
+        try container.encodeIfPresent(self.isNumber, forKey: .isNumber)
     }
 }

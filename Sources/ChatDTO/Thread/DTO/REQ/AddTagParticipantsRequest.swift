@@ -1,22 +1,32 @@
 //
 // AddTagParticipantsRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class AddTagParticipantsRequest: UniqueIdManagerRequest, ChatSendable, SubjectProtocol {
+public struct AddTagParticipantsRequest: Encodable, UniqueIdProtocol {
     public var tagId: Int
     public var threadIds: [Int]
-    public var subjectId: Int { tagId }
-    public var chatMessageType: ChatMessageVOTypes = .addTagParticipants
-    public var content: String? { threadIds.jsonString }
-
-    public init(tagId: Int, threadIds: [Int], uniqueId: String? = nil) {
+    public var uniqueId: String
+    
+    public init(tagId: Int, threadIds: [Int], uniqueId: String = UUID().uuidString) {
         self.threadIds = threadIds
         self.tagId = tagId
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
+    }
+
+    private enum CodingKeys: CodingKey {
+        case tagId
+        case threadIds
+        case uniqueId
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.tagId, forKey: .tagId)
+        try container.encode(self.threadIds, forKey: .threadIds)
+        try container.encode(self.uniqueId, forKey: .uniqueId)
     }
 }

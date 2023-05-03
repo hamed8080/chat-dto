@@ -1,21 +1,19 @@
 //
 // BatchDeleteMessageRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class BatchDeleteMessageRequest: UniqueIdManagerRequest, ChatSendable {
+public struct BatchDeleteMessageRequest: Encodable, UniqueIdProtocol {
     let threadId: Int
     let deleteForAll: Bool
     let messageIds: [Int]
     public let uniqueIds: [String]
-    public var chatMessageType: ChatMessageVOTypes = .deleteMessage
-    public var content: String? { jsonString }
+    public var uniqueId: String
 
-    public init(threadId: Int, messageIds: [Int], deleteForAll: Bool = false, uniqueIds: [String]? = nil, uniqueId: String? = nil) {
+    public init(threadId: Int, messageIds: [Int], deleteForAll: Bool = false, uniqueIds: [String]? = nil, uniqueId: String = UUID().uuidString) {
         self.threadId = threadId
         self.deleteForAll = deleteForAll
         if let uniqueIds = uniqueIds {
@@ -28,7 +26,7 @@ public final class BatchDeleteMessageRequest: UniqueIdManagerRequest, ChatSendab
             self.uniqueIds = generatedUniqeIds
         }
         self.messageIds = messageIds
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -1,13 +1,12 @@
 //
 // ThreadParticipantsRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class ThreadParticipantsRequest: UniqueIdManagerRequest, ChatSendable, SubjectProtocol {
+public struct ThreadParticipantsRequest: Encodable, UniqueIdProtocol {
     public var count: Int
     public var offset: Int
     public var threadId: Int
@@ -16,10 +15,7 @@ public final class ThreadParticipantsRequest: UniqueIdManagerRequest, ChatSendab
     public var cellphoneNumber: String?
     /// If it set to true the request only contains the list of admins of a thread.
     public var admin: Bool = false
-
-    public var content: String? { jsonString }
-    public var subjectId: Int { threadId }
-    public var chatMessageType: ChatMessageVOTypes = .threadParticipants
+    public var uniqueId: String
 
     public init(threadId: Int,
                 offset: Int = 0,
@@ -28,7 +24,7 @@ public final class ThreadParticipantsRequest: UniqueIdManagerRequest, ChatSendab
                 admin: Bool = false,
                 cellphoneNumber: String? = nil,
                 username: String? = nil,
-                uniqueId: String? = nil)
+                uniqueId: String = UUID().uuidString)
     {
         self.count = count
         self.offset = offset
@@ -37,7 +33,7 @@ public final class ThreadParticipantsRequest: UniqueIdManagerRequest, ChatSendab
         self.username = username
         self.cellphoneNumber = cellphoneNumber
         self.name = name
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

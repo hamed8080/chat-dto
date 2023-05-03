@@ -1,40 +1,38 @@
 //
 // AddParticipantRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 import ChatModels
 
-public final class AddParticipantRequest: UniqueIdManagerRequest, ChatSendable, SubjectProtocol {
+public struct AddParticipantRequest: Encodable, UniqueIdProtocol {
     public var id: String?
     public var idType: InviteeTypes?
     public var threadId: Int
     public var contactIds: [Int]?
     public var subjectId: Int { threadId }
-    public var chatMessageType: ChatMessageVOTypes = .addParticipant
-    public var content: String? { jsonString }
+    public var uniqueId: String
 
-    public init(userName: String, threadId: Int, uniqueId: String? = nil) {
+    public init(userName: String, threadId: Int, uniqueId: String = UUID().uuidString) {
         idType = .username
         id = userName
         self.threadId = threadId
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
-    public init(coreUserId: Int, threadId: Int, uniqueId: String? = nil) {
+    public init(coreUserId: Int, threadId: Int, uniqueId: String = UUID().uuidString) {
         idType = .coreUserId
         id = "\(coreUserId)"
         self.threadId = threadId
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
-    public init(contactIds: [Int], threadId: Int, uniqueId: String? = nil) {
+    public init(contactIds: [Int], threadId: Int, uniqueId: String = UUID().uuidString) {
         self.contactIds = contactIds
         self.threadId = threadId
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

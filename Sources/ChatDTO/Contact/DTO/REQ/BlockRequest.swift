@@ -1,28 +1,26 @@
 //
 // BlockRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class BlockRequest: UniqueIdManagerRequest, ChatSendable {
+public struct BlockRequest: Encodable, UniqueIdProtocol {
     public let contactId: Int?
     public let threadId: Int?
     public let userId: Int?
-    public var chatMessageType: ChatMessageVOTypes = .block
-    public var content: String? { jsonString }
+    public var uniqueId: String
 
     public init(contactId: Int? = nil,
                 threadId: Int? = nil,
                 userId: Int? = nil,
-                uniqueId: String? = nil)
+                uniqueId: String = UUID().uuidString)
     {
         self.contactId = contactId
         self.threadId = threadId
         self.userId = userId
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

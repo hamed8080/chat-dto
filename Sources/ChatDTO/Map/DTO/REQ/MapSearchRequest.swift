@@ -1,26 +1,26 @@
 //
 // MapSearchRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
 // Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class MapSearchRequest: UniqueIdManagerRequest, Encodable {
+public struct MapSearchRequest: Encodable, UniqueIdProtocol {
     public let lat: Double
     public let lng: Double
     public let term: String
+    public var uniqueId: String
 
     public init(lat: Double,
                 lng: Double,
                 term: String,
-                uniqueId: String? = nil)
+                uniqueId: String = UUID().uuidString)
     {
         self.lat = lat
         self.lng = lng
         self.term = term
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

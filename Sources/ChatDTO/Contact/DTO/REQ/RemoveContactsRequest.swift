@@ -1,19 +1,19 @@
 //
 // RemoveContactsRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
 // Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class RemoveContactsRequest: UniqueIdManagerRequest, Encodable, BodyRequestProtocol {
+public struct RemoveContactsRequest: Encodable, UniqueIdProtocol {
     public let contactId: Int
     public var typeCode: String?
+    public var uniqueId: String
 
-    public init(contactId: Int, uniqueId _: String? = nil) {
+    public init(contactId: Int, uniqueId: String = UUID().uuidString) {
         self.contactId = contactId
-        super.init(uniqueId: nil)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

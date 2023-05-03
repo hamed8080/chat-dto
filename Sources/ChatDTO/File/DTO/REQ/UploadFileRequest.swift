@@ -1,15 +1,14 @@
 //
 // UploadFileRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
 // Created by Hamed Hosseini on 12/14/22
 
 import CoreServices
 import Foundation
 import UniformTypeIdentifiers
-import ChatCore
 
-public class UploadFileRequest: UniqueIdManagerRequest, Encodable {
+public struct UploadFileRequest: Encodable, UniqueIdProtocol {
     public var data: Data
     public var fileExtension: String?
     public var fileName: String = ""
@@ -21,6 +20,7 @@ public class UploadFileRequest: UniqueIdManagerRequest, Encodable {
     public var userGroupHash: String?
     public var description: String?
     public var typeCode: String?
+    public var uniqueId: String
 
     public init(data: Data,
                 fileExtension: String? = nil,
@@ -30,7 +30,7 @@ public class UploadFileRequest: UniqueIdManagerRequest, Encodable {
                 mimeType: String? = nil,
                 originalName: String? = nil,
                 userGroupHash: String? = nil,
-                uniqueId: String? = nil)
+                uniqueId: String = UUID().uuidString)
     {
         self.data = data
         self.fileExtension = fileExtension
@@ -41,10 +41,10 @@ public class UploadFileRequest: UniqueIdManagerRequest, Encodable {
         self.userGroupHash = userGroupHash
         self.originalName = originalName ?? fileName + (fileExtension ?? "")
         self.isPublic = userGroupHash != nil ? false : isPublic // if send file iniside the thread we need to set is isPublic to false
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
-    class func guessMimeType(_ fileExtension: String?, _ fileName: String?) -> String {
+    static func guessMimeType(_ fileExtension: String?, _ fileName: String?) -> String {
         let ext = fileExtension ?? URL(fileURLWithPath: fileName ?? "").pathExtension
         var mimeType: String?
         if #available(iOS 14.0, *) {

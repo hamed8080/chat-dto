@@ -1,23 +1,20 @@
 //
 // LeaveThreadRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public class LeaveThreadRequest: UniqueIdManagerRequest, ChatSendable, SubjectProtocol {
+public struct LeaveThreadRequest: Encodable, UniqueIdProtocol {
     public let threadId: Int
     public let clearHistory: Bool?
-    public var subjectId: Int { threadId }
-    public var content: String? { jsonString }
-    public var chatMessageType: ChatMessageVOTypes = .leaveThread
+    public var uniqueId: String
 
-    public init(threadId: Int, clearHistory: Bool? = false, uniqueId: String? = nil) {
+    public init(threadId: Int, clearHistory: Bool? = false, uniqueId: String = UUID().uuidString) {
         self.clearHistory = clearHistory
         self.threadId = threadId
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -1,8 +1,8 @@
 //
 // MessageResponse.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 12/9/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 
@@ -12,7 +12,7 @@ public enum MessageResposneState {
     case seen
 }
 
-public final class MessageResponse: Decodable {
+public struct MessageResponse: Decodable {
     public var threadId: Int?
     public var participantId: Int?
     public var messageId: Int?
@@ -27,14 +27,14 @@ public final class MessageResponse: Decodable {
         self.messageTime = messageTime
     }
 
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case threadId = "conversationId"
         case participantId
         case messageId
         case messageTime
     }
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         threadId = try container.decodeIfPresent(Int.self, forKey: .threadId)
         participantId = try container.decodeIfPresent(Int.self, forKey: .participantId)

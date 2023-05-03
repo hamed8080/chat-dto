@@ -1,26 +1,24 @@
 //
 // DeleteMessageRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class DeleteMessageRequest: UniqueIdManagerRequest, ChatSendable, SubjectProtocol {
+public struct DeleteMessageRequest: Encodable, UniqueIdProtocol {
     public let deleteForAll: Bool
     public let messageId: Int
     public var subjectId: Int { messageId }
-    public var chatMessageType: ChatMessageVOTypes = .deleteMessage
-    public var content: String? { jsonString }
+    public var uniqueId: String
 
     public init(deleteForAll: Bool? = false,
                 messageId: Int,
-                uniqueId: String? = nil)
+                uniqueId: String = UUID().uuidString)
     {
         self.deleteForAll = deleteForAll ?? false
         self.messageId = messageId
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

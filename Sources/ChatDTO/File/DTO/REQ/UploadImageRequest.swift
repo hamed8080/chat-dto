@@ -1,42 +1,61 @@
 //
 // UploadImageRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/2/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-public final class UploadImageRequest: UploadFileRequest {
+
+public struct UploadImageRequest: Encodable, UniqueIdProtocol {
+    public var data: Data
+    public var fileExtension: String?
+    public var fileName: String = ""
+    public var fileSize: Int64 = 0
+    /// if  send file iniside the thread we need to set is isPublic to false
+    public private(set) var isPublic: Bool?
+    public var mimeType: String = ""
+    public var originalName: String = ""
+    public var userGroupHash: String?
+    public var description: String?
+    public var typeCode: String?
+    public var uniqueId: String
+
     public var xC: Int = 0
     public var yC: Int = 0
     public var hC: Int = 0
     public var wC: Int = 0
 
-    public init(
-        data: Data,
-        xC: Int = 0,
-        yC: Int = 0,
-        hC: Int,
-        wC: Int,
-        fileExtension: String? = nil,
-        fileName: String? = nil,
-        mimeType: String? = nil,
-        originalName: String? = nil,
-        userGroupHash: String? = nil,
-        uniqueId: String? = nil,
-        isPublic: Bool? = nil
-    ) {
+
+    public init(data: Data,
+                fileExtension: String? = nil,
+                fileName: String = "",
+                fileSize: Int64 = 0,
+                isPublic: Bool? = nil,
+                mimeType: String,
+                originalName: String = "",
+                userGroupHash: String? = nil,
+                description: String? = nil,
+                typeCode: String? = nil,
+                uniqueId: String = UUID().uuidString,
+                xC: Int = 0,
+                yC: Int = 0,
+                hC: Int = 0,
+                wC: Int = 0) {
+        self.data = data
+        self.fileExtension = fileExtension
+        self.fileName = fileName
+        self.fileSize = fileSize
+        self.isPublic = isPublic
+        self.mimeType = mimeType
+        self.originalName = originalName
+        self.userGroupHash = userGroupHash
+        self.description = description
+        self.typeCode = typeCode
+        self.uniqueId = uniqueId
         self.xC = xC
         self.yC = yC
         self.hC = hC
         self.wC = wC
-        super.init(data: data,
-                   fileExtension: fileExtension,
-                   fileName: fileName,
-                   isPublic: isPublic,
-                   mimeType: mimeType,
-                   originalName: originalName,
-                   userGroupHash: userGroupHash,
-                   uniqueId: uniqueId)
     }
 
     private enum CodingKeys: String, CodingKey {
@@ -49,12 +68,13 @@ public final class UploadImageRequest: UploadFileRequest {
         case wC
     }
 
-    override public func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try? super.encode(to: encoder)
         try container.encode("\(xC)", forKey: .xC)
         try container.encode("\(yC)", forKey: .yC)
         try container.encode("\(hC)", forKey: .hC)
         try container.encode("\(wC)", forKey: .wC)
+        try container.encodeIfPresent("\(isPublic != nil && isPublic == true ? "true" : "false")", forKey: .isPublic) // dont send bool it crash when send and encode to dictionary
+        try container.encodeIfPresent(fileName, forKey: .filename)
     }
 }

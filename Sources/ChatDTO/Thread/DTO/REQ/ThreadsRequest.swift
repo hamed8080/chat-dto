@@ -1,15 +1,13 @@
 //
 // ThreadsRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
-import Async
 import Foundation
-import ChatCore
 import ChatModels
 
-public final class ThreadsRequest: UniqueIdManagerRequest, ChatSendable {
+public struct ThreadsRequest: Encodable, UniqueIdProtocol {
     public let count: Int
     public let offset: Int
     public var name: String?
@@ -22,8 +20,7 @@ public final class ThreadsRequest: UniqueIdManagerRequest, ChatSendable {
     public var metadataCriteria: String?
     public var isGroup: Bool?
     public var type: ThreadTypes?
-    public var chatMessageType: ChatMessageVOTypes = .getThreads
-    public var content: String? { jsonString }
+    public var uniqueId: String
 
     public init(count: Int = 25,
                 offset: Int = 0,
@@ -37,7 +34,7 @@ public final class ThreadsRequest: UniqueIdManagerRequest, ChatSendable {
                 partnerCoreUserId: Int? = nil,
                 partnerCoreContactId: Int? = nil,
                 metadataCriteria: String? = nil,
-                uniqueId: String? = nil)
+                uniqueId: String = UUID().uuidString)
     {
         self.count = count
         self.offset = offset
@@ -51,7 +48,7 @@ public final class ThreadsRequest: UniqueIdManagerRequest, ChatSendable {
         self.creatorCoreUserId = creatorCoreUserId
         self.partnerCoreUserId = partnerCoreUserId
         self.partnerCoreContactId = partnerCoreContactId
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

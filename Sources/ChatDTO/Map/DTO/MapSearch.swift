@@ -1,12 +1,12 @@
 //
 // MapSearch.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/2/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 
-open class MapSearch {
+public struct MapSearch {
     public var count: Int
     public var items: [MapItem]?
 

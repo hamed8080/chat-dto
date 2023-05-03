@@ -1,12 +1,12 @@
 //
 // MapSearchResponse.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/2/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 
-open class MapSearchResponse: Decodable {
+public struct MapSearchResponse: Decodable {
     public var count: Int
     public var items: [MapItem]?
 
@@ -15,14 +15,14 @@ open class MapSearchResponse: Decodable {
         case items
     }
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         count = (try container.decodeIfPresent(Int.self, forKey: .count)) ?? 0
         items = (try container.decodeIfPresent([MapItem].self, forKey: .items)) ?? nil
     }
 }
 
-open class MapItem: Codable {
+public struct MapItem: Codable {
     public let address: String?
     public let category: String?
     public let region: String?
@@ -30,9 +30,41 @@ open class MapItem: Codable {
     public let title: String?
     public var location: Location?
     public var neighbourhood: String?
+
+    private enum CodingKeys: CodingKey {
+        case address
+        case category
+        case region
+        case type
+        case title
+        case location
+        case neighbourhood
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.address = try container.decodeIfPresent(String.self, forKey: .address)
+        self.category = try container.decodeIfPresent(String.self, forKey: .category)
+        self.region = try container.decodeIfPresent(String.self, forKey: .region)
+        self.type = try container.decodeIfPresent(String.self, forKey: .type)
+        self.title = try container.decodeIfPresent(String.self, forKey: .title)
+        self.location = try container.decodeIfPresent(Location.self, forKey: .location)
+        self.neighbourhood = try container.decodeIfPresent(String.self, forKey: .neighbourhood)
+    }
 }
 
-open class Location: Codable {
+public struct Location: Codable {
     public let x: Double
     public let y: Double
+
+    private enum CodingKeys: CodingKey {
+        case x
+        case y
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.x = try container.decode(Double.self, forKey: .x)
+        self.y = try container.decode(Double.self, forKey: .y)
+    }
 }

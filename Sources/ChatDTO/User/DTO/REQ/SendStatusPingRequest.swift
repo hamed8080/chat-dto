@@ -1,11 +1,10 @@
 //
-// SendStatusPingRequest.swift
-// Copyright (c) 2022 Chat
+// StatusPingType.swift
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
 public enum StatusPingType: Int, Encodable, Identifiable, CaseIterable {
     public var id: Self { self }
@@ -16,28 +15,27 @@ public enum StatusPingType: Int, Encodable, Identifiable, CaseIterable {
     case contactId
 }
 
-public final class SendStatusPingRequest: UniqueIdManagerRequest, ChatSendable {
+public struct SendStatusPingRequest: Encodable, UniqueIdProtocol {
     public let statusType: StatusPingType
     public let id: Int?
-    public var chatMessageType: ChatMessageVOTypes = .statusPing
-    public var content: String? { jsonString }
+    public var uniqueId: String
 
-    public init(statusType: StatusPingType, uniqueId: String? = nil) {
+    public init(statusType: StatusPingType, uniqueId: String = UUID().uuidString) {
         id = nil
         self.statusType = statusType
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
-    public init(statusType: StatusPingType, contactId: Int, uniqueId: String? = nil) {
+    public init(statusType: StatusPingType, contactId: Int, uniqueId: String = UUID().uuidString) {
         id = contactId
         self.statusType = statusType
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
-    public init(statusType: StatusPingType, threadId: Int, uniqueId: String? = nil) {
+    public init(statusType: StatusPingType, threadId: Int, uniqueId: String = UUID().uuidString) {
         id = threadId
         self.statusType = statusType
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

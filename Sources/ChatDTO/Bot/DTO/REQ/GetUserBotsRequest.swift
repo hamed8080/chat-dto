@@ -1,18 +1,22 @@
 //
 // GetUserBotsRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
 /// The request to fetch the list of user bots.
-public final class GetUserBotsRequest: UniqueIdManagerRequest, ChatSendable {
-    public var chatMessageType: ChatMessageVOTypes = .getUserBots
-    public var content: String?
+public struct GetUserBotsRequest: Encodable, UniqueIdProtocol {
+    public var uniqueId: String
 
-    override public init(uniqueId: String? = nil) {
-        super.init(uniqueId: uniqueId)
+    public init(uniqueId: String = UUID().uuidString) {
+        self.uniqueId = uniqueId
     }
+
+    enum CodingKeys: CodingKey {
+        case uniqueId
+    }
+
+    public func encode(to encoder: Encoder) throws {}
 }

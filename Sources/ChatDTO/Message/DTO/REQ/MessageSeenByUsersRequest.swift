@@ -1,24 +1,22 @@
 //
 // MessageSeenByUsersRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class MessageSeenByUsersRequest: UniqueIdManagerRequest, ChatSendable {
+public struct MessageSeenByUsersRequest: Encodable, UniqueIdProtocol {
     public let messageId: Int
     public let offset: Int
     public let count: Int
-    public var chatMessageType: ChatMessageVOTypes = .getMessageSeenParticipants
-    public var content: String? { jsonString }
+    public var uniqueId: String
 
-    public init(messageId: Int, count: Int = 25, offset: Int = 0, uniqueId: String? = nil) {
+    public init(messageId: Int, count: Int = 25, offset: Int = 0, uniqueId: String = UUID().uuidString) {
         self.messageId = messageId
         self.offset = offset
         self.count = count
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

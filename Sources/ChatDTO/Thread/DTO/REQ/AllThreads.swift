@@ -1,23 +1,21 @@
 //
 // AllThreads.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
-public final class AllThreads: UniqueIdManagerRequest, ChatSendable {
+public struct AllThreads: Encodable, UniqueIdProtocol {
     /// - summary: If it set to true the result only contains the ids of threads not other properties.
     private let summary: Bool = true
-    public var chatMessageType: ChatMessageVOTypes = .getThreads
-    public var content: String? { jsonString }
+    public var uniqueId: String
 
     /// Init the request.
     /// - Parameters:
     ///   - uniqueId: The optional uniqueId.
-    override public init(uniqueId: String? = nil) {
-        super.init(uniqueId: uniqueId)
+    public init(uniqueId: String = UUID().uuidString) {
+       self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

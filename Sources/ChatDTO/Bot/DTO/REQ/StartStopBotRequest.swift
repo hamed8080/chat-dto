@@ -1,33 +1,30 @@
 //
 // StartStopBotRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import ChatCore
 
 /// Start or stop a bot request.
-public final class StartStopBotRequest: UniqueIdManagerRequest, ChatSendable, SubjectProtocol {
-    public var chatMessageType: ChatMessageVOTypes = .stopBot
-    public var subjectId: Int { threadId }
-    public var content: String? { jsonString }
-
+public struct StartStopBotRequest: Encodable, UniqueIdProtocol  {
     /// The name of the bot.
     public let botName: String
 
     /// The id of the thread you want to stop this bot.
     public let threadId: Int
 
+    public var uniqueId: String
+
     /// The initializer.
     /// - Parameters:
     ///   - botName: The name of the bot.
     ///   - threadId: The id of the thread.
     ///   - uniqueId:  The unique id of request. If you manage the unique id by yourself you should leave this blank, otherwise, you must use it if you need to know what response is for what request.
-    public init(botName: String, threadId: Int, uniqueId: String? = nil) {
+    public init(botName: String, threadId: Int, uniqueId: String = UUID().uuidString) {
         self.botName = botName
         self.threadId = threadId
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -1,20 +1,29 @@
 //
 // JoinPublicThreadRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/16/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 import ChatModels
-import ChatCore
 
-public final class JoinPublicThreadRequest: UniqueIdManagerRequest, PlainTextSendable {
+public struct JoinPublicThreadRequest: Encodable, UniqueIdProtocol {
     public var threadName: String
-    public var chatMessageType: ChatMessageVOTypes = .joinThread
-    public var content: String? { threadName }
+    public var uniqueId: String
 
-    public init(threadName: String, uniqueId: String? = nil) {
+    public init(threadName: String, uniqueId: String = UUID().uuidString) {
         self.threadName = threadName
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
+    }
+
+    private enum CodingKeys: CodingKey {
+        case threadName
+        case uniqueId
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.threadName, forKey: .threadName)
+        try container.encode(self.uniqueId, forKey: .uniqueId)
     }
 }

@@ -1,18 +1,13 @@
 //
 // ContactsRequest.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/19/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
-import Async
-import ChatCore
 import ChatModels
 
-public final class ContactsRequest: UniqueIdManagerRequest, ChatSendable {
-    public var chatMessageType: ChatMessageVOTypes = .getContacts
-    public var content: String? { jsonString }
-
+public struct ContactsRequest: Encodable, UniqueIdProtocol {
     public var size: Int = 25
     public var offset: Int = 0
     // use in cashe
@@ -23,6 +18,7 @@ public final class ContactsRequest: UniqueIdManagerRequest, ChatSendable {
     public let order: String?
     public let query: String?
     public var summery: Bool?
+    public var uniqueId: String
 
     public init(id: Int? = nil,
                 count: Int = 50,
@@ -33,7 +29,7 @@ public final class ContactsRequest: UniqueIdManagerRequest, ChatSendable {
                 order: Ordering? = nil,
                 query: String? = nil,
                 summery: Bool? = nil,
-                uniqueId: String? = nil)
+                uniqueId: String = UUID().uuidString)
     {
         size = count
         self.offset = offset
@@ -44,7 +40,7 @@ public final class ContactsRequest: UniqueIdManagerRequest, ChatSendable {
         self.query = query
         self.summery = summery
         self.coreUserId = coreUserId
-        super.init(uniqueId: uniqueId)
+        self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {

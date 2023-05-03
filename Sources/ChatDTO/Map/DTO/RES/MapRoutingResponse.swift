@@ -1,19 +1,19 @@
 //
 // MapRoutingResponse.swift
-// Copyright (c) 2022 Chat
+// Copyright (c) 2022 ChatDTO
 //
-// Created by Hamed Hosseini on 11/2/22
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 
-open class MapRoutingResponse: Decodable {
+public struct MapRoutingResponse: Decodable {
     public var routes: [Route]?
 
     private enum CodingKeys: String, CodingKey {
         case routes
     }
 
-    public required init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         routes = try container.decodeIfPresent([Route].self, forKey: .routes) ?? nil
     }
