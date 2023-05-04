@@ -47,6 +47,20 @@ public struct Device: Decodable {
         self.osVersion = try container.decodeIfPresent(String.self, forKey: .osVersion)
         self.uid = try container.decodeIfPresent(String.self, forKey: .uid)
     }
+
+    public init(agent: String? = nil, browser: String? = nil, current: Bool? = nil, deviceType: String? = nil, id: Int? = nil, ip: String? = nil, language: String? = nil, lastAccessTime: Int? = nil, os: String? = nil, osVersion: String? = nil, uid: String? = nil) {
+        self.agent = agent
+        self.browser = browser
+        self.current = current
+        self.deviceType = deviceType
+        self.id = id
+        self.ip = ip
+        self.language = language
+        self.lastAccessTime = lastAccessTime
+        self.os = os
+        self.osVersion = osVersion
+        self.uid = uid
+    }
 }
 
 public struct DevicesResposne: Decodable {
@@ -68,5 +82,12 @@ public struct DevicesResposne: Decodable {
         self.offset = try container.decodeIfPresent(Int.self, forKey: .offset)
         self.size = try container.decodeIfPresent(Int.self, forKey: .size)
         self.total = try container.decodeIfPresent(Int.self, forKey: .total)
+    }
+
+    public init(devices: [Device]? = nil, offset: Int? = nil, size: Int? = nil, total: Int? = nil) {
+        self.devices = devices
+        self.offset = offset
+        self.size = size
+        self.total = total
     }
 }

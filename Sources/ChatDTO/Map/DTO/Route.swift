@@ -20,6 +20,11 @@ public struct Route: Decodable {
         self.overviewPolyline = try container.decodeIfPresent(OverviewPolyline.self, forKey: .overviewPolyline)
         self.legs = try container.decodeIfPresent([Leg].self, forKey: .legs)
     }
+
+    public init(overviewPolyline: OverviewPolyline? = nil, legs: [Leg]? = nil) {
+        self.overviewPolyline = overviewPolyline
+        self.legs = legs
+    }
 }
 
 public struct Leg: Decodable {
@@ -42,6 +47,13 @@ public struct Leg: Decodable {
         self.duration = try container.decodeIfPresent(Duration.self, forKey: .duration)
         self.steps = try container.decodeIfPresent([Step].self, forKey: .steps)
     }
+
+    public init(summary: String? = nil, distance: Distance? = nil, duration: Duration? = nil, steps: [Step]? = nil) {
+        self.summary = summary
+        self.distance = distance
+        self.duration = duration
+        self.steps = steps
+    }
 }
 
 public struct OverviewPolyline: Decodable {
@@ -54,6 +66,10 @@ public struct OverviewPolyline: Decodable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.points = try container.decodeIfPresent(String.self, forKey: .points)
+    }
+
+    public init(points: String? = nil) {
+        self.points = points
     }
 }
 
@@ -71,6 +87,11 @@ public struct Distance: Decodable {
         self.value = try container.decodeIfPresent(Double.self, forKey: .value)
         self.text = try container.decodeIfPresent(String.self, forKey: .text)
     }
+
+    public init(value: Double? = nil, text: String? = nil) {
+        self.value = value
+        self.text = text
+    }
 }
 
 public struct Duration: Decodable {
@@ -86,6 +107,11 @@ public struct Duration: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.value = try container.decodeIfPresent(Double.self, forKey: .value)
         self.text = try container.decodeIfPresent(String.self, forKey: .text)
+    }
+
+    public init(value: Double? = nil, text: String? = nil) {
+        self.value = value
+        self.text = text
     }
 }
 
@@ -117,5 +143,15 @@ public struct Step: Decodable {
         self.duration = try container.decodeIfPresent(Duration.self, forKey: .duration)
         self.startLocation = try container.decodeIfPresent([Double].self, forKey: .startLocation)
         self.maneuver = try container.decodeIfPresent(String.self, forKey: .maneuver)
+    }
+
+    public init(name: String? = nil, instruction: String? = nil, rotaryName: String? = nil, distance: Distance? = nil, duration: Duration? = nil, startLocation: [Double]? = nil, maneuver: String? = nil) {
+        self.name = name
+        self.instruction = instruction
+        self.rotaryName = rotaryName
+        self.distance = distance
+        self.duration = duration
+        self.startLocation = startLocation
+        self.maneuver = maneuver
     }
 }

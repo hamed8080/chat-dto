@@ -42,4 +42,12 @@ public struct SystemEventMessageModel: Codable {
         try container.encode(self.ssoId, forKey: .ssoId)
         try container.encode(self.user, forKey: .user)
     }
+
+    public init(coreUserId: Int64, smt: SMT, userId: Int, ssoId: String, user: String) {
+        self.coreUserId = coreUserId
+        self.smt = smt
+        self.userId = userId
+        self.ssoId = ssoId
+        self.user = user
+    }
 }

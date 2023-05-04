@@ -76,4 +76,12 @@ public struct FileOwner: Decodable {
         self.avatar = try container.decodeIfPresent(String.self, forKey: .avatar)
         self.roles = try container.decode([String].self, forKey: .roles)
     }
+
+    public init(username: String? = nil, name: String? = nil, ssoId: Int? = nil, avatar: String? = nil, roles: [String]) {
+        self.username = username
+        self.name = name
+        self.ssoId = ssoId
+        self.avatar = avatar
+        self.roles = roles
+    }
 }

@@ -14,7 +14,7 @@ public struct GetUserBotsRequest: Encodable, UniqueIdProtocol {
         self.uniqueId = uniqueId
     }
 
-    enum CodingKeys: CodingKey {
+    private enum CodingKeys: CodingKey {
         case uniqueId
     }
 

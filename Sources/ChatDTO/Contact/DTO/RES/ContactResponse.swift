@@ -23,4 +23,9 @@ public struct ContactResponse: Decodable {
         }
         contentCount = try container.decodeIfPresent(Int.self, forKey: .contentCount) ?? 0
     }
+
+    public init(contentCount: Int = 0, contacts: [Contact] = []) {
+        self.contentCount = contentCount
+        self.contacts = contacts
+    }
 }

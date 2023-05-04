@@ -18,7 +18,7 @@ public struct CreateThreadWithMessage: Encodable, UniqueIdProtocol {
     public var uniqueId: String
     public var message: CreateThreadMessage
 
-    init(description: String?,
+    public init(description: String?,
          image: String?,
          invitees: [Invitee]?,
          metadata: String?,

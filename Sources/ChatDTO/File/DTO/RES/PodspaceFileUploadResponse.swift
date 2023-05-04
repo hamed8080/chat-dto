@@ -40,6 +40,16 @@ public struct PodspaceFileUploadResponse: Decodable {
         self.timestamp = try container.decodeIfPresent(String.self, forKey: .timestamp)
         self.reference = try container.decodeIfPresent(String.self, forKey: .reference)
     }
+
+    public init(status: Int, path: String? = nil, error: String? = nil, message: String? = nil, result: UploadFileResponse? = nil, timestamp: String? = nil, reference: String? = nil) {
+        self.status = status
+        self.path = path
+        self.error = error
+        self.message = message
+        self.result = result
+        self.timestamp = timestamp
+        self.reference = reference
+    }
 }
 
 public enum FileUploadError: Int {

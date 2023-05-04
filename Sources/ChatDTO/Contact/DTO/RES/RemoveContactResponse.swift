@@ -6,6 +6,7 @@
 
 
 import Foundation
+
 public struct RemoveContactResponse: Decodable {
     public var deteled: Bool
 
@@ -16,5 +17,9 @@ public struct RemoveContactResponse: Decodable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         deteled = try container.decodeIfPresent(Bool.self, forKey: .result) ?? false
+    }
+
+    public init(deteled: Bool) {
+        self.deteled = deteled
     }
 }

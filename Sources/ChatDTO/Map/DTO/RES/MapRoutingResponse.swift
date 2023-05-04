@@ -17,4 +17,8 @@ public struct MapRoutingResponse: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         routes = try container.decodeIfPresent([Route].self, forKey: .routes) ?? nil
     }
+
+    public init(routes: [Route]? = nil) {
+        self.routes = routes
+    }
 }

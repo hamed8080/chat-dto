@@ -23,4 +23,9 @@ public struct PublicThreadNameAvailableResponse: Decodable {
             name = dictionary["name"]
         }
     }
+
+    public init(uniqueName: String? = nil, name: String? = nil) {
+        self.uniqueName = uniqueName
+        self.name = name
+    }
 }

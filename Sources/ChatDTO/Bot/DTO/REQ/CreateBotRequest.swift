@@ -22,7 +22,7 @@ public struct CreateBotRequest: Encodable, UniqueIdProtocol {
         self.uniqueId = uniqueId
     }
 
-    enum CodingKeys: CodingKey {
+    private enum CodingKeys: CodingKey {
         case botName
     }
 

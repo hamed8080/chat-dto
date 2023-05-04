@@ -21,4 +21,10 @@ public struct LastSeenMessageResponse: Decodable {
         id = try container?.decodeIfPresent(Int.self, forKey: .id)
         unreadCount = try container?.decodeIfPresent(Int.self, forKey: .unreadCount) ?? 0
     }
+
+    public init(id: Int? = nil, uniqueId: String? = nil, unreadCount: Int? = nil) {
+        self.id = id
+        self.uniqueId = uniqueId
+        self.unreadCount = unreadCount
+    }
 }

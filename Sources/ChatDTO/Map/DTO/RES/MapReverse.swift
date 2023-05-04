@@ -35,4 +35,14 @@ public struct MapReverse: Codable {
         municipalityZone = (try? container.decodeIfPresent(String.self, forKey: .municipalityZone)) ?? nil
         state = (try? container.decodeIfPresent(String.self, forKey: .state)) ?? nil
     }
+
+    public init(address: String? = nil, city: String? = nil, neighbourhood: String? = nil, inOddEvenZone: Bool? = nil, inTrafficZone: Bool? = nil, municipalityZone: String? = nil, state: String? = nil) {
+        self.address = address
+        self.city = city
+        self.neighbourhood = neighbourhood
+        self.inOddEvenZone = inOddEvenZone
+        self.inTrafficZone = inTrafficZone
+        self.municipalityZone = municipalityZone
+        self.state = state
+    }
 }

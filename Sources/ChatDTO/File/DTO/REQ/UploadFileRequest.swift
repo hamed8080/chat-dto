@@ -4,7 +4,9 @@
 //
 // Created by Hamed Hosseini on 12/14/22
 
+#if canImport(CoreServices)
 import CoreServices
+#endif
 import Foundation
 import UniformTypeIdentifiers
 
@@ -46,13 +48,15 @@ public struct UploadFileRequest: Encodable, UniqueIdProtocol {
 
     static func guessMimeType(_ fileExtension: String?, _ fileName: String?) -> String {
         let ext = fileExtension ?? URL(fileURLWithPath: fileName ?? "").pathExtension
-        var mimeType: String?
         if #available(iOS 14.0, *) {
-            mimeType = UTType(filenameExtension: ext)?.preferredMIMEType
-        } else if let uti = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, ext as NSString, nil)?.takeRetainedValue() {
-            mimeType = UTTypeCopyPreferredTagWithClass(uti, kUTTagClassMIMEType)?.takeRetainedValue() as? String
+            return UTType(filenameExtension: ext)?.preferredMIMEType ?? "application/octet-stream"
         }
-        return mimeType ?? "application/octet-stream"
+        #if canImport(CoreServices)
+            if let uti = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, ext as NSString, nil)?.takeRetainedValue() {
+                return UTTypeCopyPreferredTagWithClass(uti, kUTTagClassMIMEType)?.takeRetainedValue() as? String ?? "application/octet-stream"
+            }
+        #endif
+        return "application/octet-stream"
     }
 
     private enum CodingKeys: String, CodingKey {

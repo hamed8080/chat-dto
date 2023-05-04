@@ -20,6 +20,11 @@ public struct MapSearchResponse: Decodable {
         count = (try container.decodeIfPresent(Int.self, forKey: .count)) ?? 0
         items = (try container.decodeIfPresent([MapItem].self, forKey: .items)) ?? nil
     }
+
+    public init(count: Int, items: [MapItem]? = nil) {
+        self.count = count
+        self.items = items
+    }
 }
 
 public struct MapItem: Codable {
@@ -51,6 +56,16 @@ public struct MapItem: Codable {
         self.location = try container.decodeIfPresent(Location.self, forKey: .location)
         self.neighbourhood = try container.decodeIfPresent(String.self, forKey: .neighbourhood)
     }
+
+    public init(address: String? = nil, category: String? = nil, region: String? = nil, type: String? = nil, title: String? = nil, location: Location? = nil, neighbourhood: String? = nil) {
+        self.address = address
+        self.category = category
+        self.region = region
+        self.type = type
+        self.title = title
+        self.location = location
+        self.neighbourhood = neighbourhood
+    }
 }
 
 public struct Location: Codable {
@@ -66,5 +81,10 @@ public struct Location: Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.x = try container.decode(Double.self, forKey: .x)
         self.y = try container.decode(Double.self, forKey: .y)
+    }
+
+    public init(x: Double, y: Double) {
+        self.x = x
+        self.y = y
     }
 }
