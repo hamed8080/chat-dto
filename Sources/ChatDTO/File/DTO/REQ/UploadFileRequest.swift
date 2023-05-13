@@ -7,8 +7,10 @@
 #if canImport(CoreServices)
 import CoreServices
 #endif
-import Foundation
+#if canImport(UniformTypeIdentifiers)
 import UniformTypeIdentifiers
+#endif
+import Foundation
 
 public struct UploadFileRequest: Encodable, UniqueIdProtocol {
     public var data: Data
@@ -48,13 +50,15 @@ public struct UploadFileRequest: Encodable, UniqueIdProtocol {
 
     static func guessMimeType(_ fileExtension: String?, _ fileName: String?) -> String {
         let ext = fileExtension ?? URL(fileURLWithPath: fileName ?? "").pathExtension
+        #if canImport(UniformTypeIdentifiers)
         if #available(iOS 14.0, *) {
             return UTType(filenameExtension: ext)?.preferredMIMEType ?? "application/octet-stream"
         }
+        #endif
         #if canImport(CoreServices)
-            if let uti = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, ext as NSString, nil)?.takeRetainedValue() {
-                return UTTypeCopyPreferredTagWithClass(uti, kUTTagClassMIMEType)?.takeRetainedValue() as? String ?? "application/octet-stream"
-            }
+        if let uti = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, ext as NSString, nil)?.takeRetainedValue() {
+            return UTTypeCopyPreferredTagWithClass(uti, kUTTagClassMIMEType)?.takeRetainedValue() as? String ?? "application/octet-stream"
+        }
         #endif
         return "application/octet-stream"
     }

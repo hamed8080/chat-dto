@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.swift_versions = "4.0"
   s.source       = { :git => "https://pubgi.fanapsoft.ir/chat/ios/chat-dto", :tag => s.version }
   s.source_files = "Sources/ChatDTO/**/*.{h,swift,xcdatamodeld,m,momd}"
-  s.frameworks  = "Foundation"
+  s.frameworks  = "Foundation", "CoreServices"
   s.dependency "ChatModels" , '1.0.2'
 end
