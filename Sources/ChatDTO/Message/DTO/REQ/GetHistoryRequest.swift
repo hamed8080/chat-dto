@@ -33,7 +33,7 @@ public struct GetHistoryRequest: Encodable, UniqueIdProtocol {
     public var historyEndTime: UInt?
     public var readOnly: Bool = false
     public var newMessages: Bool?
-    public var uniqueId: String
+    public let uniqueId: String
 
     /// - Parameters:
     ///   - readOnly: This property prevent to write to cache when you only need to view messages of a thread pass true if you need to only view messages.

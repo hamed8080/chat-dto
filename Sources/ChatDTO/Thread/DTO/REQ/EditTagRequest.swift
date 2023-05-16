@@ -9,7 +9,7 @@ import Foundation
 public struct EditTagRequest: Encodable, UniqueIdProtocol {
     public var name: String
     public var id: Int
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(id: Int, tagName: String, uniqueId: String = UUID().uuidString) {
         self.id = id

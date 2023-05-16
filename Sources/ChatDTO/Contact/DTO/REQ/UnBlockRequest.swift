@@ -10,7 +10,7 @@ public struct UnBlockRequest: Encodable, UniqueIdProtocol {
     public let contactId: Int?
     public let threadId: Int?
     public let userId: Int?
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(contactId: Int? = nil,
                 threadId: Int? = nil,

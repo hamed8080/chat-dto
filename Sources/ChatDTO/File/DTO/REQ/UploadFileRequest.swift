@@ -24,12 +24,12 @@ public struct UploadFileRequest: Encodable, UniqueIdProtocol {
     public var userGroupHash: String?
     public var description: String?
     public var typeCode: String?
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(data: Data,
                 fileExtension: String? = nil,
                 fileName: String? = nil,
-                description _: String? = nil,
+                description: String? = nil,
                 isPublic: Bool? = nil,
                 mimeType: String? = nil,
                 originalName: String? = nil,
@@ -46,6 +46,7 @@ public struct UploadFileRequest: Encodable, UniqueIdProtocol {
         self.originalName = originalName ?? fileName + (fileExtension ?? "")
         self.isPublic = userGroupHash != nil ? false : isPublic // if send file iniside the thread we need to set is isPublic to false
         self.uniqueId = uniqueId
+        self.description = description
     }
 
     static func guessMimeType(_ fileExtension: String?, _ fileName: String?) -> String {

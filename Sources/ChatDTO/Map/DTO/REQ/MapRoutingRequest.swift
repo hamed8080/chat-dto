@@ -21,7 +21,7 @@ public struct MapRoutingRequest: Encodable, UniqueIdProtocol {
     public var alternative: Bool = true
     private let destination: Coordinate
     private let origin: Coordinate
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(alternative: Bool?, origin: Coordinate, destination: Coordinate, uniqueId: String = UUID().uuidString) {
         self.alternative = alternative ?? true

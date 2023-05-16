@@ -18,7 +18,7 @@ public struct ContactsRequest: Encodable, UniqueIdProtocol {
     public let order: String?
     public let query: String?
     public var summery: Bool?
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(id: Int? = nil,
                 count: Int = 50,

@@ -18,7 +18,7 @@ public struct UploadImageRequest: Encodable, UniqueIdProtocol {
     public var userGroupHash: String?
     public var description: String?
     public var typeCode: String?
-    public var uniqueId: String
+    public let uniqueId: String
 
     public var xC: Int = 0
     public var yC: Int = 0

@@ -9,7 +9,7 @@ import Foundation
 public struct MessageDeliverRequest: Encodable, UniqueIdProtocol {
     public let messageId: String
     public let threadId: Int?
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(messageId: Int, threadId: Int?, uniqueId: String = UUID().uuidString) {
         self.messageId = "\(messageId)"

@@ -9,13 +9,19 @@ import ChatModels
 
 public struct SystemEventMessageModel: Codable {
     public let coreUserId: Int64
-
     /// System message type.
     public let smt: SMT
-
     public let userId: Int
     public let ssoId: String
     public let user: String
+
+    public init(coreUserId: Int64, smt: SMT, userId: Int, ssoId: String, user: String) {
+        self.coreUserId = coreUserId
+        self.smt = smt
+        self.userId = userId
+        self.ssoId = ssoId
+        self.user = user
+    }
 
     private enum CodingKeys: CodingKey {
         case coreUserId
@@ -41,13 +47,5 @@ public struct SystemEventMessageModel: Codable {
         try container.encode(self.userId, forKey: .userId)
         try container.encode(self.ssoId, forKey: .ssoId)
         try container.encode(self.user, forKey: .user)
-    }
-
-    public init(coreUserId: Int64, smt: SMT, userId: Int, ssoId: String, user: String) {
-        self.coreUserId = coreUserId
-        self.smt = smt
-        self.userId = userId
-        self.ssoId = ssoId
-        self.user = user
     }
 }

@@ -12,8 +12,7 @@ public struct AddParticipantRequest: Encodable, UniqueIdProtocol {
     public var idType: InviteeTypes?
     public var threadId: Int
     public var contactIds: [Int]?
-    public var subjectId: Int { threadId }
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(userName: String, threadId: Int, uniqueId: String = UUID().uuidString) {
         idType = .username

@@ -11,7 +11,7 @@ public struct MentionRequest: Encodable, UniqueIdProtocol {
     public var offset: Int = 0
     public let threadId: Int
     public let onlyUnreadMention: Bool
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(threadId: Int,
                 onlyUnreadMention: Bool,

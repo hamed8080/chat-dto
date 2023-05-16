@@ -10,7 +10,7 @@ public struct MapSearchRequest: Encodable, UniqueIdProtocol {
     public let lat: Double
     public let lng: Double
     public let term: String
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(lat: Double,
                 lng: Double,

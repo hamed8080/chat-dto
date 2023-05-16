@@ -9,7 +9,7 @@ import Foundation
 public struct RemoveParticipantsRequest: Encodable, UniqueIdProtocol {
     public let participantIds: [Int]
     public let threadId: Int
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(participantId: Int, threadId: Int, uniqueId: String = UUID().uuidString) {
         self.threadId = threadId

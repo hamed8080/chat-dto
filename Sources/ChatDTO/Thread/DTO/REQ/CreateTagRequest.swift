@@ -8,7 +8,7 @@ import Foundation
 
 public struct CreateTagRequest: Encodable, UniqueIdProtocol {
     public var name: String
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(tagName: String, uniqueId: String = UUID().uuidString) {
         name = tagName

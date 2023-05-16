@@ -10,7 +10,7 @@ import ChatModels
 public struct RemoveCallParticipantsRequest: Encodable, UniqueIdProtocol {
     public let callId: Int
     public var userIds: [Int]
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(callId: Int, userIds: [Int], uniqueId: String = UUID().uuidString) {
         self.callId = callId

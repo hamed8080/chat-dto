@@ -9,7 +9,7 @@ import Foundation
 public struct AuditorRequest: Encodable, UniqueIdProtocol {
     public let userRoles: [UserRoleRequest]
     public let threadId: Int
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(userRoleRequest: UserRoleRequest, threadId: Int, uniqueId: String = UUID().uuidString) {
         self.userRoles = [userRoleRequest]

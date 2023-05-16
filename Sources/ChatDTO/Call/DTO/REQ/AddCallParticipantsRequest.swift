@@ -12,7 +12,7 @@ public struct AddCallParticipantsRequest: Encodable, UniqueIdProtocol {
     public var contactIds: [Int]?
     public var userNames: [Invitee]?
     public var coreuserIds: [Invitee]?
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(callId: Int, uniqueId: String = UUID().uuidString) {
         self.callId = callId

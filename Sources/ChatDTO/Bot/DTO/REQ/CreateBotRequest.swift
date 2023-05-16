@@ -10,8 +10,8 @@ import Foundation
 /// Create bot request.
 public struct CreateBotRequest: Encodable, UniqueIdProtocol {
     /// The name of the bot you want to create.
-    public var botName: String
-    public var uniqueId: String
+    public let botName: String
+    public let uniqueId: String
 
     /// Initializer.
     /// - Parameters:

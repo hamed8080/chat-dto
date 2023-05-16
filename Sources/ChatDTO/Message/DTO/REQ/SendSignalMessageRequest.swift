@@ -10,7 +10,7 @@ import ChatModels
 public struct SendSignalMessageRequest: Encodable, UniqueIdProtocol {
     public let signalType: SignalMessageType
     public let threadId: Int
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(signalType: SignalMessageType, threadId: Int, uniqueId: String = UUID().uuidString) {
         self.signalType = signalType

@@ -9,7 +9,7 @@ import ChatModels
 
 public struct JoinPublicThreadRequest: Encodable, UniqueIdProtocol {
     public var threadName: String
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(threadName: String, uniqueId: String = UUID().uuidString) {
         self.threadName = threadName

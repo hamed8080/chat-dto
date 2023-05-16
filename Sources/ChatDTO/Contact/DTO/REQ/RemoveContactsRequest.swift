@@ -9,11 +9,12 @@ import Foundation
 public struct RemoveContactsRequest: Encodable, UniqueIdProtocol {
     public let contactId: Int
     public var typeCode: String?
-    public var uniqueId: String
+    public let uniqueId: String
 
-    public init(contactId: Int, uniqueId: String = UUID().uuidString) {
+    public init(contactId: Int, typeCode: String? = nil, uniqueId: String = UUID().uuidString) {
         self.contactId = contactId
         self.uniqueId = uniqueId
+        self.typeCode = typeCode
     }
 
     private enum CodingKeys: String, CodingKey {

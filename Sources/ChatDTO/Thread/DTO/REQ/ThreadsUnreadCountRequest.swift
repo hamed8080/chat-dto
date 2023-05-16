@@ -8,7 +8,7 @@ import Foundation
 
 public struct ThreadsUnreadCountRequest: Encodable, UniqueIdProtocol {
     public let threadIds: [Int]
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(threadIds: [Int], uniqueId: String = UUID().uuidString) {
         self.threadIds = threadIds

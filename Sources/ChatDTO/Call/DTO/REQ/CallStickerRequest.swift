@@ -10,7 +10,7 @@ import ChatModels
 public struct CallStickerRequest: Encodable, UniqueIdProtocol {
     public let callId: Int
     public let stickers: [CallSticker]
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(callId: Int, stickers: [CallSticker], uniqueId: String = UUID().uuidString) {
         self.callId = callId

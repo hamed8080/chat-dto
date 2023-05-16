@@ -10,7 +10,7 @@ public struct MessageSeenByUsersRequest: Encodable, UniqueIdProtocol {
     public let messageId: Int
     public let offset: Int
     public let count: Int
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(messageId: Int, count: Int = 25, offset: Int = 0, uniqueId: String = UUID().uuidString) {
         self.messageId = messageId

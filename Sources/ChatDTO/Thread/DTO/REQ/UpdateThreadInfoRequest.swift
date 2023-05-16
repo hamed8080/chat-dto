@@ -12,7 +12,7 @@ public struct UpdateThreadInfoRequest: Encodable, UniqueIdProtocol {
     public var threadImage: UploadImageRequest?
     public let threadId: Int
     public let title: String?
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(description: String? = nil,
                 metadata: String? = nil,

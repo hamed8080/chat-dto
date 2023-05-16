@@ -9,8 +9,7 @@ import Foundation
 public struct DeleteMessageRequest: Encodable, UniqueIdProtocol {
     public let deleteForAll: Bool
     public let messageId: Int
-    public var subjectId: Int { messageId }
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(deleteForAll: Bool? = false,
                 messageId: Int,

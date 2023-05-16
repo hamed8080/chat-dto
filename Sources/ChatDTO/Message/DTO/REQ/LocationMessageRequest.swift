@@ -21,7 +21,7 @@ public struct LocationMessageRequest: Encodable, UniqueIdProtocol {
     public let threadId: Int
     public let userGroupHash: String
     public let messageType: MessageType
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(mapCenter: Coordinate,
                 threadId: Int,

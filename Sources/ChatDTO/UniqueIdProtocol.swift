@@ -7,5 +7,5 @@
 import Foundation
 
 public protocol UniqueIdProtocol: Encodable {
-    var uniqueId: String { get set }
+    var uniqueId: String { get }
 }

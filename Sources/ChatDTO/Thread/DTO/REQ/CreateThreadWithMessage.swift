@@ -15,16 +15,16 @@ public struct CreateThreadWithMessage: Encodable, UniqueIdProtocol {
     public let title: String
     public let type: ThreadTypes?
     public let uniqueName: String? // only for public thread
-    public var uniqueId: String
+    public let uniqueId: String
     public var message: CreateThreadMessage
 
-    public init(description: String?,
-         image: String?,
-         invitees: [Invitee]?,
-         metadata: String?,
+    public init(description: String? = nil,
+         image: String? = nil,
+         invitees: [Invitee]? = nil,
+         metadata: String? = nil,
          title: String,
-         type: ThreadTypes?,
-         uniqueName: String?,
+         type: ThreadTypes? = nil,
+         uniqueName: String? = nil,
          uniqueId: String = UUID().uuidString,
          message: CreateThreadMessage) {
         self.description = description

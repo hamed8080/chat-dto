@@ -8,7 +8,7 @@ import Foundation
 
 public struct GetTagParticipantsRequest: Encodable, UniqueIdProtocol {
     public var id: Int
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(id: Int, uniqueId: String = UUID().uuidString) {
         self.id = id

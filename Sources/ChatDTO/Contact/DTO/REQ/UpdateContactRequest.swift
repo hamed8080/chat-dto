@@ -13,8 +13,8 @@ public struct UpdateContactRequest: Encodable, UniqueIdProtocol {
     public let id: Int
     public let lastName: String
     public let username: String
-    internal var typeCode: String?
-    public var uniqueId: String
+    public let typeCode: String?
+    public let uniqueId: String
 
     public init(cellphoneNumber: String,
                 email: String,
@@ -22,6 +22,7 @@ public struct UpdateContactRequest: Encodable, UniqueIdProtocol {
                 id: Int,
                 lastName: String,
                 username: String,
+                typeCode: String? = nil,
                 uniqueId: String = UUID().uuidString)
     {
         self.cellphoneNumber = cellphoneNumber
@@ -31,6 +32,7 @@ public struct UpdateContactRequest: Encodable, UniqueIdProtocol {
         self.lastName = lastName
         self.username = username
         self.uniqueId = uniqueId
+        self.typeCode = typeCode
     }
 
     private enum CodingKeys: String, CodingKey {

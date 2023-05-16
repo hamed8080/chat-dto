@@ -18,7 +18,7 @@ public enum StatusPingType: Int, Encodable, Identifiable, CaseIterable {
 public struct SendStatusPingRequest: Encodable, UniqueIdProtocol {
     public let statusType: StatusPingType
     public let id: Int?
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(statusType: StatusPingType, uniqueId: String = UUID().uuidString) {
         id = nil

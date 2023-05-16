@@ -9,7 +9,7 @@ import Foundation
 public struct SafeLeaveThreadRequest: Encodable, UniqueIdProtocol {
     public let threadId: Int
     public let clearHistory: Bool?
-    public var uniqueId: String
+    public let uniqueId: String
     public let participantId: Int
 
     public init(threadId: Int, participantId: Int, clearHistory: Bool? = false, uniqueId: String = UUID().uuidString) {

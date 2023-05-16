@@ -13,7 +13,7 @@ public struct StartCallRequest: Encodable, UniqueIdProtocol {
     public let type: CallType
     public let client: SendClient
     public let createCallThreadRequest: CreateCallThreadRequest?
-    public var uniqueId: String
+    public let uniqueId: String
     public var thread: Conversation?
     public var contacts: [Contact]?
     public var isVideoOn: Bool { type == .videoCall }

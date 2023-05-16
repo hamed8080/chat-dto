@@ -20,7 +20,7 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
     public var metadataCriteria: String?
     public var isGroup: Bool?
     public var type: ThreadTypes?
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(count: Int = 25,
                 offset: Int = 0,

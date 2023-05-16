@@ -8,7 +8,6 @@ import Foundation
 
 public struct LastSeenMessageResponse: Decodable {
     public let id: Int?
-    public var uniqueId: String?
     public let unreadCount: Int?
 
     private enum CodingKeys: CodingKey {
@@ -22,9 +21,8 @@ public struct LastSeenMessageResponse: Decodable {
         unreadCount = try container?.decodeIfPresent(Int.self, forKey: .unreadCount) ?? 0
     }
 
-    public init(id: Int? = nil, uniqueId: String? = nil, unreadCount: Int? = nil) {
+    public init(id: Int? = nil, unreadCount: Int? = nil) {
         self.id = id
-        self.uniqueId = uniqueId
         self.unreadCount = unreadCount
     }
 }

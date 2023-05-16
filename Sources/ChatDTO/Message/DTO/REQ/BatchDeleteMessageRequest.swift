@@ -11,7 +11,7 @@ public struct BatchDeleteMessageRequest: Encodable, UniqueIdProtocol {
     let deleteForAll: Bool
     let messageIds: [Int]
     public let uniqueIds: [String]
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(threadId: Int, messageIds: [Int], deleteForAll: Bool = false, uniqueIds: [String]? = nil, uniqueId: String = UUID().uuidString) {
         self.threadId = threadId

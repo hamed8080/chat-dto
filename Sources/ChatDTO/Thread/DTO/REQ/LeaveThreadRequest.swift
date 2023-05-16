@@ -9,7 +9,7 @@ import Foundation
 public struct LeaveThreadRequest: Encodable, UniqueIdProtocol {
     public let threadId: Int
     public let clearHistory: Bool?
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(threadId: Int, clearHistory: Bool? = false, uniqueId: String = UUID().uuidString) {
         self.clearHistory = clearHistory

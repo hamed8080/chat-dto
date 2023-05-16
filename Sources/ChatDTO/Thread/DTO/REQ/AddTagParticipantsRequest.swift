@@ -9,7 +9,7 @@ import Foundation
 public struct AddTagParticipantsRequest: Encodable, UniqueIdProtocol {
     public var tagId: Int
     public var threadIds: [Int]
-    public var uniqueId: String
+    public let uniqueId: String
     
     public init(tagId: Int, threadIds: [Int], uniqueId: String = UUID().uuidString) {
         self.threadIds = threadIds

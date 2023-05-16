@@ -7,7 +7,7 @@
 import Foundation
 
 public struct UserInfoRequest: Encodable, UniqueIdProtocol {
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(uniqueId: String = UUID().uuidString) {
         self.uniqueId = uniqueId

@@ -12,7 +12,7 @@ public struct CreateCallThreadRequest: Encodable, UniqueIdProtocol {
     public let description: String?
     public let metadata: String?
     public let uniqueName: String?
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(title: String? = nil, image: String? = nil, description: String? = nil, metadata: String? = nil, uniqueName: String? = nil, uniqueId: String = UUID().uuidString) {
         self.title = title

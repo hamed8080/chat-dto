@@ -9,7 +9,7 @@ import ChatModels
 
 public struct RegisterAssistantRequest: Encodable, UniqueIdProtocol {
     public let assistants: [Assistant]
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(assistants: [Assistant], uniqueId: String = UUID().uuidString) {
         self.assistants = assistants

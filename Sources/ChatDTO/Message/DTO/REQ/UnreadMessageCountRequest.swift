@@ -8,7 +8,7 @@ import Foundation
 
 public struct UnreadMessageCountRequest: Encodable, UniqueIdProtocol {
     let countMutedThreads: Bool
-    public var uniqueId: String
+    public let uniqueId: String
 
     public init(countMutedThreads: Bool = false, uniqueId: String = UUID().uuidString) {
         self.countMutedThreads = countMutedThreads

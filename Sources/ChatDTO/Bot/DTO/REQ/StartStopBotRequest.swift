@@ -14,7 +14,7 @@ public struct StartStopBotRequest: Encodable, UniqueIdProtocol  {
     /// The id of the thread you want to stop this bot.
     public let threadId: Int
 
-    public var uniqueId: String
+    public let uniqueId: String
 
     /// The initializer.
     /// - Parameters:
