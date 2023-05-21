@@ -10,9 +10,9 @@ public struct MessageDeliveredUsersRequest: Encodable, UniqueIdProtocol {
     public let messageId: Int
     public let offset: Int
     public let count: Int
-    public let uniqueId: String
+    public let uniqueId: String?
 
-    public init(messageId: Int, count: Int = 25, offset: Int = 0, uniqueId: String = UUID().uuidString) {
+    public init(messageId: Int, count: Int = 25, offset: Int = 0, uniqueId: String? = nil) {
         self.messageId = messageId
         self.offset = offset
         self.count = count

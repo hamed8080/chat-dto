@@ -12,14 +12,14 @@ public struct UpdateThreadInfoRequest: Encodable, UniqueIdProtocol {
     public var threadImage: UploadImageRequest?
     public let threadId: Int
     public let title: String?
-    public let uniqueId: String
+    public let uniqueId: String?
 
     public init(description: String? = nil,
                 metadata: String? = nil,
                 threadId: Int,
                 threadImage: UploadImageRequest? = nil,
                 title: String,
-                uniqueId: String = UUID().uuidString)
+                uniqueId: String? = nil)
     {
         self.description = description
         self.metadata = metadata

@@ -13,7 +13,7 @@ public struct MapStaticImageRequest: Encodable, UniqueIdProtocol {
     public var type: String = "standard-night"
     public var width: Int = 800
     public var zoom: Int = 15
-    public let uniqueId: String
+    public let uniqueId: String?
 
     public init(center: Coordinate,
                 key: String? = nil,
@@ -21,7 +21,7 @@ public struct MapStaticImageRequest: Encodable, UniqueIdProtocol {
                 width: Int = 800,
                 zoom: Int = 15,
                 type: String = "standard-night",
-                uniqueId: String = UUID().uuidString
+                uniqueId: String? = nil
     )
     {
         self.center = "\(center.lat),\(center.lng)"

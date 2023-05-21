@@ -9,9 +9,9 @@ import Foundation
 public struct PinUnpinMessageRequest: Encodable, UniqueIdProtocol {
     public let messageId: Int
     public let notifyAll: Bool
-    public let uniqueId: String
+    public let uniqueId: String?
 
-    public init(messageId: Int, notifyAll: Bool = false, uniqueId: String = UUID().uuidString) {
+    public init(messageId: Int, notifyAll: Bool = false, uniqueId: String? = nil) {
         self.messageId = messageId
         self.notifyAll = notifyAll
         self.uniqueId = uniqueId

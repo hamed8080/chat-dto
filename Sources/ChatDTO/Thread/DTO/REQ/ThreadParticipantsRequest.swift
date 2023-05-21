@@ -15,7 +15,7 @@ public struct ThreadParticipantsRequest: Encodable, UniqueIdProtocol {
     public var cellphoneNumber: String?
     /// If it set to true the request only contains the list of admins of a thread.
     public var admin: Bool = false
-    public let uniqueId: String
+    public let uniqueId: String?
 
     public init(threadId: Int,
                 offset: Int = 0,
@@ -24,7 +24,7 @@ public struct ThreadParticipantsRequest: Encodable, UniqueIdProtocol {
                 admin: Bool = false,
                 cellphoneNumber: String? = nil,
                 username: String? = nil,
-                uniqueId: String = UUID().uuidString)
+                uniqueId: String? = nil)
     {
         self.count = count
         self.offset = offset

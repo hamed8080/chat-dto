@@ -9,9 +9,9 @@ import ChatModels
 
 public struct CancelCallRequest: Encodable, UniqueIdProtocol {
     public let call: Call
-    public let uniqueId: String
+    public let uniqueId: String?
 
-    public init(call: Call, uniqueId: String = UUID().uuidString) {
+    public init(call: Call, uniqueId: String? = nil) {
         self.call = call
         self.uniqueId = uniqueId
     }

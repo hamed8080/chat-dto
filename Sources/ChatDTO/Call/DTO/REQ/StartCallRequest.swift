@@ -13,7 +13,7 @@ public struct StartCallRequest: Encodable, UniqueIdProtocol {
     public let type: CallType
     public let client: SendClient
     public let createCallThreadRequest: CreateCallThreadRequest?
-    public let uniqueId: String
+    public let uniqueId: String?
     public var thread: Conversation?
     public var contacts: [Contact]?
     public var isVideoOn: Bool { type == .videoCall }
@@ -43,7 +43,7 @@ public struct StartCallRequest: Encodable, UniqueIdProtocol {
                 type: CallType,
                 groupName: String = "group",
                 createCallThreadRequest: CreateCallThreadRequest? = nil,
-                uniqueId: String = UUID().uuidString)
+                uniqueId: String? = nil)
     {
         self.contacts = contacts
         self.groupName = groupName

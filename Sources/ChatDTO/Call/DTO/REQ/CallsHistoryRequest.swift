@@ -16,7 +16,7 @@ public struct CallsHistoryRequest: Encodable, UniqueIdProtocol {
     public let creatorCoreUserId: Int?
     public let creatorSsoId: Int?
     public let threadId: Int?
-    public let uniqueId: String
+    public let uniqueId: String?
 
     public init(count: Int = 50,
                 offset: Int = 0,
@@ -26,7 +26,7 @@ public struct CallsHistoryRequest: Encodable, UniqueIdProtocol {
                 creatorCoreUserId: Int? = nil,
                 creatorSsoId: Int? = nil,
                 threadId: Int? = nil,
-                uniqueId: String = UUID().uuidString
+                uniqueId: String? = nil
     )
     {
         self.count = count

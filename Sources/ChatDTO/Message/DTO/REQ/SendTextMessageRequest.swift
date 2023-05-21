@@ -15,7 +15,7 @@ public struct SendTextMessageRequest: Encodable, UniqueIdProtocol {
     public let systemMetadata: String?
     public let textMessage: String
     public var threadId: Int
-    public let uniqueId: String
+    public let uniqueId: String?
     public var typeCode: String?
 
     public init(threadId: Int,
@@ -24,7 +24,7 @@ public struct SendTextMessageRequest: Encodable, UniqueIdProtocol {
                 metadata: String? = nil,
                 repliedTo: Int? = nil,
                 systemMetadata: String? = nil,
-                uniqueId: String = UUID().uuidString)
+                uniqueId: String? = nil)
     {
         self.messageType = messageType
         self.metadata = metadata

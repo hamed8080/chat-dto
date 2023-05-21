@@ -8,9 +8,9 @@ import Foundation
 
 public struct NotSeenDurationRequest: Encodable, UniqueIdProtocol {
     public let userIds: [Int]
-    public let uniqueId: String
+    public let uniqueId: String?
 
-    public init(userIds: [Int], uniqueId: String = UUID().uuidString) {
+    public init(userIds: [Int], uniqueId: String? = nil) {
         self.userIds = userIds
         self.uniqueId = uniqueId
     }

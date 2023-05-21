@@ -10,9 +10,9 @@ import ChatModels
 public struct RenewCallRequest: Encodable, UniqueIdProtocol{
     public let invitess: [Invitee]
     public let callId: Int
-    public let uniqueId: String
+    public let uniqueId: String?
 
-    public init(invitees: [Invitee], callId: Int, uniqueId: String = UUID().uuidString) {
+    public init(invitees: [Invitee], callId: Int, uniqueId: String? = nil) {
         invitess = invitees
         self.callId = callId
         self.uniqueId = uniqueId

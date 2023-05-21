@@ -13,14 +13,14 @@ public struct GetJoinCallsRequest: Encodable, UniqueIdProtocol {
     public let name: String?
     public let type: CallType?
     public let threadIds: [Int]
-    public let uniqueId: String
+    public let uniqueId: String?
 
     public init(threadIds: [Int],
                 offset: Int = 0,
                 count: Int = 50,
                 name: String? = nil,
                 type: CallType? = nil,
-                uniqueId: String = UUID().uuidString)
+                uniqueId: String? = nil)
     {
         self.offset = offset
         self.count = count

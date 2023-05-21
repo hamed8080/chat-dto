@@ -15,7 +15,7 @@ public struct EditMessageRequest: Encodable, UniqueIdProtocol {
     public let textMessage: String
     public let metadata: String?
     public let threadId: Int
-    public let uniqueId: String
+    public let uniqueId: String?
     public var typeCode: String?
 
     public init(threadId: Int,
@@ -24,7 +24,7 @@ public struct EditMessageRequest: Encodable, UniqueIdProtocol {
                 textMessage: String,
                 repliedTo: Int? = nil,
                 metadata: String? = nil,
-                uniqueId: String = UUID().uuidString)
+                uniqueId: String? = nil)
     {
         self.threadId = threadId
         self.messageType = messageType

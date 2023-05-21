@@ -15,7 +15,7 @@ public struct CreateThreadRequest: Encodable, UniqueIdProtocol {
     public let title: String
     public let type: ThreadTypes?
     public let uniqueName: String? // only for public thread
-    public let uniqueId: String
+    public let uniqueId: String?
 
     public init(description: String? = nil,
                 image: String? = nil,
@@ -24,7 +24,7 @@ public struct CreateThreadRequest: Encodable, UniqueIdProtocol {
                 title: String,
                 type: ThreadTypes? = nil,
                 uniqueName: String? = nil,
-                uniqueId: String = UUID().uuidString)
+                uniqueId: String? = nil)
     {
         self.description = description
         self.image = image

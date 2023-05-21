@@ -14,7 +14,7 @@ public struct AddContactRequest: Encodable, UniqueIdProtocol {
     public var ownerId: Int?
     public var username: String?
     public var typeCode: String?
-    public let uniqueId: String
+    public let uniqueId: String?
 
     public init(cellphoneNumber: String? = nil,
                 email: String? = nil,
@@ -22,7 +22,7 @@ public struct AddContactRequest: Encodable, UniqueIdProtocol {
                 lastName: String? = nil,
                 ownerId: Int? = nil,
                 typeCode: String? = nil,
-                uniqueId: String = UUID().uuidString)
+                uniqueId: String? = nil)
     {
         self.cellphoneNumber = cellphoneNumber
         self.email = email
@@ -41,7 +41,7 @@ public struct AddContactRequest: Encodable, UniqueIdProtocol {
                 ownerId: Int? = nil,
                 username: String? = nil,
                 typeCode: String? = nil,
-                uniqueId: String = UUID().uuidString)
+                uniqueId: String? = nil)
     {
         cellphoneNumber = nil
         self.email = email

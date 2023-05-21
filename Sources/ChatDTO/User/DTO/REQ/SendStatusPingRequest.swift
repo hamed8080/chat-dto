@@ -18,21 +18,21 @@ public enum StatusPingType: Int, Encodable, Identifiable, CaseIterable {
 public struct SendStatusPingRequest: Encodable, UniqueIdProtocol {
     public let statusType: StatusPingType
     public let id: Int?
-    public let uniqueId: String
+    public let uniqueId: String?
 
-    public init(statusType: StatusPingType, uniqueId: String = UUID().uuidString) {
+    public init(statusType: StatusPingType, uniqueId: String? = nil) {
         id = nil
         self.statusType = statusType
         self.uniqueId = uniqueId
     }
 
-    public init(statusType: StatusPingType, contactId: Int, uniqueId: String = UUID().uuidString) {
+    public init(statusType: StatusPingType, contactId: Int, uniqueId: String? = nil) {
         id = contactId
         self.statusType = statusType
         self.uniqueId = uniqueId
     }
 
-    public init(statusType: StatusPingType, threadId: Int, uniqueId: String = UUID().uuidString) {
+    public init(statusType: StatusPingType, threadId: Int, uniqueId: String? = nil) {
         id = threadId
         self.statusType = statusType
         self.uniqueId = uniqueId

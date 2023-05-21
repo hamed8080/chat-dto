@@ -9,9 +9,9 @@ import Foundation
 public struct UpdateChatProfile: Encodable, UniqueIdProtocol {
     public let bio: String?
     public let metadata: String?
-    public let uniqueId: String
+    public let uniqueId: String?
 
-    public init(bio: String?, metadata: String? = nil, uniqueId: String = UUID().uuidString) {
+    public init(bio: String?, metadata: String? = nil, uniqueId: String? = nil) {
         self.bio = bio
         self.metadata = metadata
         self.uniqueId = uniqueId

@@ -11,9 +11,9 @@ public struct ChangeThreadTypeRequest: Encodable, UniqueIdProtocol {
     public let uniqueName: String?
     public var threadId: Int
     public var type: ThreadTypes
-    public let uniqueId: String
+    public let uniqueId: String?
 
-    public init(threadId: Int, type: ThreadTypes, uniqueName: String? = nil, uniqueId: String = UUID().uuidString) {
+    public init(threadId: Int, type: ThreadTypes, uniqueName: String? = nil, uniqueId: String? = nil) {
         self.type = type
         self.threadId = threadId
         self.uniqueName = uniqueName

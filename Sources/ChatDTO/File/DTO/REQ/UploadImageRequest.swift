@@ -18,7 +18,7 @@ public struct UploadImageRequest: Encodable, UniqueIdProtocol {
     public var userGroupHash: String?
     public var description: String?
     public var typeCode: String?
-    public let uniqueId: String
+    public let uniqueId: String?
 
     public var xC: Int = 0
     public var yC: Int = 0
@@ -36,7 +36,7 @@ public struct UploadImageRequest: Encodable, UniqueIdProtocol {
                 userGroupHash: String? = nil,
                 description: String? = nil,
                 typeCode: String? = nil,
-                uniqueId: String = UUID().uuidString,
+                uniqueId: String? = nil,
                 xC: Int = 0,
                 yC: Int = 0,
                 hC: Int = 0,

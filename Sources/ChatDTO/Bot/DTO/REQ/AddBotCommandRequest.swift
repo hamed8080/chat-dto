@@ -10,14 +10,14 @@ public struct AddBotCommandRequest: Encodable, UniqueIdProtocol {
     /// The bot name.
     public let botName: String
     public let commandList: [String]
-    public let uniqueId: String
+    public let uniqueId: String?
 
     /// The initializer.
     /// - Parameters:
     ///   - botName: The bot name.
     ///   - commandList: List of commands.
     ///   - uniqueId: The unique id of request. If you manage the unique id by yourself you should leave this blank, otherwise, you must use it if you need to know what response is for what request.
-    public init(botName: String, commandList: [String] = [], uniqueId: String = UUID().uuidString) {
+    public init(botName: String, commandList: [String] = [], uniqueId: String? = nil) {
         self.botName = botName
         var arr: [String] = []
         for command in commandList {

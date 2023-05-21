@@ -15,7 +15,7 @@ public struct CreateThreadWithMessage: Encodable, UniqueIdProtocol {
     public let title: String
     public let type: ThreadTypes?
     public let uniqueName: String? // only for public thread
-    public let uniqueId: String
+    public let uniqueId: String?
     public var message: CreateThreadMessage
 
     public init(description: String? = nil,
@@ -25,7 +25,7 @@ public struct CreateThreadWithMessage: Encodable, UniqueIdProtocol {
          title: String,
          type: ThreadTypes? = nil,
          uniqueName: String? = nil,
-         uniqueId: String = UUID().uuidString,
+         uniqueId: String? = nil,
          message: CreateThreadMessage) {
         self.description = description
         self.image = image

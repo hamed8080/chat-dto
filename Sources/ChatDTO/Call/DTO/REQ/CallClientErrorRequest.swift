@@ -9,9 +9,9 @@ import Foundation
 public struct CallClientErrorRequest: Encodable, UniqueIdProtocol {
     public let code: CallClientErrorType
     public let callId: Int
-    public let uniqueId: String
+    public let uniqueId: String?
 
-    public init(callId: Int, code: CallClientErrorType, uniqueId: String = UUID().uuidString) {
+    public init(callId: Int, code: CallClientErrorType, uniqueId: String? = nil) {
         self.callId = callId
         self.code = code
         self.uniqueId = uniqueId

@@ -12,20 +12,20 @@ public struct AddCallParticipantsRequest: Encodable, UniqueIdProtocol {
     public var contactIds: [Int]?
     public var userNames: [Invitee]?
     public var coreuserIds: [Invitee]?
-    public let uniqueId: String
+    public let uniqueId: String?
 
-    public init(callId: Int, uniqueId: String = UUID().uuidString) {
+    public init(callId: Int, uniqueId: String? = nil) {
         self.callId = callId
         self.uniqueId = uniqueId
     }
 
-    public init(callId: Int, contactIds: [Int], uniqueId: String = UUID().uuidString) {
+    public init(callId: Int, contactIds: [Int], uniqueId: String? = nil) {
         self.callId = callId
         self.contactIds = contactIds
         self.uniqueId = uniqueId
     }
 
-    public init(callId: Int, userNames: [String], uniqueId: String = UUID().uuidString) {
+    public init(callId: Int, userNames: [String], uniqueId: String? = nil) {
         self.callId = callId
         var invitess: [Invitee] = []
         userNames.forEach { userame in
@@ -35,7 +35,7 @@ public struct AddCallParticipantsRequest: Encodable, UniqueIdProtocol {
         self.uniqueId = uniqueId
     }
 
-    public init(callId: Int, coreUserIds: [Int], uniqueId: String = UUID().uuidString) {
+    public init(callId: Int, coreUserIds: [Int], uniqueId: String? = nil) {
         self.callId = callId
         var invitess: [Invitee] = []
         coreUserIds.forEach { coreuserId in

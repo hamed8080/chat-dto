@@ -9,11 +9,11 @@ import Foundation
 public struct DeleteMessageRequest: Encodable, UniqueIdProtocol {
     public let deleteForAll: Bool
     public let messageId: Int
-    public let uniqueId: String
+    public let uniqueId: String?
 
     public init(deleteForAll: Bool? = false,
                 messageId: Int,
-                uniqueId: String = UUID().uuidString)
+                uniqueId: String? = nil)
     {
         self.deleteForAll = deleteForAll ?? false
         self.messageId = messageId

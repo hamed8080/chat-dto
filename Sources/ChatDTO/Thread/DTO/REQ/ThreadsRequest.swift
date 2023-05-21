@@ -20,7 +20,7 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
     public var metadataCriteria: String?
     public var isGroup: Bool?
     public var type: ThreadTypes?
-    public let uniqueId: String
+    public let uniqueId: String?
 
     public init(count: Int = 25,
                 offset: Int = 0,
@@ -34,7 +34,7 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
                 partnerCoreUserId: Int? = nil,
                 partnerCoreContactId: Int? = nil,
                 metadataCriteria: String? = nil,
-                uniqueId: String = UUID().uuidString)
+                uniqueId: String? = nil)
     {
         self.count = count
         self.offset = offset

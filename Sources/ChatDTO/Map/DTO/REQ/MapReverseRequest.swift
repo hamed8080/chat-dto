@@ -9,9 +9,9 @@ import Foundation
 public struct MapReverseRequest: Encodable, UniqueIdProtocol {
     public let lat: Double
     public let lng: Double
-    public let uniqueId: String
+    public let uniqueId: String?
 
-    public init(lat: Double, lng: Double, uniqueId: String = UUID().uuidString) {
+    public init(lat: Double, lng: Double, uniqueId: String? = nil) {
         self.lat = lat
         self.lng = lng
         self.uniqueId = uniqueId

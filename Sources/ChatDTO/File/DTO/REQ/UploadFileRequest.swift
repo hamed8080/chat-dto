@@ -24,7 +24,7 @@ public struct UploadFileRequest: Encodable, UniqueIdProtocol {
     public var userGroupHash: String?
     public var description: String?
     public var typeCode: String?
-    public let uniqueId: String
+    public let uniqueId: String?
 
     public init(data: Data,
                 fileExtension: String? = nil,
@@ -34,7 +34,7 @@ public struct UploadFileRequest: Encodable, UniqueIdProtocol {
                 mimeType: String? = nil,
                 originalName: String? = nil,
                 userGroupHash: String? = nil,
-                uniqueId: String = UUID().uuidString)
+                uniqueId: String? = nil)
     {
         self.data = data
         self.fileExtension = fileExtension

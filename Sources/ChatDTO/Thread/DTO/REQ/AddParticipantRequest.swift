@@ -12,23 +12,23 @@ public struct AddParticipantRequest: Encodable, UniqueIdProtocol {
     public var idType: InviteeTypes?
     public var threadId: Int
     public var contactIds: [Int]?
-    public let uniqueId: String
+    public let uniqueId: String?
 
-    public init(userName: String, threadId: Int, uniqueId: String = UUID().uuidString) {
+    public init(userName: String, threadId: Int, uniqueId: String? = nil) {
         idType = .username
         id = userName
         self.threadId = threadId
         self.uniqueId = uniqueId
     }
 
-    public init(coreUserId: Int, threadId: Int, uniqueId: String = UUID().uuidString) {
+    public init(coreUserId: Int, threadId: Int, uniqueId: String? = nil) {
         idType = .coreUserId
         id = "\(coreUserId)"
         self.threadId = threadId
         self.uniqueId = uniqueId
     }
 
-    public init(contactIds: [Int], threadId: Int, uniqueId: String = UUID().uuidString) {
+    public init(contactIds: [Int], threadId: Int, uniqueId: String? = nil) {
         self.contactIds = contactIds
         self.threadId = threadId
         self.uniqueId = uniqueId

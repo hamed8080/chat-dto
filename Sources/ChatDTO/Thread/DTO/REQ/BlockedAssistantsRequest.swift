@@ -9,9 +9,9 @@ import Foundation
 public struct BlockedAssistantsRequest: Encodable, UniqueIdProtocol {
     public let count: Int
     public let offset: Int
-    public let uniqueId: String
+    public let uniqueId: String?
 
-    public init(count: Int = 25, offset: Int = 0, uniqueId: String = UUID().uuidString) {
+    public init(count: Int = 25, offset: Int = 0, uniqueId: String? = nil) {
         self.count = count
         self.offset = offset
         self.uniqueId = uniqueId

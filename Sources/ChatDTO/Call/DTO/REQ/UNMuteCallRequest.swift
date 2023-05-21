@@ -9,9 +9,9 @@ import Foundation
 public struct UNMuteCallRequest: Encodable, UniqueIdProtocol {
     public let callId: Int
     public let userIds: [Int]
-    public let uniqueId: String
+    public let uniqueId: String?
 
-    public init(callId: Int, userIds: [Int], uniqueId: String = UUID().uuidString) {
+    public init(callId: Int, userIds: [Int], uniqueId: String? = nil) {
         self.callId = callId
         self.userIds = userIds
         self.uniqueId = uniqueId

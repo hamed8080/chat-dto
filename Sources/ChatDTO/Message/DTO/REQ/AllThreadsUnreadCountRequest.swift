@@ -1,26 +1,26 @@
 //
-// CreateTagRequest.swift
+// AllThreadsUnreadCountRequest.swift
 // Copyright (c) 2022 ChatDTO
 //
 // Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 
-public struct CreateTagRequest: Encodable, UniqueIdProtocol {
-    public var name: String
+public struct AllThreadsUnreadCountRequest: Encodable, UniqueIdProtocol {
+    let mute: Bool
     public let uniqueId: String?
 
-    public init(tagName: String, uniqueId: String? = nil) {
-        name = tagName
+    public init(mute: Bool = false, uniqueId: String? = nil) {
+        self.mute = mute
         self.uniqueId = uniqueId
     }
 
     private enum CodingKeys: String, CodingKey {
-        case name
+        case mute
     }
 
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try? container.encode(name, forKey: .name)
+        try container.encode(mute, forKey: .mute)
     }
 }

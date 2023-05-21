@@ -14,14 +14,14 @@ public struct StartStopBotRequest: Encodable, UniqueIdProtocol  {
     /// The id of the thread you want to stop this bot.
     public let threadId: Int
 
-    public let uniqueId: String
+    public let uniqueId: String?
 
     /// The initializer.
     /// - Parameters:
     ///   - botName: The name of the bot.
     ///   - threadId: The id of the thread.
     ///   - uniqueId:  The unique id of request. If you manage the unique id by yourself you should leave this blank, otherwise, you must use it if you need to know what response is for what request.
-    public init(botName: String, threadId: Int, uniqueId: String = UUID().uuidString) {
+    public init(botName: String, threadId: Int, uniqueId: String? = nil) {
         self.botName = botName
         self.threadId = threadId
         self.uniqueId = uniqueId
