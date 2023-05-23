@@ -9,9 +9,9 @@ import Foundation
 public struct RemoveContactsRequest: Encodable, UniqueIdProtocol {
     public let contactId: Int
     public var typeCode: String?
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(contactId: Int, typeCode: String? = nil, uniqueId: String? = nil) {
+    public init(contactId: Int, typeCode: String? = nil, uniqueId: String = "G-\(UUID().uuidString)") {
         self.contactId = contactId
         self.uniqueId = uniqueId
         self.typeCode = typeCode

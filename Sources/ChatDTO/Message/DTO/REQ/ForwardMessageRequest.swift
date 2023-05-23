@@ -13,7 +13,7 @@ public struct ForwardMessageRequest: Encodable, UniqueIdProtocol {
     public let threadId: Int
     public var uniqueIds: [String]
     public var typeCode: String?
-    public let uniqueId: String?
+    public let uniqueId: String
 
     public init(fromThreadId: Int,
                 threadId: Int,

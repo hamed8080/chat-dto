@@ -10,12 +10,12 @@ public struct BlockRequest: Encodable, UniqueIdProtocol {
     public let contactId: Int?
     public let threadId: Int?
     public let userId: Int?
-    public let uniqueId: String?
+    public let uniqueId: String
 
     public init(contactId: Int? = nil,
                 threadId: Int? = nil,
                 userId: Int? = nil,
-                uniqueId: String? = nil)
+                uniqueId: String = "G-\(UUID().uuidString)")
     {
         self.contactId = contactId
         self.threadId = threadId

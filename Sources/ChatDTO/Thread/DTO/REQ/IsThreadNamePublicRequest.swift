@@ -8,9 +8,9 @@ import Foundation
 
 public struct IsThreadNamePublicRequest: Encodable, UniqueIdProtocol {
     public let name: String
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(name: String, uniqueId: String? = nil) {
+    public init(name: String, uniqueId: String = "G-\(UUID().uuidString)") {
         self.name = name
         self.uniqueId = uniqueId
     }

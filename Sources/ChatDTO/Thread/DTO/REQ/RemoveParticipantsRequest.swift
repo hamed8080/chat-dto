@@ -9,15 +9,15 @@ import Foundation
 public struct RemoveParticipantsRequest: Encodable, UniqueIdProtocol {
     public let participantIds: [Int]
     public let threadId: Int
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(participantId: Int, threadId: Int, uniqueId: String? = nil) {
+    public init(participantId: Int, threadId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
         self.threadId = threadId
         participantIds = [participantId]
         self.uniqueId = uniqueId
     }
 
-    public init(participantIds: [Int], threadId: Int, uniqueId: String? = nil) {
+    public init(participantIds: [Int], threadId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
         self.threadId = threadId
         self.participantIds = participantIds
         self.uniqueId = uniqueId

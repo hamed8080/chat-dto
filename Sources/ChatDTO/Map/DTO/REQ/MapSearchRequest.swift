@@ -10,12 +10,12 @@ public struct MapSearchRequest: Encodable, UniqueIdProtocol {
     public let lat: Double
     public let lng: Double
     public let term: String
-    public let uniqueId: String?
+    public let uniqueId: String
 
     public init(lat: Double,
                 lng: Double,
                 term: String,
-                uniqueId: String? = nil)
+                uniqueId: String = "G-\(UUID().uuidString)")
     {
         self.lat = lat
         self.lng = lng

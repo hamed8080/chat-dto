@@ -9,12 +9,12 @@ import Foundation
 public struct AllThreads: Encodable, UniqueIdProtocol {
     /// - summary: If it set to true the result only contains the ids of threads not other properties.
     private let summary: Bool = true
-    public let uniqueId: String?
+    public let uniqueId: String
 
     /// Init the request.
     /// - Parameters:
     ///   - uniqueId: The optional uniqueId.
-    public init(uniqueId: String? = nil) {
+    public init(uniqueId: String = "G-\(UUID().uuidString)") {
        self.uniqueId = uniqueId
     }
 

@@ -10,9 +10,9 @@ import ChatModels
 public struct MuteCallRequest: Encodable, UniqueIdProtocol {
     public let callId: Int
     public let userIds: [Int]
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(callId: Int, userIds: [Int], uniqueId: String? = nil) {
+    public init(callId: Int, userIds: [Int], uniqueId: String = "G-\(UUID().uuidString)") {
         self.callId = callId
         self.userIds = userIds
         self.uniqueId = uniqueId

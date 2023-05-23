@@ -12,9 +12,9 @@ public struct CreateCallThreadRequest: Encodable, UniqueIdProtocol {
     public let description: String?
     public let metadata: String?
     public let uniqueName: String?
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(title: String? = nil, image: String? = nil, description: String? = nil, metadata: String? = nil, uniqueName: String? = nil, uniqueId: String? = nil) {
+    public init(title: String? = nil, image: String? = nil, description: String? = nil, metadata: String? = nil, uniqueName: String? = nil, uniqueId: String = "G-\(UUID().uuidString)") {
         self.title = title
         self.image = image
         self.description = description

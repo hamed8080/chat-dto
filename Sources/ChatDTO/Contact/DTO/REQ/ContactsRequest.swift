@@ -18,7 +18,7 @@ public struct ContactsRequest: Encodable, UniqueIdProtocol {
     public let order: String?
     public let query: String?
     public var summery: Bool?
-    public let uniqueId: String?
+    public let uniqueId: String
 
     public init(id: Int? = nil,
                 count: Int = 50,
@@ -29,7 +29,7 @@ public struct ContactsRequest: Encodable, UniqueIdProtocol {
                 order: Ordering? = nil,
                 query: String? = nil,
                 summery: Bool? = nil,
-                uniqueId: String? = nil)
+                uniqueId: String = "G-\(UUID().uuidString)")
     {
         size = count
         self.offset = offset

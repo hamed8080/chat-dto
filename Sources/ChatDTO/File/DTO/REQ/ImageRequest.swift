@@ -13,9 +13,9 @@ public struct ImageRequest: Encodable, UniqueIdProtocol {
     public let size: ImageSize?
     public let crop: Bool?
     public let checkUserGroupAccess: Bool
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false, quality: Float? = nil, size: ImageSize? = nil, crop: Bool? = nil, uniqueId: String? = nil) {
+    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false, quality: Float? = nil, size: ImageSize? = nil, crop: Bool? = nil, uniqueId: String = "G-\(UUID().uuidString)") {
         self.hashCode = hashCode
         self.forceToDownloadFromServer = forceToDownloadFromServer
         self.size = size

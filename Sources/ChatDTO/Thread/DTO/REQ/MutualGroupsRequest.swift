@@ -11,9 +11,9 @@ public struct MutualGroupsRequest: Encodable, UniqueIdProtocol {
     public let count: Int
     public let offset: Int
     public let toBeUserVO: Invitee
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(toBeUser: Invitee, count: Int = 25, offset: Int = 0, uniqueId: String? = nil) {
+    public init(toBeUser: Invitee, count: Int = 25, offset: Int = 0, uniqueId: String = "G-\(UUID().uuidString)") {
         self.count = count
         self.offset = offset
         toBeUserVO = toBeUser

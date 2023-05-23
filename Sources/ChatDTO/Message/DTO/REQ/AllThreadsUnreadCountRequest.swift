@@ -8,9 +8,9 @@ import Foundation
 
 public struct AllThreadsUnreadCountRequest: Encodable, UniqueIdProtocol {
     let mute: Bool
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(mute: Bool = false, uniqueId: String? = nil) {
+    public init(mute: Bool = false, uniqueId: String = "G-\(UUID().uuidString)") {
         self.mute = mute
         self.uniqueId = uniqueId
     }

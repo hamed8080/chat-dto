@@ -9,9 +9,9 @@ import Foundation
 public struct EditTagRequest: Encodable, UniqueIdProtocol {
     public var name: String
     public var id: Int
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(id: Int, tagName: String, uniqueId: String? = nil) {
+    public init(id: Int, tagName: String, uniqueId: String = "G-\(UUID().uuidString)") {
         self.id = id
         name = tagName
         self.uniqueId = uniqueId

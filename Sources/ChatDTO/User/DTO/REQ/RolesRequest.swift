@@ -10,9 +10,9 @@ import ChatModels
 public struct RolesRequest: Encodable, UniqueIdProtocol {
     public let userRoles: [UserRoleRequest]
     public let threadId: Int
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(userRoles: [UserRoleRequest], threadId: Int, uniqueId: String? = nil) {
+    public init(userRoles: [UserRoleRequest], threadId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
         self.userRoles = userRoles
         self.threadId = threadId
         self.uniqueId = uniqueId

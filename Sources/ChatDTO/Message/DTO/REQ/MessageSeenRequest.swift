@@ -9,9 +9,9 @@ import Foundation
 public struct MessageSeenRequest: Encodable, UniqueIdProtocol {
     public let messageId: Int
     public let threadId: Int
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(threadId: Int, messageId: Int, uniqueId: String? = nil) {
+    public init(threadId: Int, messageId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
         self.messageId = messageId
         self.threadId = threadId
         self.uniqueId = uniqueId

@@ -10,9 +10,9 @@ import ChatModels
 public struct RemoveTagParticipantsRequest: Encodable, UniqueIdProtocol {
     public var tagId: Int
     public var tagParticipants: [TagParticipant]
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(tagId: Int, tagParticipants: [TagParticipant], uniqueId: String? = nil) {
+    public init(tagId: Int, tagParticipants: [TagParticipant], uniqueId: String = "G-\(UUID().uuidString)") {
         self.tagId = tagId
         self.tagParticipants = tagParticipants
         self.uniqueId = uniqueId

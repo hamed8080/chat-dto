@@ -10,9 +10,9 @@ public struct FileRequest: Encodable, UniqueIdProtocol {
     public let hashCode: String
     public let checkUserGroupAccess: Bool
     public var forceToDownloadFromServer: Bool
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false, uniqueId: String? = nil) {
+    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false, uniqueId: String = "G-\(UUID().uuidString)") {
         self.hashCode = hashCode
         self.forceToDownloadFromServer = forceToDownloadFromServer
         self.checkUserGroupAccess = checkUserGroupAccess

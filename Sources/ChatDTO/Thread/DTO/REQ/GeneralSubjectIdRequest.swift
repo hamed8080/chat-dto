@@ -8,9 +8,9 @@ import Foundation
 
 public struct GeneralSubjectIdRequest: Encodable, UniqueIdProtocol {
     public var _subjectId: Int
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(subjectId: Int, uniqueId: String? = nil) {
+    public init(subjectId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
         self._subjectId = subjectId
         self.uniqueId = uniqueId
     }

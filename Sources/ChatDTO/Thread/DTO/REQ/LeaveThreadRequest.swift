@@ -9,9 +9,9 @@ import Foundation
 public struct LeaveThreadRequest: Encodable, UniqueIdProtocol {
     public let threadId: Int
     public let clearHistory: Bool?
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(threadId: Int, clearHistory: Bool? = false, uniqueId: String? = nil) {
+    public init(threadId: Int, clearHistory: Bool? = false, uniqueId: String = "G-\(UUID().uuidString)") {
         self.clearHistory = clearHistory
         self.threadId = threadId
         self.uniqueId = uniqueId

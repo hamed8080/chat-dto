@@ -9,9 +9,9 @@ import ChatModels
 
 public struct DeactiveAssistantRequest: Encodable, UniqueIdProtocol {
     public let assistants: [Assistant]
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(assistants: [Assistant], uniqueId: String? = nil) {
+    public init(assistants: [Assistant], uniqueId: String = "G-\(UUID().uuidString)") {
         self.assistants = assistants
         self.uniqueId = uniqueId
     }

@@ -8,9 +8,9 @@ import Foundation
 
 public struct DeleteTagRequest: Encodable, UniqueIdProtocol {
     public var id: Int
-    public let uniqueId: String?
+    public let uniqueId: String
 
-    public init(id: Int, uniqueId: String? = nil) {
+    public init(id: Int, uniqueId: String = "G-\(UUID().uuidString)") {
         self.id = id
         self.uniqueId = uniqueId
     }
