@@ -1,5 +1,5 @@
 //
-// RegisterAssistantRequest.swift
+// RegisterAssistantsRequest.swift
 // Copyright (c) 2022 ChatDTO
 //
 // Created by Hamed Hosseini on 12/14/22
@@ -7,7 +7,7 @@
 import Foundation
 import ChatModels
 
-public struct RegisterAssistantRequest: Encodable, UniqueIdProtocol {
+public struct RegisterAssistantsRequest: Encodable, UniqueIdProtocol {
     public let assistants: [Assistant]
     public let uniqueId: String
 

@@ -6,7 +6,7 @@
 
 import Foundation
 
-public enum MessageResposneState {
+public enum MessageResponseState {
     case sent
     case delivered
     case seen
@@ -17,9 +17,9 @@ public struct MessageResponse: Decodable {
     public var participantId: Int?
     public var messageId: Int?
     public var messageTime: UInt?
-    public var messageState: MessageResposneState?
+    public var messageState: MessageResponseState?
 
-    public init(messageState: MessageResposneState, threadId: Int? = nil, participantId: Int? = nil, messageId: Int? = nil, messageTime: UInt? = nil) {
+    public init(messageState: MessageResponseState, threadId: Int? = nil, participantId: Int? = nil, messageId: Int? = nil, messageTime: UInt? = nil) {
         self.messageState = messageState
         self.threadId = threadId
         self.participantId = participantId

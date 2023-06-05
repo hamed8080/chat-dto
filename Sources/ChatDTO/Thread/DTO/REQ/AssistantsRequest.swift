@@ -12,7 +12,7 @@ public struct AssistantsRequest: Encodable, UniqueIdProtocol {
     public let offset: Int
     public let uniqueId: String
 
-    public init(contactType: String,
+    public init(contactType: String = "default",
                 count: Int = 25,
                 offset: Int = 0,
                 uniqueId: String = "G-\(UUID().uuidString)")
