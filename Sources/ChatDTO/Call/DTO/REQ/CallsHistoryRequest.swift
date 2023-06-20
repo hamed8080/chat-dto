@@ -25,8 +25,7 @@ public struct CallsHistoryRequest: Encodable, UniqueIdProtocol {
                 name: String? = nil,
                 creatorCoreUserId: Int? = nil,
                 creatorSsoId: Int? = nil,
-                threadId: Int? = nil,
-                uniqueId: String = "G-\(UUID().uuidString)"
+                threadId: Int? = nil
     )
     {
         self.count = count
@@ -37,7 +36,7 @@ public struct CallsHistoryRequest: Encodable, UniqueIdProtocol {
         self.creatorCoreUserId = creatorCoreUserId
         self.creatorSsoId = creatorSsoId
         self.threadId = threadId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

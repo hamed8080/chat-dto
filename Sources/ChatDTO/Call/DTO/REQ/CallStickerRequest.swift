@@ -12,10 +12,10 @@ public struct CallStickerRequest: Encodable, UniqueIdProtocol {
     public let stickers: [CallSticker]
     public let uniqueId: String
 
-    public init(callId: Int, stickers: [CallSticker], uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(callId: Int, stickers: [CallSticker]) {
         self.callId = callId
         self.stickers = stickers
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

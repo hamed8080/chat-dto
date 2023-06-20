@@ -23,8 +23,7 @@ public struct EditMessageRequest: Encodable, UniqueIdProtocol {
                 messageId: Int,
                 textMessage: String,
                 repliedTo: Int? = nil,
-                metadata: String? = nil,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                metadata: String? = nil)
     {
         self.threadId = threadId
         self.messageType = messageType
@@ -32,7 +31,24 @@ public struct EditMessageRequest: Encodable, UniqueIdProtocol {
         self.messageId = messageId
         self.textMessage = textMessage
         self.metadata = metadata
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
+    }
+
+    internal init(threadId: Int,
+                messageType: MessageType,
+                messageId: Int,
+                textMessage: String,
+                repliedTo: Int? = nil,
+                metadata: String? = nil,
+                uniqueId: String)
+    {
+        self.threadId = threadId
+        self.messageType = messageType
+        self.repliedTo = repliedTo
+        self.messageId = messageId
+        self.textMessage = textMessage
+        self.metadata = metadata
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

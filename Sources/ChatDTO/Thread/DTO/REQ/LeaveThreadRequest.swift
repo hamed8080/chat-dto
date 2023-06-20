@@ -11,10 +11,10 @@ public struct LeaveThreadRequest: Encodable, UniqueIdProtocol {
     public let clearHistory: Bool?
     public let uniqueId: String
 
-    public init(threadId: Int, clearHistory: Bool? = false, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(threadId: Int, clearHistory: Bool? = false) {
         self.clearHistory = clearHistory
         self.threadId = threadId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

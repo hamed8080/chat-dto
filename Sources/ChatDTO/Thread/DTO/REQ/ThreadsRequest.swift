@@ -33,8 +33,7 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
                 creatorCoreUserId: Int? = nil,
                 partnerCoreUserId: Int? = nil,
                 partnerCoreContactId: Int? = nil,
-                metadataCriteria: String? = nil,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                metadataCriteria: String? = nil)
     {
         self.count = count
         self.offset = offset
@@ -48,7 +47,7 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
         self.creatorCoreUserId = creatorCoreUserId
         self.partnerCoreUserId = partnerCoreUserId
         self.partnerCoreContactId = partnerCoreContactId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

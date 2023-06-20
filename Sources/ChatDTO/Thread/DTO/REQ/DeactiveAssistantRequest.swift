@@ -11,9 +11,9 @@ public struct DeactiveAssistantRequest: Encodable, UniqueIdProtocol {
     public let assistants: [Assistant]
     public let uniqueId: String
 
-    public init(assistants: [Assistant], uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(assistants: [Assistant]) {
         self.assistants = assistants
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

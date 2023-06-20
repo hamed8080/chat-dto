@@ -10,9 +10,9 @@ public struct AllThreadsUnreadCountRequest: Encodable, UniqueIdProtocol {
     let mute: Bool
     public let uniqueId: String
 
-    public init(mute: Bool = false, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(mute: Bool = false) {
         self.mute = mute
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

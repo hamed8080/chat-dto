@@ -13,20 +13,12 @@ public struct BatchDeleteMessageRequest: Encodable, UniqueIdProtocol {
     public let uniqueIds: [String]
     public let uniqueId: String
 
-    public init(threadId: Int, messageIds: [Int], deleteForAll: Bool = false, uniqueIds: [String]? = nil, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(threadId: Int, messageIds: [Int], deleteForAll: Bool = false) {
         self.threadId = threadId
         self.deleteForAll = deleteForAll
-        if let uniqueIds = uniqueIds {
-            self.uniqueIds = uniqueIds
-        } else {
-            var generatedUniqeIds: [String] = []
-            for _ in 0 ..< messageIds.count {
-                generatedUniqeIds.append(UUID().uuidString)
-            }
-            self.uniqueIds = generatedUniqeIds
-        }
+        self.uniqueIds = messageIds.map{_ in UUID().uuidString}
         self.messageIds = messageIds
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -62,8 +62,7 @@ public struct GetHistoryRequest: Encodable, UniqueIdProtocol {
                 lastMessageTime: UInt? = nil,
                 historyEndTime: UInt? = nil,
                 readOnly: Bool = false,
-                newMessages: Bool? = nil,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                newMessages: Bool? = nil)
     {
         self.threadId = threadId
         self.count = count ?? 25
@@ -91,7 +90,7 @@ public struct GetHistoryRequest: Encodable, UniqueIdProtocol {
         self.historyEndTime = historyEndTime
         self.readOnly = readOnly
         self.newMessages = newMessages
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

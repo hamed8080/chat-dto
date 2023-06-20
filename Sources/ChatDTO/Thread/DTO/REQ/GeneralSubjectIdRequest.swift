@@ -10,7 +10,12 @@ public struct GeneralSubjectIdRequest: Encodable, UniqueIdProtocol {
     public var _subjectId: Int
     public let uniqueId: String
 
-    public init(subjectId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(subjectId: Int) {
+        self._subjectId = subjectId
+        self.uniqueId = UUID().uuidString
+    }
+
+    internal init(subjectId: Int, uniqueId: String) {
         self._subjectId = subjectId
         self.uniqueId = uniqueId
     }

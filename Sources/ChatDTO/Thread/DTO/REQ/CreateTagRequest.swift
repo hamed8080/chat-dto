@@ -10,9 +10,9 @@ public struct CreateTagRequest: Encodable, UniqueIdProtocol {
     public var name: String
     public let uniqueId: String
 
-    public init(tagName: String, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(tagName: String) {
         name = tagName
-        self.uniqueId = uniqueId
+        uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

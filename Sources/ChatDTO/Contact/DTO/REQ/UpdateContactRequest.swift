@@ -22,8 +22,7 @@ public struct UpdateContactRequest: Encodable, UniqueIdProtocol {
                 id: Int,
                 lastName: String,
                 username: String,
-                typeCode: String? = nil,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                typeCode: String? = nil)
     {
         self.cellphoneNumber = cellphoneNumber
         self.email = email
@@ -31,7 +30,7 @@ public struct UpdateContactRequest: Encodable, UniqueIdProtocol {
         self.id = id
         self.lastName = lastName
         self.username = username
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
         self.typeCode = typeCode
     }
 

@@ -11,10 +11,10 @@ public struct AcceptCallRequest: Encodable, UniqueIdProtocol {
     public let callId: Int
     public let uniqueId: String
 
-    public init(callId: Int, client: SendClient, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(callId: Int, client: SendClient) {
         self.callId = callId
         self.client = client
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

@@ -14,13 +14,12 @@ public struct MapSearchRequest: Encodable, UniqueIdProtocol {
 
     public init(lat: Double,
                 lng: Double,
-                term: String,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                term: String)
     {
         self.lat = lat
         self.lng = lng
         self.term = term
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

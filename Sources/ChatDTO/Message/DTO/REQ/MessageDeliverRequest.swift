@@ -11,10 +11,10 @@ public struct MessageDeliverRequest: Encodable, UniqueIdProtocol {
     public let threadId: Int?
     public let uniqueId: String
 
-    public init(messageId: Int, threadId: Int?, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(messageId: Int, threadId: Int?) {
         self.messageId = "\(messageId)"
         self.threadId = threadId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

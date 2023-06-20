@@ -15,22 +15,19 @@ public struct ForwardMessageRequest: Encodable, UniqueIdProtocol {
     public var typeCode: String?
     public let uniqueId: String
 
-    public init(fromThreadId: Int,
-                threadId: Int,
-                messageIds: [Int],
-                uniqueIds: [String] = [])
-    {
+    public init(fromThreadId: Int, threadId: Int, messageIds: [Int]) {
+        self.fromThreadId = fromThreadId
+        self.threadId = threadId
+        self.messageIds = messageIds
+        self.uniqueIds = messageIds.map{_ in UUID().uuidString}
+        self.uniqueId = "\(self.uniqueIds)"
+    }
+
+    internal init(fromThreadId: Int, threadId: Int, messageIds: [Int], uniqueIds: [String]) {
         self.fromThreadId = fromThreadId
         self.threadId = threadId
         self.messageIds = messageIds
         self.uniqueIds = uniqueIds
-        if self.uniqueIds.count == 0 {
-            var uniqueIds: [String] = []
-            for _ in messageIds {
-                uniqueIds.append(UUID().uuidString)
-            }
-            self.uniqueIds = uniqueIds
-        }
         self.uniqueId = "\(self.uniqueIds)"
     }
 

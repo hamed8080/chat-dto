@@ -33,8 +33,7 @@ public struct LocationMessageRequest: Encodable, UniqueIdProtocol {
                 mapImageName: String? = nil,
                 repliedTo: Int? = nil,
                 systemMetadata: String? = nil,
-                textMessage: String? = nil,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                textMessage: String? = nil)
     {
         self.mapCenter = mapCenter
         self.mapHeight = mapHeight
@@ -49,7 +48,7 @@ public struct LocationMessageRequest: Encodable, UniqueIdProtocol {
         self.threadId = threadId
         self.userGroupHash = userGroupHash
         messageType = MessageType.picture
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

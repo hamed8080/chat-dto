@@ -11,10 +11,10 @@ public struct BlockedListRequest: Encodable, UniqueIdProtocol {
     public let offset: Int
     public let uniqueId: String
 
-    public init(count: Int = 25, offset: Int = 0, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(count: Int = 25, offset: Int = 0) {
         self.count = count
         self.offset = offset
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

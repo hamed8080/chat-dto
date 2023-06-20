@@ -23,8 +23,24 @@ public struct ReplyMessageRequest: Encodable, UniqueIdProtocol {
                 textMessage: String,
                 messageType: MessageType,
                 metadata: String? = nil,
+                systemMetadata: String? = nil)
+    {
+        self.messageType = messageType
+        self.metadata = metadata
+        self.repliedTo = repliedTo
+        self.systemMetadata = systemMetadata
+        self.textMessage = textMessage
+        self.threadId = threadId
+        self.uniqueId = UUID().uuidString
+    }
+
+    internal init(threadId: Int,
+                repliedTo: Int,
+                textMessage: String,
+                messageType: MessageType,
+                metadata: String? = nil,
                 systemMetadata: String? = nil,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                uniqueId: String)
     {
         self.messageType = messageType
         self.metadata = metadata

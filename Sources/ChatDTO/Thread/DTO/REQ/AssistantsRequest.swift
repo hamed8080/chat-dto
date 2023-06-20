@@ -12,15 +12,11 @@ public struct AssistantsRequest: Encodable, UniqueIdProtocol {
     public let offset: Int
     public let uniqueId: String
 
-    public init(contactType: String = "default",
-                count: Int = 25,
-                offset: Int = 0,
-                uniqueId: String = "G-\(UUID().uuidString)")
-    {
+    public init(contactType: String = "default", count: Int = 25, offset: Int = 0) {
         self.contactType = contactType
         self.count = count
         self.offset = offset
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

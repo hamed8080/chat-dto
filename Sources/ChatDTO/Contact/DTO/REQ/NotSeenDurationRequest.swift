@@ -10,9 +10,9 @@ public struct NotSeenDurationRequest: Encodable, UniqueIdProtocol {
     public let userIds: [Int]
     public let uniqueId: String
 
-    public init(userIds: [Int], uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(userIds: [Int]) {
         self.userIds = userIds
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

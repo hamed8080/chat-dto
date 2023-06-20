@@ -23,8 +23,7 @@ public struct ThreadParticipantsRequest: Encodable, UniqueIdProtocol {
                 name: String? = nil,
                 admin: Bool = false,
                 cellphoneNumber: String? = nil,
-                username: String? = nil,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                username: String? = nil)
     {
         self.count = count
         self.offset = offset
@@ -33,7 +32,7 @@ public struct ThreadParticipantsRequest: Encodable, UniqueIdProtocol {
         self.username = username
         self.cellphoneNumber = cellphoneNumber
         self.name = name
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

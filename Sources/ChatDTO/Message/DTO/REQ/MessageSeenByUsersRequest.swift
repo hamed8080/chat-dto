@@ -12,11 +12,11 @@ public struct MessageSeenByUsersRequest: Encodable, UniqueIdProtocol {
     public let count: Int
     public let uniqueId: String
 
-    public init(messageId: Int, count: Int = 25, offset: Int = 0, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(messageId: Int, count: Int = 25, offset: Int = 0) {
         self.messageId = messageId
         self.offset = offset
         self.count = count
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -16,14 +16,13 @@ public struct UnBlockRequest: Encodable, UniqueIdProtocol {
     public init(blockId: Int? = nil,
                 contactId: Int? = nil,
                 threadId: Int? = nil,
-                userId: Int? = nil,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                userId: Int? = nil)
     {
         self.blockId = blockId
         self.contactId = contactId
         self.threadId = threadId
         self.userId = userId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

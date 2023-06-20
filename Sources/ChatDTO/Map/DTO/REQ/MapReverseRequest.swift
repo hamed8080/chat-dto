@@ -11,10 +11,10 @@ public struct MapReverseRequest: Encodable, UniqueIdProtocol {
     public let lng: Double
     public let uniqueId: String
 
-    public init(lat: Double, lng: Double, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(lat: Double, lng: Double) {
         self.lat = lat
         self.lng = lng
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

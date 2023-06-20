@@ -11,10 +11,10 @@ public struct PinUnpinMessageRequest: Encodable, UniqueIdProtocol {
     public let notifyAll: Bool
     public let uniqueId: String
 
-    public init(messageId: Int, notifyAll: Bool = false, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(messageId: Int, notifyAll: Bool = false) {
         self.messageId = messageId
         self.notifyAll = notifyAll
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -11,10 +11,10 @@ public struct AddTagParticipantsRequest: Encodable, UniqueIdProtocol {
     public var threadIds: [Int]
     public let uniqueId: String
     
-    public init(tagId: Int, threadIds: [Int], uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(tagId: Int, threadIds: [Int]) {
         self.threadIds = threadIds
         self.tagId = tagId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

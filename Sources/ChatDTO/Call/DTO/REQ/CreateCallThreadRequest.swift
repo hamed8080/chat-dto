@@ -14,13 +14,13 @@ public struct CreateCallThreadRequest: Encodable, UniqueIdProtocol {
     public let uniqueName: String?
     public let uniqueId: String
 
-    public init(title: String? = nil, image: String? = nil, description: String? = nil, metadata: String? = nil, uniqueName: String? = nil, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(title: String? = nil, image: String? = nil, description: String? = nil, metadata: String? = nil, uniqueName: String? = nil) {
         self.title = title
         self.image = image
         self.description = description
         self.metadata = metadata
         self.uniqueName = uniqueName
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

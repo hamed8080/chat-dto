@@ -23,11 +23,11 @@ public struct MapRoutingRequest: Encodable, UniqueIdProtocol {
     private let origin: Coordinate
     public let uniqueId: String
 
-    public init(alternative: Bool?, origin: Coordinate, destination: Coordinate, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(alternative: Bool?, origin: Coordinate, destination: Coordinate) {
         self.alternative = alternative ?? true
         self.destination = origin
         self.origin = destination
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

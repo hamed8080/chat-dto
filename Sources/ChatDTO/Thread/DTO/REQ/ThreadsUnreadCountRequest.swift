@@ -10,9 +10,9 @@ public struct ThreadsUnreadCountRequest: Encodable, UniqueIdProtocol {
     public let threadIds: [Int]
     public let uniqueId: String
 
-    public init(threadIds: [Int], uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(threadIds: [Int]) {
         self.threadIds = threadIds
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     public func encode(to _: Encoder) throws {}

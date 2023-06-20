@@ -23,8 +23,7 @@ public struct CreateThreadRequest: Encodable, UniqueIdProtocol {
                 metadata: String? = nil,
                 title: String,
                 type: ThreadTypes? = nil,
-                uniqueName: String? = nil,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                uniqueName: String? = nil)
     {
         self.description = description
         self.image = image
@@ -33,7 +32,7 @@ public struct CreateThreadRequest: Encodable, UniqueIdProtocol {
         self.title = title
         self.type = type
         self.uniqueName = uniqueName
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

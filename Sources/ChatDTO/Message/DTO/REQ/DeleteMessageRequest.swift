@@ -11,13 +11,10 @@ public struct DeleteMessageRequest: Encodable, UniqueIdProtocol {
     public let messageId: Int
     public let uniqueId: String
 
-    public init(deleteForAll: Bool? = false,
-                messageId: Int,
-                uniqueId: String = "G-\(UUID().uuidString)")
-    {
+    public init(deleteForAll: Bool? = false, messageId: Int) {
         self.deleteForAll = deleteForAll ?? false
         self.messageId = messageId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -14,35 +14,35 @@ public struct AddCallParticipantsRequest: Encodable, UniqueIdProtocol {
     public var coreuserIds: [Invitee]?
     public let uniqueId: String
 
-    public init(callId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(callId: Int) {
         self.callId = callId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
-    public init(callId: Int, contactIds: [Int], uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(callId: Int, contactIds: [Int]) {
         self.callId = callId
         self.contactIds = contactIds
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
-    public init(callId: Int, userNames: [String], uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(callId: Int, userNames: [String]) {
         self.callId = callId
         var invitess: [Invitee] = []
         userNames.forEach { userame in
             invitess.append(Invitee(id: userame, idType: .username))
         }
         self.userNames = invitess
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
-    public init(callId: Int, coreUserIds: [Int], uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(callId: Int, coreUserIds: [Int]) {
         self.callId = callId
         var invitess: [Invitee] = []
         coreUserIds.forEach { coreuserId in
             invitess.append(Invitee(id: "\(coreuserId)", idType: .coreUserId))
         }
         coreuserIds = invitess
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     public func encode(to encoder: Encoder) throws {

@@ -11,10 +11,10 @@ public struct UpdateChatProfile: Encodable, UniqueIdProtocol {
     public let metadata: String?
     public let uniqueId: String
 
-    public init(bio: String?, metadata: String? = nil, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(bio: String?, metadata: String? = nil) {
         self.bio = bio
         self.metadata = metadata
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

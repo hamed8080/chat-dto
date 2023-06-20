@@ -18,15 +18,14 @@ public struct UpdateThreadInfoRequest: Encodable, UniqueIdProtocol {
                 metadata: String? = nil,
                 threadId: Int,
                 threadImage: UploadImageRequest? = nil,
-                title: String,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                title: String)
     {
         self.description = description
         self.metadata = metadata
         self.threadId = threadId
         self.threadImage = threadImage
         self.title = title
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -10,9 +10,9 @@ public struct IsThreadNamePublicRequest: Encodable, UniqueIdProtocol {
     public let name: String
     public let uniqueId: String
 
-    public init(name: String, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(name: String) {
         self.name = name
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

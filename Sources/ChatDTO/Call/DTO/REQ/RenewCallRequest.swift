@@ -12,10 +12,10 @@ public struct RenewCallRequest: Encodable, UniqueIdProtocol{
     public let callId: Int
     public let uniqueId: String
 
-    public init(invitees: [Invitee], callId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(invitees: [Invitee], callId: Int) {
         invitess = invitees
         self.callId = callId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

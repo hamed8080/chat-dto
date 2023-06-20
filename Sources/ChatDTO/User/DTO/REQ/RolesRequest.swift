@@ -12,7 +12,13 @@ public struct RolesRequest: Encodable, UniqueIdProtocol {
     public let threadId: Int
     public let uniqueId: String
 
-    public init(userRoles: [UserRoleRequest], threadId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(userRoles: [UserRoleRequest], threadId: Int) {
+        self.userRoles = userRoles
+        self.threadId = threadId
+        self.uniqueId = UUID().uuidString
+    }
+
+    internal init(userRoles: [UserRoleRequest], threadId: Int, uniqueId: String) {
         self.userRoles = userRoles
         self.threadId = threadId
         self.uniqueId = uniqueId

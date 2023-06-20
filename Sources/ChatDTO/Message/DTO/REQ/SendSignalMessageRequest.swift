@@ -12,10 +12,10 @@ public struct SendSignalMessageRequest: Encodable, UniqueIdProtocol {
     public let threadId: Int
     public let uniqueId: String
 
-    public init(signalType: SignalMessageType, threadId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(signalType: SignalMessageType, threadId: Int) {
         self.signalType = signalType
         self.threadId = threadId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

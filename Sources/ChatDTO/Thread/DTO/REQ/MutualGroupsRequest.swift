@@ -13,11 +13,11 @@ public struct MutualGroupsRequest: Encodable, UniqueIdProtocol {
     public let toBeUserVO: Invitee
     public let uniqueId: String
 
-    public init(toBeUser: Invitee, count: Int = 25, offset: Int = 0, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(toBeUser: Invitee, count: Int = 25, offset: Int = 0) {
         self.count = count
         self.offset = offset
         toBeUserVO = toBeUser
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

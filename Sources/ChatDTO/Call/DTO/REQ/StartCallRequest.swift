@@ -42,8 +42,7 @@ public struct StartCallRequest: Encodable, UniqueIdProtocol {
                 invitees: [Invitee]? = nil,
                 type: CallType,
                 groupName: String = "group",
-                createCallThreadRequest: CreateCallThreadRequest? = nil,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                createCallThreadRequest: CreateCallThreadRequest? = nil)
     {
         self.contacts = contacts
         self.groupName = groupName
@@ -53,7 +52,7 @@ public struct StartCallRequest: Encodable, UniqueIdProtocol {
         self.type = type
         self.client = client
         self.createCallThreadRequest = createCallThreadRequest
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -11,16 +11,16 @@ public struct RemoveParticipantsRequest: Encodable, UniqueIdProtocol {
     public let threadId: Int
     public let uniqueId: String
 
-    public init(participantId: Int, threadId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(participantId: Int, threadId: Int) {
         self.threadId = threadId
         participantIds = [participantId]
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
-    public init(participantIds: [Int], threadId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(participantIds: [Int], threadId: Int) {
         self.threadId = threadId
         self.participantIds = participantIds
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

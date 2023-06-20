@@ -9,8 +9,8 @@ import Foundation
 public struct UserInfoRequest: Encodable, UniqueIdProtocol {
     public let uniqueId: String
 
-    public init(uniqueId: String = "G-\(UUID().uuidString)") {
-        self.uniqueId = uniqueId
+    public init() {
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

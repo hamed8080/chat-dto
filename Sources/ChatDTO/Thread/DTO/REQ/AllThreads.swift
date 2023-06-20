@@ -14,8 +14,8 @@ public struct AllThreads: Encodable, UniqueIdProtocol {
     /// Init the request.
     /// - Parameters:
     ///   - uniqueId: The optional uniqueId.
-    public init(uniqueId: String = "G-\(UUID().uuidString)") {
-       self.uniqueId = uniqueId
+    public init() {
+       self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

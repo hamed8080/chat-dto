@@ -12,10 +12,10 @@ public struct RemoveTagParticipantsRequest: Encodable, UniqueIdProtocol {
     public var tagParticipants: [TagParticipant]
     public let uniqueId: String
 
-    public init(tagId: Int, tagParticipants: [TagParticipant], uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(tagId: Int, tagParticipants: [TagParticipant]) {
         self.tagId = tagId
         self.tagParticipants = tagParticipants
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

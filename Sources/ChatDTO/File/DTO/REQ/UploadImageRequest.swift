@@ -36,7 +36,38 @@ public struct UploadImageRequest: Encodable, UniqueIdProtocol {
                 userGroupHash: String? = nil,
                 description: String? = nil,
                 typeCode: String? = nil,
-                uniqueId: String = "G-\(UUID().uuidString)",
+                xC: Int = 0,
+                yC: Int = 0,
+                hC: Int = 0,
+                wC: Int = 0) {
+        self.data = data
+        self.fileExtension = fileExtension
+        self.fileName = fileName
+        self.fileSize = fileSize
+        self.isPublic = isPublic
+        self.mimeType = mimeType
+        self.originalName = originalName
+        self.userGroupHash = userGroupHash
+        self.description = description
+        self.typeCode = typeCode
+        self.uniqueId = UUID().uuidString
+        self.xC = xC
+        self.yC = yC
+        self.hC = hC
+        self.wC = wC
+    }
+
+    internal init(data: Data,
+                fileExtension: String? = nil,
+                fileName: String = "",
+                fileSize: Int64 = 0,
+                isPublic: Bool? = nil,
+                mimeType: String,
+                originalName: String = "",
+                userGroupHash: String? = nil,
+                description: String? = nil,
+                typeCode: String? = nil,
+                uniqueId: String,
                 xC: Int = 0,
                 yC: Int = 0,
                 hC: Int = 0,

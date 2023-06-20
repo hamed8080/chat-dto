@@ -14,24 +14,24 @@ public struct AddParticipantRequest: Encodable, UniqueIdProtocol {
     public var contactIds: [Int]?
     public let uniqueId: String
 
-    public init(userName: String, threadId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(userName: String, threadId: Int) {
         idType = .username
         id = userName
         self.threadId = threadId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
-    public init(coreUserId: Int, threadId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(coreUserId: Int, threadId: Int) {
         idType = .coreUserId
         id = "\(coreUserId)"
         self.threadId = threadId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
-    public init(contactIds: [Int], threadId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(contactIds: [Int], threadId: Int) {
         self.contactIds = contactIds
         self.threadId = threadId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

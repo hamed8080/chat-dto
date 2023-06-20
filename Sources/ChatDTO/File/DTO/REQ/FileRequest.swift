@@ -12,11 +12,11 @@ public struct FileRequest: Encodable, UniqueIdProtocol {
     public var forceToDownloadFromServer: Bool
     public let uniqueId: String
 
-    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false) {
         self.hashCode = hashCode
         self.forceToDownloadFromServer = forceToDownloadFromServer
         self.checkUserGroupAccess = checkUserGroupAccess
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

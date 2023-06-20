@@ -11,10 +11,10 @@ public struct UNMuteCallRequest: Encodable, UniqueIdProtocol {
     public let userIds: [Int]
     public let uniqueId: String
 
-    public init(callId: Int, userIds: [Int], uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(callId: Int, userIds: [Int]) {
         self.callId = callId
         self.userIds = userIds
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

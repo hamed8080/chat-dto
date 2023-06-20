@@ -11,9 +11,9 @@ public struct RemoveContactsRequest: Encodable, UniqueIdProtocol {
     public var typeCode: String?
     public let uniqueId: String
 
-    public init(contactId: Int, typeCode: String? = nil, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(contactId: Int, typeCode: String? = nil) {
         self.contactId = contactId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
         self.typeCode = typeCode
     }
 

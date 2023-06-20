@@ -25,7 +25,6 @@ public struct CreateThreadWithMessage: Encodable, UniqueIdProtocol {
          title: String,
          type: ThreadTypes? = nil,
          uniqueName: String? = nil,
-         uniqueId: String = "G-\(UUID().uuidString)",
          message: CreateThreadMessage) {
         self.description = description
         self.image = image
@@ -34,7 +33,7 @@ public struct CreateThreadWithMessage: Encodable, UniqueIdProtocol {
         self.title = title
         self.type = type
         self.uniqueName = uniqueName
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
         self.message = message
     }
 

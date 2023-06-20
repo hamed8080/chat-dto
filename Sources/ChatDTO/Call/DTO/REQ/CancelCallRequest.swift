@@ -11,9 +11,9 @@ public struct CancelCallRequest: Encodable, UniqueIdProtocol {
     public let call: Call
     public let uniqueId: String
 
-    public init(call: Call, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(call: Call) {
         self.call = call
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

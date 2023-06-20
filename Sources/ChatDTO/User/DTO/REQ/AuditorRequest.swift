@@ -11,10 +11,10 @@ public struct AuditorRequest: Encodable, UniqueIdProtocol {
     public let threadId: Int
     public let uniqueId: String
 
-    public init(userRoleRequest: UserRoleRequest, threadId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(userRoleRequest: UserRoleRequest, threadId: Int) {
         self.userRoles = [userRoleRequest]
         self.threadId =  threadId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

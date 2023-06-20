@@ -12,10 +12,10 @@ public struct RemoveCallParticipantsRequest: Encodable, UniqueIdProtocol {
     public var userIds: [Int]
     public let uniqueId: String
 
-    public init(callId: Int, userIds: [Int], uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(callId: Int, userIds: [Int]) {
         self.callId = callId
         self.userIds = userIds
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     public func encode(to encoder: Encoder) throws {

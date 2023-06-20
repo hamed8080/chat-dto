@@ -16,14 +16,13 @@ public struct MentionRequest: Encodable, UniqueIdProtocol {
     public init(threadId: Int,
                 onlyUnreadMention: Bool,
                 count: Int = 25,
-                offset: Int = 0,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                offset: Int = 0)
     {
         self.count = count
         self.offset = offset
         self.threadId = threadId
         self.onlyUnreadMention = onlyUnreadMention
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

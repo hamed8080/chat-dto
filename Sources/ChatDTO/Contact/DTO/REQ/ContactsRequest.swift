@@ -28,8 +28,7 @@ public struct ContactsRequest: Encodable, UniqueIdProtocol {
                 offset: Int = 0,
                 order: Ordering? = nil,
                 query: String? = nil,
-                summery: Bool? = nil,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                summery: Bool? = nil)
     {
         size = count
         self.offset = offset
@@ -40,7 +39,7 @@ public struct ContactsRequest: Encodable, UniqueIdProtocol {
         self.query = query
         self.summery = summery
         self.coreUserId = coreUserId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

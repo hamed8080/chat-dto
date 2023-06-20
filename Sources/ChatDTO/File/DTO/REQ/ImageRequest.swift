@@ -17,7 +17,7 @@ public struct ImageRequest: Encodable, UniqueIdProtocol {
     public let thumbnail: Bool
     public let uniqueId: String
 
-    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false, quality: Float? = nil, size: ImageSize? = nil, crop: Bool? = nil, thumbnail: Bool = false, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false, quality: Float? = nil, size: ImageSize? = nil, crop: Bool? = nil, thumbnail: Bool = false) {
         self.hashCode = hashCode
         self.forceToDownloadFromServer = forceToDownloadFromServer
         self.size = size
@@ -25,7 +25,7 @@ public struct ImageRequest: Encodable, UniqueIdProtocol {
         self.quality = quality ?? 1
         self.checkUserGroupAccess = checkUserGroupAccess
         self.thumbnail = thumbnail
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

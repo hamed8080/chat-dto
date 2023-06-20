@@ -11,10 +11,10 @@ public struct EditTagRequest: Encodable, UniqueIdProtocol {
     public var id: Int
     public let uniqueId: String
 
-    public init(id: Int, tagName: String, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(id: Int, tagName: String) {
         self.id = id
         name = tagName
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

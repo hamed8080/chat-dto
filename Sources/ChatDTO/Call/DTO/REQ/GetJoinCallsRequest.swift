@@ -19,15 +19,14 @@ public struct GetJoinCallsRequest: Encodable, UniqueIdProtocol {
                 offset: Int = 0,
                 count: Int = 50,
                 name: String? = nil,
-                type: CallType? = nil,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                type: CallType? = nil)
     {
         self.offset = offset
         self.count = count
         self.name = name
         self.type = type
         self.threadIds = threadIds
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

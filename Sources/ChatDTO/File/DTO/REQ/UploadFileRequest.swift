@@ -33,8 +33,30 @@ public struct UploadFileRequest: Encodable, UniqueIdProtocol {
                 isPublic: Bool? = nil,
                 mimeType: String? = nil,
                 originalName: String? = nil,
+                userGroupHash: String? = nil)
+    {
+        self.data = data
+        self.fileExtension = fileExtension
+        let fileName = fileName ?? "\(NSUUID().uuidString)"
+        self.fileName = fileName
+        fileSize = Int64(data.count)
+        self.mimeType = mimeType ?? UploadFileRequest.guessMimeType(fileExtension, fileName)
+        self.userGroupHash = userGroupHash
+        self.originalName = originalName ?? fileName + (fileExtension ?? "")
+        self.isPublic = userGroupHash != nil ? false : isPublic // if send file iniside the thread we need to set is isPublic to false
+        self.uniqueId = UUID().uuidString
+        self.description = description
+    }
+
+    internal init(data: Data,
+                fileExtension: String? = nil,
+                fileName: String? = nil,
+                description: String? = nil,
+                isPublic: Bool? = nil,
+                mimeType: String? = nil,
+                originalName: String? = nil,
                 userGroupHash: String? = nil,
-                uniqueId: String = "G-\(UUID().uuidString)")
+                uniqueId: String)
     {
         self.data = data
         self.fileExtension = fileExtension

@@ -20,22 +20,22 @@ public struct SendStatusPingRequest: Encodable, UniqueIdProtocol {
     public let id: Int?
     public let uniqueId: String
 
-    public init(statusType: StatusPingType, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(statusType: StatusPingType) {
         id = nil
         self.statusType = statusType
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
-    public init(statusType: StatusPingType, contactId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(statusType: StatusPingType, contactId: Int) {
         id = contactId
         self.statusType = statusType
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
-    public init(statusType: StatusPingType, threadId: Int, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(statusType: StatusPingType, threadId: Int) {
         id = threadId
         self.statusType = statusType
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {

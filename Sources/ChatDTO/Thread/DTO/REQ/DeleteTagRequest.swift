@@ -10,9 +10,9 @@ public struct DeleteTagRequest: Encodable, UniqueIdProtocol {
     public var id: Int
     public let uniqueId: String
 
-    public init(id: Int, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(id: Int) {
         self.id = id
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

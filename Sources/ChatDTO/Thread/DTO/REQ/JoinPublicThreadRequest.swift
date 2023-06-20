@@ -11,9 +11,9 @@ public struct JoinPublicThreadRequest: Encodable, UniqueIdProtocol {
     public var threadName: String
     public let uniqueId: String
 
-    public init(threadName: String, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(threadName: String) {
         self.threadName = threadName
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: CodingKey {

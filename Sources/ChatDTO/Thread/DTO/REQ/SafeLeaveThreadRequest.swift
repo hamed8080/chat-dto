@@ -5,6 +5,7 @@
 // Created by Hamed Hosseini on 12/14/22
 
 import Foundation
+import ChatModels
 
 public struct SafeLeaveThreadRequest: Encodable, UniqueIdProtocol {
     public let threadId: Int
@@ -12,11 +13,11 @@ public struct SafeLeaveThreadRequest: Encodable, UniqueIdProtocol {
     public let uniqueId: String
     public let participantId: Int
 
-    public init(threadId: Int, participantId: Int, clearHistory: Bool? = false, uniqueId: String = "G-\(UUID().uuidString)") {
+    public init(threadId: Int, participantId: Int, clearHistory: Bool? = false) {
         self.participantId = participantId
         self.clearHistory = clearHistory
         self.threadId = threadId
-        self.uniqueId = uniqueId
+        self.uniqueId = UUID().uuidString
     }
 
     private enum CodingKeys: String, CodingKey {
