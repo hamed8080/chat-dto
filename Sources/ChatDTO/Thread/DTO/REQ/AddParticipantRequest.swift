@@ -8,22 +8,21 @@ import Foundation
 import ChatModels
 
 public struct AddParticipantRequest: Encodable, UniqueIdProtocol {
-    public var id: String?
-    public var idType: InviteeTypes?
+    private var invitees: [Invitee]?
     public var threadId: Int
     public var contactIds: [Int]?
+    public var coreUserIds: [Int]?
+    public var userNames: [String]?
     public let uniqueId: String
 
-    public init(userName: String, threadId: Int) {
-        idType = .username
-        id = userName
+    public init(userNames: [String], threadId: Int) {
+        invitees = userNames.map { .init(id: $0, idType : .username) }
         self.threadId = threadId
         self.uniqueId = UUID().uuidString
     }
 
-    public init(coreUserId: Int, threadId: Int) {
-        idType = .coreUserId
-        id = "\(coreUserId)"
+    public init(coreUserIds: [Int], threadId: Int) {
+        invitees = coreUserIds.map { .init(id: "\($0)", idType : .coreUserId) }
         self.threadId = threadId
         self.uniqueId = UUID().uuidString
     }
@@ -34,16 +33,10 @@ public struct AddParticipantRequest: Encodable, UniqueIdProtocol {
         self.uniqueId = UUID().uuidString
     }
 
-    private enum CodingKeys: String, CodingKey {
-        case id
-        case idType
-    }
-
     public func encode(to encoder: Encoder) throws {
-        if contactIds == nil {
-            var container = encoder.container(keyedBy: CodingKeys.self)
-            try? container.encode(id, forKey: .id)
-            try? container.encode(idType, forKey: .idType)
+        if let invitees = invitees {
+            var container = encoder.unkeyedContainer()
+            try? container.encode(contentsOf: invitees)
         } else if let contactIds = contactIds {
             var container = encoder.unkeyedContainer()
             try? container.encode(contentsOf: contactIds)

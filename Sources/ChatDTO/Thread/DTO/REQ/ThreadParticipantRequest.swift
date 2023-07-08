@@ -1,12 +1,12 @@
 //
-// ThreadParticipantsRequest.swift
+// ThreadParticipantRequest.swift
 // Copyright (c) 2022 ChatDTO
 //
 // Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 
-public struct ThreadParticipantsRequest: Encodable, UniqueIdProtocol {
+public struct ThreadParticipantRequest: Encodable, UniqueIdProtocol {
     public var count: Int
     public var offset: Int
     public var threadId: Int

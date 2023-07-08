@@ -1,5 +1,5 @@
 //
-// RemoveParticipantsRequest.swift
+// RemoveParticipantRequest.swift
 // Copyright (c) 2022 ChatDTO
 //
 // Created by Hamed Hosseini on 12/14/22
@@ -7,7 +7,7 @@
 import Foundation
 import ChatModels
 
-public struct RemoveParticipantsRequest: Encodable, UniqueIdProtocol {
+public struct RemoveParticipantRequest: Encodable, UniqueIdProtocol {
     public let participantIds: [Int]?
     public let invitees: [Invitee]?
     public let threadId: Int
