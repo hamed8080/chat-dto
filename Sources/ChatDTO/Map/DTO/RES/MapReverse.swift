@@ -14,6 +14,7 @@ public struct MapReverse: Codable {
     public var inTrafficZone: Bool?
     public var municipalityZone: String?
     public var state: String?
+    public var formattedAddress: String?
 
     private enum CodingKeys: String, CodingKey {
         case address
@@ -23,6 +24,7 @@ public struct MapReverse: Codable {
         case inTrafficZone = "in_traffic_zone"
         case municipalityZone = "municipality_zone"
         case state
+        case formattedAddress = "formatted_address"
     }
 
     public init(from decoder: Decoder) throws {
@@ -34,9 +36,10 @@ public struct MapReverse: Codable {
         inTrafficZone = (try? container.decodeIfPresent(Bool.self, forKey: .inTrafficZone)) ?? false
         municipalityZone = (try? container.decodeIfPresent(String.self, forKey: .municipalityZone)) ?? nil
         state = (try? container.decodeIfPresent(String.self, forKey: .state)) ?? nil
+        formattedAddress = (try? container.decodeIfPresent(String.self, forKey: .formattedAddress)) ?? nil
     }
 
-    public init(address: String? = nil, city: String? = nil, neighbourhood: String? = nil, inOddEvenZone: Bool? = nil, inTrafficZone: Bool? = nil, municipalityZone: String? = nil, state: String? = nil) {
+    public init(address: String? = nil, city: String? = nil, neighbourhood: String? = nil, inOddEvenZone: Bool? = nil, inTrafficZone: Bool? = nil, municipalityZone: String? = nil, state: String? = nil, formattedAddress: String? = nil) {
         self.address = address
         self.city = city
         self.neighbourhood = neighbourhood
@@ -44,5 +47,6 @@ public struct MapReverse: Codable {
         self.inTrafficZone = inTrafficZone
         self.municipalityZone = municipalityZone
         self.state = state
+        self.formattedAddress = formattedAddress
     }
 }
