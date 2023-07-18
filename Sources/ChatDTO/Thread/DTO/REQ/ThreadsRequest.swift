@@ -21,6 +21,8 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
     public var isGroup: Bool?
     public var type: ThreadTypes?
     public let uniqueId: String
+    /// - summary: If it set to true the result only contains the ids of threads not other properties.
+    private let summary: Bool?
 
     public init(count: Int = 25,
                 offset: Int = 0,
@@ -33,7 +35,8 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
                 creatorCoreUserId: Int? = nil,
                 partnerCoreUserId: Int? = nil,
                 partnerCoreContactId: Int? = nil,
-                metadataCriteria: String? = nil)
+                metadataCriteria: String? = nil,
+                summary: Bool? = nil)
     {
         self.count = count
         self.offset = offset
@@ -48,6 +51,7 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
         self.partnerCoreUserId = partnerCoreUserId
         self.partnerCoreContactId = partnerCoreContactId
         self.uniqueId = UUID().uuidString
+        self.summary = summary
     }
 
     private enum CodingKeys: String, CodingKey {
@@ -63,6 +67,7 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
         case metadataCriteria
         case isGroup
         case type
+        case summary
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -79,5 +84,6 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
         try? container.encodeIfPresent(archived, forKey: .archived)
         try? container.encodeIfPresent(isGroup, forKey: .isGroup)
         try? container.encodeIfPresent(type, forKey: .type)
+        try? container.encodeIfPresent(summary, forKey: .summary)
     }
 }
