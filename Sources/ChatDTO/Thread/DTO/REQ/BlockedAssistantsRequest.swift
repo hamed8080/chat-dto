@@ -6,7 +6,7 @@
 
 import Foundation
 
-public struct BlockedAssistantsRequest: Encodable, UniqueIdProtocol {
+public struct BlockedAssistantsRequest: Encodable, UniqueIdProtocol, Hashable {
     public let count: Int
     public let offset: Int
     public let uniqueId: String
