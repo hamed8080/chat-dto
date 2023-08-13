@@ -9,10 +9,10 @@ import Foundation
 public struct AddReactionRequest: Encodable, UniqueIdProtocol {
     public let messageId: Int
     public let conversationId: Int
-    public let reaction: String
+    public let reaction: Int
     public let uniqueId: String
 
-    public init(messageId: Int, conversationId: Int, reaction: String) {
+    public init(messageId: Int, conversationId: Int, reaction: Int) {
         self.messageId = messageId
         self.reaction = reaction
         self.conversationId = conversationId
