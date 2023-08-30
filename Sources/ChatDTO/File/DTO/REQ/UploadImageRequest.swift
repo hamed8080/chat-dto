@@ -24,7 +24,7 @@ public struct UploadImageRequest: Encodable, UniqueIdProtocol {
     public var yC: Int = 0
     public var hC: Int = 0
     public var wC: Int = 0
-
+    public var dataToSend: Data? { data }
 
     public init(data: Data,
                 fileExtension: String? = nil,

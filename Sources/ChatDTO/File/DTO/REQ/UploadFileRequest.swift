@@ -25,6 +25,7 @@ public struct UploadFileRequest: Encodable, UniqueIdProtocol {
     public var description: String?
     public var typeCode: String?
     public let uniqueId: String
+    public var dataToSend: Data? { data }
 
     public init(data: Data,
                 fileExtension: String? = nil,

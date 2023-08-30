@@ -36,6 +36,21 @@ public struct UploadFileResponse: Decodable {
         case uploader
     }
 
+    public init(name: String? = nil, hash: String? = nil, parentHash: String? = nil, created: Int64? = nil, updated: Int64? = nil, `extension`: String? = nil, size: Int64? = nil, type: String? = nil, actualHeight: Int64? = nil, actualWidth: Int64? = nil, owner: FileOwner? = nil, uploader: FileOwner? = nil) {
+        self.name = name
+        self.hash = hash
+        self.parentHash = parentHash
+        self.created = created
+        self.updated = updated
+        self.`extension` = `extension`
+        self.size = size
+        self.type = type
+        self.actualHeight = actualHeight
+        self.actualWidth = actualWidth
+        self.owner = owner
+        self.uploader = uploader
+    }
+
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.name = try container.decodeIfPresent(String.self, forKey: .name)
