@@ -5,15 +5,16 @@
 // Created by Hamed Hosseini on 12/14/22
 
 import Foundation
+import ChatModels
 
 public struct ReplaceReactionRequest: Encodable, UniqueIdProtocol {
     public let messageId: Int
     public let conversationId: Int
     public let reactionId: Int
-    public let reaction: Int
+    public let reaction: Sticker
     public let uniqueId: String
 
-    public init(messageId: Int, conversationId: Int, reactionId: Int, reaction: Int) {
+    public init(messageId: Int, conversationId: Int, reactionId: Int, reaction: Sticker) {
         self.messageId = messageId
         self.reactionId = reactionId
         self.reaction = reaction
