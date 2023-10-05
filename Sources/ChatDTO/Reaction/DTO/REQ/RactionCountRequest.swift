@@ -7,7 +7,7 @@
 import Foundation
 
 public struct RactionCountRequest: Encodable, UniqueIdProtocol {
-    public let messageIds: [Int]
+    public var messageIds: [Int]
     public let conversationId: Int
     public let uniqueId: String
 

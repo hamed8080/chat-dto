@@ -9,11 +9,11 @@ import ChatModels
 
 public struct CurrentUserReaction: Decodable {
     public var messageId: Int?
-    public var reactoin: Reaction?
+    public var reaction: Reaction?
 
     public init(messageId: Int? = nil, reaction: Reaction? = nil) {
         self.messageId = messageId
-        self.reactoin = reaction
+        self.reaction = reaction
     }
 
     private enum CodingKeys: String, CodingKey {
@@ -24,6 +24,6 @@ public struct CurrentUserReaction: Decodable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         messageId = try container.decodeIfPresent(Int.self, forKey: .messageId)
-        reactoin = try container.decodeIfPresent(Reaction.self, forKey: .reactionVO)
+        reaction = try container.decodeIfPresent(Reaction.self, forKey: .reactionVO)
     }
 }
