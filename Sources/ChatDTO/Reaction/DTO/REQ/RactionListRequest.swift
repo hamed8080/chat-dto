@@ -9,7 +9,7 @@ import ChatModels
 
 public struct RactionListRequest: Encodable, UniqueIdProtocol {
     public let messageId: Int
-    public let offset: Int
+    public var offset: Int
     public let count: Int
     public let conversationId: Int
     public let uniqueId: String
