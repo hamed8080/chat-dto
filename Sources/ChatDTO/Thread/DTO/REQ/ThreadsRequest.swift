@@ -23,6 +23,8 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
     public let uniqueId: String
     /// - summary: If it set to true the result only contains the ids of threads not other properties.
     private let summary: Bool?
+    public let cellPhoneNumber: String?
+    public let userName: String?
 
     public init(count: Int = 25,
                 offset: Int = 0,
@@ -36,6 +38,8 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
                 partnerCoreUserId: Int? = nil,
                 partnerCoreContactId: Int? = nil,
                 metadataCriteria: String? = nil,
+                cellPhoneNumber: String? = nil,
+                userName: String? = nil,
                 summary: Bool? = nil)
     {
         self.count = count
@@ -50,6 +54,8 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
         self.creatorCoreUserId = creatorCoreUserId
         self.partnerCoreUserId = partnerCoreUserId
         self.partnerCoreContactId = partnerCoreContactId
+        self.cellPhoneNumber = cellPhoneNumber
+        self.userName = userName
         self.uniqueId = UUID().uuidString
         self.summary = summary
     }
@@ -68,6 +74,8 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
         case isGroup
         case type
         case summary
+        case cellphoneNumber
+        case username
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -85,5 +93,7 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
         try? container.encodeIfPresent(isGroup, forKey: .isGroup)
         try? container.encodeIfPresent(type, forKey: .type)
         try? container.encodeIfPresent(summary, forKey: .summary)
+        try? container.encodeIfPresent(cellPhoneNumber, forKey: .cellphoneNumber)
+        try? container.encodeIfPresent(userName, forKey: .username)
     }
 }
