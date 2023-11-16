@@ -9,7 +9,7 @@ import ChatModels
 
 public struct ReplyMessageRequest: Encodable, UniqueIdProtocol {
     public var queueTime: Date = .init()
-    public let messageType: MessageType
+    public var messageType: MessageType
     public var metadata: String?
     public let repliedTo: Int?
     public let systemMetadata: String?
