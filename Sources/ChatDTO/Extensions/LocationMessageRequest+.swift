@@ -22,7 +22,7 @@ extension LocationMessageRequest {
     public var textMessageRequest: SendTextMessageRequest {
         SendTextMessageRequest(threadId: threadId,
                                textMessage: textMessage ?? "",
-                               messageType: .location,
+                               messageType: .podSpacePicture,
                                repliedTo: repliedTo,
                                systemMetadata: systemMetadata,
                                uniqueId: uniqueId)
