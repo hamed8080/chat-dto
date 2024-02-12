@@ -13,7 +13,7 @@ public struct ReplyPrivatelyRequest: Encodable, UniqueIdProtocol {
     public var metadata: String?
     public let repliedTo: Int?
     public let systemMetadata: String?
-    public let uniqueId: String
+    public var uniqueId: String
     public var typeCode: String?
     public let replyContent: ReplyPrivatelyContent
 

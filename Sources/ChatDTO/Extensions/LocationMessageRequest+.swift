@@ -10,8 +10,8 @@ extension LocationMessageRequest {
 
     public func imageRequest(data: Data, wC: Int, hC: Int, mimeType: String = "image/png") -> UploadImageRequest {
         UploadImageRequest(data: data,
-                           fileExtension: ".png",
-                           fileName: mapImageName ?? "",
+                           fileExtension: "png",
+                           fileName: "\(mapImageName ?? "").png",
                            mimeType: mimeType,
                            userGroupHash: userGroupHash,
                            uniqueId: uniqueId,
