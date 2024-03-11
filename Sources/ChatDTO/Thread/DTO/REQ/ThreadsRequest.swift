@@ -22,9 +22,10 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
     public var type: ThreadTypes?
     public let uniqueId: String
     /// - summary: If it set to true the result only contains the ids of threads not other properties.
-    private let summary: Bool?
+    public let summary: Bool?
     public let cellPhoneNumber: String?
     public let userName: String?
+    public let cache: Bool
 
     public init(count: Int = 25,
                 offset: Int = 0,
@@ -40,7 +41,9 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
                 metadataCriteria: String? = nil,
                 cellPhoneNumber: String? = nil,
                 userName: String? = nil,
-                summary: Bool? = nil)
+                summary: Bool? = nil,
+                cache: Bool = true
+    )
     {
         self.count = count
         self.offset = offset
@@ -58,6 +61,7 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
         self.userName = userName
         self.uniqueId = UUID().uuidString
         self.summary = summary
+        self.cache = cache
     }
 
     private enum CodingKeys: String, CodingKey {
