@@ -22,7 +22,7 @@ public struct ContactsRequest: Encodable, UniqueIdProtocol {
     public let uniqueId: String
 
     public init(id: Int? = nil,
-                count: Int = 50,
+                count: Int = 25,
                 cellphoneNumber: String? = nil,
                 userName: String? = nil,
                 email: String? = nil,
