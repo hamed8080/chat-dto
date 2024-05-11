@@ -17,19 +17,21 @@ let package = Package(
             targets: ["ChatDTO"]),
     ],
     dependencies: [
-        .package(path: "../ChatModels"),
+        .package(url: "https://pubgi.fanapsoft.ir/chat/ios/chat-models", from: "2.0.0"),
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
     ],
     targets: [
         .target(
             name: "ChatDTO",
             dependencies: [
-                "ChatModels",
+                .product(name: "ChatModels", package: "chat-models"),
             ]
         ),
         .testTarget(
             name: "ChatDTOTests",
-            dependencies: ["ChatDTO"],
+            dependencies: [
+                .product(name: "ChatModels", package: "chat-models"),
+            ],
             resources: []
         ),
     ]
