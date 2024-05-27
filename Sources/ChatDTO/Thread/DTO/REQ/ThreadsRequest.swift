@@ -8,8 +8,8 @@ import Foundation
 import ChatModels
 
 public struct ThreadsRequest: Encodable, UniqueIdProtocol {
-    public let count: Int
-    public let offset: Int
+    public var count: Int
+    public var offset: Int
     public var name: String?
     public let new: Bool?
     public let archived: Bool?
