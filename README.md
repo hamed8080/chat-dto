@@ -24,7 +24,7 @@ Add in `Package.swift` or directly in `Xcode Project dependencies` section:
 Add in `Podfile`:
 
 ```ruby
-pod "chat-models", :git => 'http://pubgi.fanapsoft.ir/chat/ios/chat-dto.git', :tag => '1.0.2'
+pod "chat-models", :git => 'http://pubgi.sandpod.ir/chat/ios/chat-dto.git', :tag => '2.0.1'
 ```
 <br/>
 
