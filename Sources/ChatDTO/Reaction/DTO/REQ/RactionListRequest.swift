@@ -7,7 +7,7 @@
 import Foundation
 import ChatModels
 
-public struct RactionListRequest: Encodable, UniqueIdProtocol {
+public struct RactionListRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let messageId: Int
     public var offset: Int
     public let count: Int
@@ -15,14 +15,16 @@ public struct RactionListRequest: Encodable, UniqueIdProtocol {
     public let uniqueId: String
     /// To filter reactions based on a specific sticker.
     public let sticker: Sticker?
+    public var typeCodeIndex: Index
 
-    public init(messageId: Int, offset: Int = 0, count: Int = 25, conversationId: Int, sticker: Sticker? = nil) {
+    public init(messageId: Int, offset: Int = 0, count: Int = 25, conversationId: Int, sticker: Sticker? = nil, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.messageId = messageId
         self.count = count
         self.offset = offset
         self.conversationId = conversationId
         self.sticker = sticker
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     enum CodingKeys: CodingKey {

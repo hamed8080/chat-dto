@@ -7,7 +7,7 @@
 import Foundation
 import ChatModels
 
-public struct ThreadsRequest: Encodable, UniqueIdProtocol {
+public struct ThreadsRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var count: Int
     public var offset: Int
     public var name: String?
@@ -26,6 +26,7 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
     public let cellPhoneNumber: String?
     public let userName: String?
     public let cache: Bool
+    public var typeCodeIndex: Index
 
     public init(count: Int = 25,
                 offset: Int = 0,
@@ -42,7 +43,8 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
                 cellPhoneNumber: String? = nil,
                 userName: String? = nil,
                 summary: Bool? = nil,
-                cache: Bool = true
+                cache: Bool = true,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0
     )
     {
         self.count = count
@@ -62,6 +64,7 @@ public struct ThreadsRequest: Encodable, UniqueIdProtocol {
         self.uniqueId = UUID().uuidString
         self.summary = summary
         self.cache = cache
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

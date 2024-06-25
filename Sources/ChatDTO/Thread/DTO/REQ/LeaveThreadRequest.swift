@@ -6,15 +6,17 @@
 
 import Foundation
 
-public struct LeaveThreadRequest: Encodable, UniqueIdProtocol {
+public struct LeaveThreadRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let threadId: Int
     public let clearHistory: Bool?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(threadId: Int, clearHistory: Bool? = false) {
+    public init(threadId: Int, clearHistory: Bool? = false, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.clearHistory = clearHistory
         self.threadId = threadId
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -15,27 +15,31 @@ public enum StatusPingType: Int, Encodable, Identifiable, CaseIterable {
     case contactId
 }
 
-public struct SendStatusPingRequest: Encodable, UniqueIdProtocol {
+public struct SendStatusPingRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let statusType: StatusPingType
     public let id: Int?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(statusType: StatusPingType) {
+    public init(statusType: StatusPingType, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         id = nil
         self.statusType = statusType
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
-    public init(statusType: StatusPingType, contactId: Int) {
+    public init(statusType: StatusPingType, contactId: Int, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         id = contactId
         self.statusType = statusType
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
-    public init(statusType: StatusPingType, threadId: Int) {
+    public init(statusType: StatusPingType, threadId: Int, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         id = threadId
         self.statusType = statusType
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

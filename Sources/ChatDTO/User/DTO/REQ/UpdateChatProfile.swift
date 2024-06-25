@@ -6,15 +6,17 @@
 
 import Foundation
 
-public struct UpdateChatProfile: Encodable, UniqueIdProtocol {
+public struct UpdateChatProfile: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let bio: String?
     public let metadata: String?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(bio: String?, metadata: String? = nil) {
+    public init(bio: String?, metadata: String? = nil, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.bio = bio
         self.metadata = metadata
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -6,14 +6,19 @@
 
 import Foundation
 
-public struct RemoveContactsRequest: Encodable, UniqueIdProtocol {
+public struct RemoveContactsRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let contactId: Int
-    public var typeCode: String?
+    private var typeCode: String?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(contactId: Int, typeCode: String? = nil) {
+    public init(contactId: Int, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.contactId = contactId
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
+    }
+
+    mutating public func setTypeCode(typeCode: String?) {
         self.typeCode = typeCode
     }
 

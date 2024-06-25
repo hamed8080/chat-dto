@@ -6,19 +6,21 @@
 
 import Foundation
 
-public struct BatchDeleteMessageRequest: Encodable, UniqueIdProtocol {
+public struct BatchDeleteMessageRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     let threadId: Int
     let deleteForAll: Bool
     let messageIds: [Int]
     public let uniqueIds: [String]
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(threadId: Int, messageIds: [Int], deleteForAll: Bool = false) {
+    public init(threadId: Int, messageIds: [Int], deleteForAll: Bool = false, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.threadId = threadId
         self.deleteForAll = deleteForAll
         self.uniqueIds = messageIds.map{_ in UUID().uuidString}
         self.messageIds = messageIds
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

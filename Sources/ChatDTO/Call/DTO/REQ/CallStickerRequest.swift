@@ -7,15 +7,17 @@
 import Foundation
 import ChatModels
 
-public struct CallStickerRequest: Encodable, UniqueIdProtocol {
+public struct CallStickerRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let callId: Int
     public let stickers: [CallSticker]
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(callId: Int, stickers: [CallSticker]) {
+    public init(callId: Int, stickers: [CallSticker], typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.callId = callId
         self.stickers = stickers
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: CodingKey {

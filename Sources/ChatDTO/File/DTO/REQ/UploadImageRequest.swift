@@ -6,7 +6,7 @@
 
 import Foundation
 
-public struct UploadImageRequest: Encodable, UniqueIdProtocol {
+public struct UploadImageRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var data: Data
     public var fileExtension: String?
     public var fileName: String = ""
@@ -17,8 +17,8 @@ public struct UploadImageRequest: Encodable, UniqueIdProtocol {
     public var originalName: String = ""
     public var userGroupHash: String?
     public var description: String?
-    public var typeCode: String?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     public var xC: Int = 0
     public var yC: Int = 0
@@ -35,7 +35,7 @@ public struct UploadImageRequest: Encodable, UniqueIdProtocol {
                 originalName: String = "",
                 userGroupHash: String? = nil,
                 description: String? = nil,
-                typeCode: String? = nil,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0,
                 xC: Int = 0,
                 yC: Int = 0,
                 hC: Int = 0,
@@ -49,7 +49,7 @@ public struct UploadImageRequest: Encodable, UniqueIdProtocol {
         self.originalName = originalName
         self.userGroupHash = userGroupHash
         self.description = description
-        self.typeCode = typeCode
+        self.typeCodeIndex = typeCodeIndex
         self.uniqueId = UUID().uuidString
         self.xC = xC
         self.yC = yC
@@ -66,7 +66,7 @@ public struct UploadImageRequest: Encodable, UniqueIdProtocol {
                 originalName: String = "",
                 userGroupHash: String? = nil,
                 description: String? = nil,
-                typeCode: String? = nil,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0,
                 uniqueId: String,
                 xC: Int = 0,
                 yC: Int = 0,
@@ -81,7 +81,7 @@ public struct UploadImageRequest: Encodable, UniqueIdProtocol {
         self.originalName = originalName
         self.userGroupHash = userGroupHash
         self.description = description
-        self.typeCode = typeCode
+        self.typeCodeIndex = typeCodeIndex
         self.uniqueId = uniqueId
         self.xC = xC
         self.yC = yC

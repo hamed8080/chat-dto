@@ -17,17 +17,19 @@ public struct Coordinate: Codable {
     }
 }
 
-public struct MapRoutingRequest: Encodable, UniqueIdProtocol {
+public struct MapRoutingRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var alternative: Bool = true
     private let destination: Coordinate
     private let origin: Coordinate
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(alternative: Bool?, origin: Coordinate, destination: Coordinate) {
+    public init(alternative: Bool?, origin: Coordinate, destination: Coordinate, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.alternative = alternative ?? true
         self.destination = origin
         self.origin = destination
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

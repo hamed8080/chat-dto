@@ -12,7 +12,7 @@ import UniformTypeIdentifiers
 #endif
 import Foundation
 
-public struct UploadFileRequest: Encodable, UniqueIdProtocol {
+public struct UploadFileRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var data: Data
     public var fileExtension: String?
     public var fileName: String = ""
@@ -23,7 +23,7 @@ public struct UploadFileRequest: Encodable, UniqueIdProtocol {
     public var originalName: String = ""
     public var userGroupHash: String?
     public var description: String?
-    public var typeCode: String?
+    public var typeCodeIndex: Index
     public let uniqueId: String
     public var dataToSend: Data? { data }
 
@@ -34,7 +34,9 @@ public struct UploadFileRequest: Encodable, UniqueIdProtocol {
                 isPublic: Bool? = nil,
                 mimeType: String? = nil,
                 originalName: String? = nil,
-                userGroupHash: String? = nil)
+                userGroupHash: String? = nil,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0
+    )
     {
         self.data = data
         self.fileExtension = fileExtension
@@ -47,6 +49,7 @@ public struct UploadFileRequest: Encodable, UniqueIdProtocol {
         self.isPublic = userGroupHash != nil ? false : isPublic // if send file iniside the thread we need to set is isPublic to false
         self.uniqueId = UUID().uuidString
         self.description = description
+        self.typeCodeIndex = typeCodeIndex
     }
 
     internal init(data: Data,
@@ -57,7 +60,8 @@ public struct UploadFileRequest: Encodable, UniqueIdProtocol {
                 mimeType: String? = nil,
                 originalName: String? = nil,
                 userGroupHash: String? = nil,
-                uniqueId: String)
+                uniqueId: String,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.data = data
         self.fileExtension = fileExtension
@@ -70,6 +74,7 @@ public struct UploadFileRequest: Encodable, UniqueIdProtocol {
         self.isPublic = userGroupHash != nil ? false : isPublic // if send file iniside the thread we need to set is isPublic to false
         self.uniqueId = uniqueId
         self.description = description
+        self.typeCodeIndex = typeCodeIndex
     }
 
     static func guessMimeType(_ fileExtension: String?, _ fileName: String?) -> String {

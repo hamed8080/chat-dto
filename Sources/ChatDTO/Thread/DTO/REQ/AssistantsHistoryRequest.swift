@@ -7,19 +7,21 @@
 import Foundation
 import ChatModels
 
-public struct AssistantsHistoryRequest: Encodable, UniqueIdProtocol {
+public struct AssistantsHistoryRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let count: Int
     public let offset: Int
     public let fromTime: UInt?
     public let toTime: UInt?
     public let actionType: AssistantActionTypes?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     public init(count: Int = 25,
                 offset: Int = 0,
                 actionType: AssistantActionTypes? = nil,
                 fromTime: UInt? = nil,
-                toTime: UInt? = nil
+                toTime: UInt? = nil,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0
     ) {
         self.actionType = actionType
         self.fromTime = fromTime
@@ -27,6 +29,7 @@ public struct AssistantsHistoryRequest: Encodable, UniqueIdProtocol {
         self.count = count
         self.offset = offset
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -7,15 +7,17 @@
 import Foundation
 import ChatModels
 
-public struct RemoveCallParticipantsRequest: Encodable, UniqueIdProtocol {
+public struct RemoveCallParticipantsRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let callId: Int
     public var userIds: [Int]
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(callId: Int, userIds: [Int]) {
+    public init(callId: Int, userIds: [Int], typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.callId = callId
         self.userIds = userIds
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     public func encode(to encoder: Encoder) throws {

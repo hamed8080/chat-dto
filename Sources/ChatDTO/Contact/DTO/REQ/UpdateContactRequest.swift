@@ -6,15 +6,17 @@
 
 import Foundation
 
-public struct UpdateContactRequest: Encodable, UniqueIdProtocol {
+public struct UpdateContactRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let cellphoneNumber: String
     public let email: String
     public let firstName: String
     public let id: Int
     public let lastName: String
     public let username: String
-    public let typeCode: String?
+    // It will change at runtime inside the method
+    private var typeCode: String?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     public init(cellphoneNumber: String,
                 email: String,
@@ -22,7 +24,7 @@ public struct UpdateContactRequest: Encodable, UniqueIdProtocol {
                 id: Int,
                 lastName: String,
                 username: String,
-                typeCode: String? = nil)
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.cellphoneNumber = cellphoneNumber
         self.email = email
@@ -31,6 +33,10 @@ public struct UpdateContactRequest: Encodable, UniqueIdProtocol {
         self.lastName = lastName
         self.username = username
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
+    }
+
+    mutating func setTypeCode(typeCode: String?) {
         self.typeCode = typeCode
     }
 

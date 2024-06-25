@@ -6,20 +6,23 @@
 
 import Foundation
 
-public struct BlockRequest: Encodable, UniqueIdProtocol {
+public struct BlockRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let contactId: Int?
     public let threadId: Int?
     public let userId: Int?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     public init(contactId: Int? = nil,
                 threadId: Int? = nil,
-                userId: Int? = nil)
+                userId: Int? = nil,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.contactId = contactId
         self.threadId = threadId
         self.userId = userId
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

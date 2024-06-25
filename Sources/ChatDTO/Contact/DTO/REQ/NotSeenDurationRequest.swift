@@ -6,13 +6,15 @@
 
 import Foundation
 
-public struct NotSeenDurationRequest: Encodable, UniqueIdProtocol {
+public struct NotSeenDurationRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let userIds: [Int]
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(userIds: [Int]) {
+    public init(userIds: [Int], typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.userIds = userIds
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

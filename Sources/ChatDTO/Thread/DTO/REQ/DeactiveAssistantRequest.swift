@@ -7,13 +7,15 @@
 import Foundation
 import ChatModels
 
-public struct DeactiveAssistantRequest: Encodable, UniqueIdProtocol {
+public struct DeactiveAssistantRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let assistants: [Assistant]
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(assistants: [Assistant]) {
+    public init(assistants: [Assistant], typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.assistants = assistants
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: CodingKey {

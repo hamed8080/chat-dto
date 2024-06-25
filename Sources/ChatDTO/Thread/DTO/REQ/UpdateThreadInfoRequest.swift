@@ -6,19 +6,21 @@
 
 import Foundation
 
-public struct UpdateThreadInfoRequest: Encodable, UniqueIdProtocol {
+public struct UpdateThreadInfoRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let description: String?
     public var metadata: String?
     public var threadImage: UploadImageRequest?
     public let threadId: Int
     public let title: String?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     public init(description: String? = nil,
                 metadata: String? = nil,
                 threadId: Int,
                 threadImage: UploadImageRequest? = nil,
-                title: String)
+                title: String,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.description = description
         self.metadata = metadata
@@ -26,6 +28,7 @@ public struct UpdateThreadInfoRequest: Encodable, UniqueIdProtocol {
         self.threadImage = threadImage
         self.title = title
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

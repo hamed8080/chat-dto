@@ -6,23 +6,26 @@
 
 import Foundation
 
-public struct MentionRequest: Encodable, UniqueIdProtocol {
+public struct MentionRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var count: Int = 25
     public var offset: Int = 0
     public let threadId: Int
     public let onlyUnreadMention: Bool
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     public init(threadId: Int,
                 onlyUnreadMention: Bool,
                 count: Int = 25,
-                offset: Int = 0)
+                offset: Int = 0,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.count = count
         self.offset = offset
         self.threadId = threadId
         self.onlyUnreadMention = onlyUnreadMention
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

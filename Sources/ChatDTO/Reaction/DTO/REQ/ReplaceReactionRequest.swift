@@ -7,19 +7,21 @@
 import Foundation
 import ChatModels
 
-public struct ReplaceReactionRequest: Encodable, UniqueIdProtocol {
+public struct ReplaceReactionRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let messageId: Int
     public let conversationId: Int
     public let reactionId: Int
     public let reaction: Sticker
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(messageId: Int, conversationId: Int, reactionId: Int, reaction: Sticker) {
+    public init(messageId: Int, conversationId: Int, reactionId: Int, reaction: Sticker, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.messageId = messageId
         self.reactionId = reactionId
         self.reaction = reaction
         self.conversationId = conversationId
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

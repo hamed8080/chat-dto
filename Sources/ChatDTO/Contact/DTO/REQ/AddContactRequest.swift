@@ -6,22 +6,24 @@
 
 import Foundation
 
-public struct AddContactRequest: Encodable, UniqueIdProtocol {
+public struct AddContactRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var cellphoneNumber: String?
     public var email: String?
     public var firstName: String?
     public var lastName: String?
     public var ownerId: Int?
     public var username: String?
-    public var typeCode: String?
+    // This property will be override in runtime in addContactMethod
+    private var typeCode: String?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     public init(cellphoneNumber: String? = nil,
                 email: String? = nil,
                 firstName: String? = nil,
                 lastName: String? = nil,
                 ownerId: Int? = nil,
-                typeCode: String? = nil)
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.cellphoneNumber = cellphoneNumber
         self.email = email
@@ -30,7 +32,7 @@ public struct AddContactRequest: Encodable, UniqueIdProtocol {
         self.ownerId = ownerId
         username = nil
         self.uniqueId = UUID().uuidString
-        self.typeCode = typeCode
+        self.typeCodeIndex = typeCodeIndex
     }
 
     /// Add Contact with username
@@ -39,7 +41,8 @@ public struct AddContactRequest: Encodable, UniqueIdProtocol {
                 lastName: String? = nil,
                 ownerId: Int? = nil,
                 username: String? = nil,
-                typeCode: String? = nil)
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0
+    )
     {
         cellphoneNumber = nil
         self.email = email
@@ -48,6 +51,10 @@ public struct AddContactRequest: Encodable, UniqueIdProtocol {
         self.ownerId = ownerId
         self.username = username
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
+    }
+
+    mutating public func setTypeCode(typeCode: String?) {
         self.typeCode = typeCode
     }
 

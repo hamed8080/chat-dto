@@ -6,15 +6,17 @@
 
 import Foundation
 
-public struct DeleteReactionRequest: Encodable, UniqueIdProtocol {
+public struct DeleteReactionRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let reactionId: Int
     public let conversationId: Int
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(reactionId: Int, conversationId: Int) {
+    public init(reactionId: Int, conversationId: Int, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.reactionId = reactionId
         self.conversationId = conversationId
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: CodingKey {

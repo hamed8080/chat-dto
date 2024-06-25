@@ -6,21 +6,23 @@
 
 import Foundation
 
-public struct CreateCallThreadRequest: Encodable, UniqueIdProtocol {
+public struct CreateCallThreadRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let title: String?
     public let image: String?
     public let description: String?
     public let metadata: String?
     public let uniqueName: String?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(title: String? = nil, image: String? = nil, description: String? = nil, metadata: String? = nil, uniqueName: String? = nil) {
+    public init(title: String? = nil, image: String? = nil, description: String? = nil, metadata: String? = nil, uniqueName: String? = nil, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.title = title
         self.image = image
         self.description = description
         self.metadata = metadata
         self.uniqueName = uniqueName
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

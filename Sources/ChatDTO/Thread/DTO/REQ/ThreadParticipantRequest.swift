@@ -6,7 +6,7 @@
 
 import Foundation
 
-public struct ThreadParticipantRequest: Encodable, UniqueIdProtocol {
+public struct ThreadParticipantRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var count: Int
     public var offset: Int
     public var threadId: Int
@@ -16,6 +16,7 @@ public struct ThreadParticipantRequest: Encodable, UniqueIdProtocol {
     /// If it set to true the request only contains the list of admins of a thread.
     public var admin: Bool = false
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     public init(threadId: Int,
                 offset: Int = 0,
@@ -23,7 +24,8 @@ public struct ThreadParticipantRequest: Encodable, UniqueIdProtocol {
                 name: String? = nil,
                 admin: Bool = false,
                 cellphoneNumber: String? = nil,
-                username: String? = nil)
+                username: String? = nil,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.count = count
         self.offset = offset
@@ -33,6 +35,7 @@ public struct ThreadParticipantRequest: Encodable, UniqueIdProtocol {
         self.cellphoneNumber = cellphoneNumber
         self.name = name
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

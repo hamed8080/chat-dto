@@ -7,7 +7,7 @@
 import Foundation
 import ChatModels
 
-public struct StartCallRequest: Encodable, UniqueIdProtocol {
+public struct StartCallRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let threadId: Int?
     public let invitees: [Invitee]?
     public let type: CallType
@@ -22,6 +22,7 @@ public struct StartCallRequest: Encodable, UniqueIdProtocol {
     public var isContactCall: Bool { contacts != nil }
     public var isGroupCall: Bool { contacts?.count ?? 0 > 1 || thread?.group == true }
     public var callDetail: CreateCallThreadRequest? { .init(title: groupName) }
+    public var typeCodeIndex: Index
 
     public var titleOfCalling: String {
         if isThreadCall {
@@ -42,7 +43,8 @@ public struct StartCallRequest: Encodable, UniqueIdProtocol {
                 invitees: [Invitee]? = nil,
                 type: CallType,
                 groupName: String = "group",
-                createCallThreadRequest: CreateCallThreadRequest? = nil)
+                createCallThreadRequest: CreateCallThreadRequest? = nil,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.contacts = contacts
         self.groupName = groupName
@@ -53,6 +55,7 @@ public struct StartCallRequest: Encodable, UniqueIdProtocol {
         self.client = client
         self.createCallThreadRequest = createCallThreadRequest
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

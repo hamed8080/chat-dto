@@ -7,13 +7,15 @@
 import Foundation
 import ChatModels
 
-public struct JoinPublicThreadRequest: Encodable, UniqueIdProtocol {
+public struct JoinPublicThreadRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var threadName: String
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(threadName: String) {
+    public init(threadName: String, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.threadName = threadName
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: CodingKey {

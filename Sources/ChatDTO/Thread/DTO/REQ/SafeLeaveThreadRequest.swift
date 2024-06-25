@@ -7,17 +7,19 @@
 import Foundation
 import ChatModels
 
-public struct SafeLeaveThreadRequest: Encodable, UniqueIdProtocol {
+public struct SafeLeaveThreadRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let threadId: Int
     public let clearHistory: Bool?
     public let uniqueId: String
     public let participantId: Int
+    public var typeCodeIndex: Index
 
-    public init(threadId: Int, participantId: Int, clearHistory: Bool? = false) {
+    public init(threadId: Int, participantId: Int, clearHistory: Bool? = false, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.participantId = participantId
         self.clearHistory = clearHistory
         self.threadId = threadId
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

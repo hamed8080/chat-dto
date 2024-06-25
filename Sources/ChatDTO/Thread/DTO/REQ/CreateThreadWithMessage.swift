@@ -7,7 +7,7 @@
 import Foundation
 import ChatModels
 
-public struct CreateThreadWithMessage: Encodable, UniqueIdProtocol {
+public struct CreateThreadWithMessage: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let description: String?
     public let image: String?
     public let invitees: [Invitee]?
@@ -17,6 +17,7 @@ public struct CreateThreadWithMessage: Encodable, UniqueIdProtocol {
     public let uniqueName: String? // only for public thread
     public let uniqueId: String
     public var message: CreateThreadMessage
+    public var typeCodeIndex: Index
 
     public init(description: String? = nil,
          image: String? = nil,
@@ -25,7 +26,8 @@ public struct CreateThreadWithMessage: Encodable, UniqueIdProtocol {
          title: String,
          type: ThreadTypes? = nil,
          uniqueName: String? = nil,
-         message: CreateThreadMessage) {
+         message: CreateThreadMessage,
+         typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.description = description
         self.image = image
         self.invitees = invitees
@@ -35,6 +37,7 @@ public struct CreateThreadWithMessage: Encodable, UniqueIdProtocol {
         self.uniqueName = uniqueName
         self.uniqueId = UUID().uuidString
         self.message = message
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

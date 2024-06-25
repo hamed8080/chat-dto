@@ -7,18 +7,19 @@
 import Foundation
 
 /// Remove the bot commands request.
-public struct RemoveBotCommandRequest: Encodable, UniqueIdProtocol {
+public struct RemoveBotCommandRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     /// The bot name.
     public let botName: String
     public let commandList: [String]
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     /// The initializer.
     /// - Parameters:
     ///   - botName: The bot name.
     ///   - commandList: List of commands.
     ///   - uniqueId: The unique id of request. If you manage the unique id by yourself you should leave this blank, otherwise, you must use it if you need to know what response is for what request.
-    public init(botName: String, commandList: [String] = []) {
+    public init(botName: String, commandList: [String] = [], typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.botName = botName
         var arr: [String] = []
         for command in commandList {
@@ -30,6 +31,7 @@ public struct RemoveBotCommandRequest: Encodable, UniqueIdProtocol {
         }
         self.commandList = arr
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

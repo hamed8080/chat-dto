@@ -6,15 +6,17 @@
 
 import Foundation
 
-public struct BlockedAssistantsRequest: Encodable, UniqueIdProtocol, Hashable {
+public struct BlockedAssistantsRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol, Hashable {
     public let count: Int
     public let offset: Int
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(count: Int = 25, offset: Int = 0) {
+    public init(count: Int = 25, offset: Int = 0, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.count = count
         self.offset = offset
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

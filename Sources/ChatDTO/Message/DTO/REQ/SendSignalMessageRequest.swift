@@ -7,15 +7,17 @@
 import Foundation
 import ChatModels
 
-public struct SendSignalMessageRequest: Encodable, UniqueIdProtocol {
+public struct SendSignalMessageRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let signalType: SignalMessageType
     public let threadId: Int
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(signalType: SignalMessageType, threadId: Int) {
+    public init(signalType: SignalMessageType, threadId: Int, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.signalType = signalType
         self.threadId = threadId
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

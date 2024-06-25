@@ -6,15 +6,17 @@
 
 import Foundation
 
-public struct UNMuteCallRequest: Encodable, UniqueIdProtocol {
+public struct UNMuteCallRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let callId: Int
     public let userIds: [Int]
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(callId: Int, userIds: [Int]) {
+    public init(callId: Int, userIds: [Int], typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.callId = callId
         self.userIds = userIds
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: CodingKey {

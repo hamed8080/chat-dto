@@ -7,7 +7,7 @@
 import Foundation
 import ChatModels
 
-public struct SendTextMessageRequest: Encodable, UniqueIdProtocol {
+public struct SendTextMessageRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var queueTime: Date = .init()
     public let messageType: MessageType
     public var metadata: String?
@@ -16,14 +16,15 @@ public struct SendTextMessageRequest: Encodable, UniqueIdProtocol {
     public let textMessage: String
     public var threadId: Int
     public let uniqueId: String
-    public var typeCode: String?
+    public var typeCodeIndex: Index
 
     public init(threadId: Int,
                 textMessage: String,
                 messageType: MessageType,
                 metadata: String? = nil,
                 repliedTo: Int? = nil,
-                systemMetadata: String? = nil)
+                systemMetadata: String? = nil,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.messageType = messageType
         self.metadata = metadata
@@ -32,6 +33,7 @@ public struct SendTextMessageRequest: Encodable, UniqueIdProtocol {
         self.textMessage = textMessage
         self.threadId = threadId
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     internal init(threadId: Int,
@@ -40,7 +42,8 @@ public struct SendTextMessageRequest: Encodable, UniqueIdProtocol {
                 metadata: String? = nil,
                 repliedTo: Int? = nil,
                 systemMetadata: String? = nil,
-                uniqueId: String)
+                uniqueId: String,
+                  typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.messageType = messageType
         self.metadata = metadata
@@ -49,6 +52,7 @@ public struct SendTextMessageRequest: Encodable, UniqueIdProtocol {
         self.textMessage = textMessage
         self.threadId = threadId
         self.uniqueId = uniqueId
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: CodingKey {
@@ -73,6 +77,6 @@ public struct SendTextMessageRequest: Encodable, UniqueIdProtocol {
         try container.encode(self.textMessage, forKey: .textMessage)
         try container.encode(self.threadId, forKey: .threadId)
         try container.encodeIfPresent(self.uniqueId, forKey: .uniqueId)
-        try container.encodeIfPresent(self.typeCode, forKey: .typeCode)
+//        try container.encodeIfPresent(self.typeCode, forKey: .typeCode)
     }
 }

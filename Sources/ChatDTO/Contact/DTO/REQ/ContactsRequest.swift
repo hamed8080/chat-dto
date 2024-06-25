@@ -7,7 +7,7 @@
 import Foundation
 import ChatModels
 
-public struct ContactsRequest: Encodable, UniqueIdProtocol {
+public struct ContactsRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var size: Int = 25
     public var offset: Int = 0
     // use in cashe
@@ -20,6 +20,7 @@ public struct ContactsRequest: Encodable, UniqueIdProtocol {
     public let query: String?
     public var summery: Bool?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     public init(id: Int? = nil,
                 count: Int = 25,
@@ -30,7 +31,8 @@ public struct ContactsRequest: Encodable, UniqueIdProtocol {
                 offset: Int = 0,
                 order: Ordering? = nil,
                 query: String? = nil,
-                summery: Bool? = nil)
+                summery: Bool? = nil,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         size = count
         self.offset = offset
@@ -43,6 +45,7 @@ public struct ContactsRequest: Encodable, UniqueIdProtocol {
         self.summery = summery
         self.coreUserId = coreUserId
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

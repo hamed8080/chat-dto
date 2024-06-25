@@ -6,15 +6,17 @@
 
 import Foundation
 
-public struct PinUnpinMessageRequest: Encodable, UniqueIdProtocol {
+public struct PinUnpinMessageRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let messageId: Int
     public let notifyAll: Bool
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(messageId: Int, notifyAll: Bool = false) {
+    public init(messageId: Int, notifyAll: Bool = false, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.messageId = messageId
         self.notifyAll = notifyAll
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

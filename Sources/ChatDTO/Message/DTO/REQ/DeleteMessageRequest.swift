@@ -6,15 +6,17 @@
 
 import Foundation
 
-public struct DeleteMessageRequest: Encodable, UniqueIdProtocol {
+public struct DeleteMessageRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let deleteForAll: Bool
     public let messageId: Int
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(deleteForAll: Bool? = false, messageId: Int) {
+    public init(deleteForAll: Bool? = false, messageId: Int, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.deleteForAll = deleteForAll ?? false
         self.messageId = messageId
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -6,15 +6,17 @@
 
 import Foundation
 
-public struct MapReverseRequest: Encodable, UniqueIdProtocol {
+public struct MapReverseRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let lat: Double
     public let lng: Double
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(lat: Double, lng: Double) {
+    public init(lat: Double, lng: Double, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.lat = lat
         self.lng = lng
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

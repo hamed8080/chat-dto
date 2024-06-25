@@ -7,7 +7,7 @@
 import Foundation
 import ChatModels
 
-public struct LocationMessageRequest: Encodable, UniqueIdProtocol {
+public struct LocationMessageRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let mapCenter: Coordinate
     public let mapHeight: Int
     public let mapType: String
@@ -22,6 +22,7 @@ public struct LocationMessageRequest: Encodable, UniqueIdProtocol {
     public let userGroupHash: String
     public let messageType: MessageType
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     public init(mapCenter: Coordinate,
                 threadId: Int,
@@ -33,7 +34,8 @@ public struct LocationMessageRequest: Encodable, UniqueIdProtocol {
                 mapImageName: String? = nil,
                 repliedTo: Int? = nil,
                 systemMetadata: String? = nil,
-                textMessage: String? = nil)
+                textMessage: String? = nil,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.mapCenter = mapCenter
         self.mapHeight = mapHeight
@@ -49,6 +51,7 @@ public struct LocationMessageRequest: Encodable, UniqueIdProtocol {
         self.userGroupHash = userGroupHash
         messageType = MessageType.picture
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: CodingKey {

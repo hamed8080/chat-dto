@@ -6,7 +6,7 @@
 
 import Foundation
 
-public struct MapStaticImageRequest: Encodable, UniqueIdProtocol {
+public struct MapStaticImageRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var key: String?
     public var center: String
     public var height: Int = 500
@@ -14,13 +14,15 @@ public struct MapStaticImageRequest: Encodable, UniqueIdProtocol {
     public var width: Int = 800
     public var zoom: Int = 15
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     public init(center: Coordinate,
                 key: String? = nil,
                 height: Int = 500,
                 width: Int = 800,
                 zoom: Int = 15,
-                type: String = "standard-night"
+                type: String = "standard-night",
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0
     )
     {
         self.center = "\(center.lat),\(center.lng)"
@@ -30,6 +32,7 @@ public struct MapStaticImageRequest: Encodable, UniqueIdProtocol {
         self.zoom = zoom
         self.key = key
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     public init(request: MapStaticImageRequest, key: String?) {

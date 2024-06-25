@@ -6,7 +6,7 @@
 
 import Foundation
 
-public struct GetHistoryRequest: Encodable, UniqueIdProtocol {
+public struct GetHistoryRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let threadId: Int
     public var offset: Int
     public var count: Int
@@ -34,6 +34,7 @@ public struct GetHistoryRequest: Encodable, UniqueIdProtocol {
     public var readOnly: Bool = false
     public var newMessages: Bool?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     /// - Parameters:
     ///   - readOnly: This property prevent to write to cache when you only need to view messages of a thread pass true if you need to only view messages.
@@ -62,7 +63,8 @@ public struct GetHistoryRequest: Encodable, UniqueIdProtocol {
                 lastMessageTime: UInt? = nil,
                 historyEndTime: UInt? = nil,
                 readOnly: Bool = false,
-                newMessages: Bool? = nil)
+                newMessages: Bool? = nil,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.threadId = threadId
         self.count = count ?? 25
@@ -91,6 +93,7 @@ public struct GetHistoryRequest: Encodable, UniqueIdProtocol {
         self.readOnly = readOnly
         self.newMessages = newMessages
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -7,7 +7,7 @@
 import Foundation
 import ChatModels
 
-public struct EditMessageRequest: Encodable, UniqueIdProtocol {
+public struct EditMessageRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var queueTime: Date = .init()
     public var messageType: MessageType
     public let repliedTo: Int?
@@ -16,14 +16,15 @@ public struct EditMessageRequest: Encodable, UniqueIdProtocol {
     public let metadata: String?
     public let threadId: Int
     public let uniqueId: String
-    public var typeCode: String?
+    public var typeCodeIndex: Index
 
     public init(threadId: Int,
                 messageType: MessageType,
                 messageId: Int,
                 textMessage: String,
                 repliedTo: Int? = nil,
-                metadata: String? = nil)
+                metadata: String? = nil,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.threadId = threadId
         self.messageType = messageType
@@ -32,6 +33,7 @@ public struct EditMessageRequest: Encodable, UniqueIdProtocol {
         self.textMessage = textMessage
         self.metadata = metadata
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     internal init(threadId: Int,
@@ -40,7 +42,8 @@ public struct EditMessageRequest: Encodable, UniqueIdProtocol {
                 textMessage: String,
                 repliedTo: Int? = nil,
                 metadata: String? = nil,
-                uniqueId: String)
+                uniqueId: String,
+                  typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.threadId = threadId
         self.messageType = messageType
@@ -49,6 +52,7 @@ public struct EditMessageRequest: Encodable, UniqueIdProtocol {
         self.textMessage = textMessage
         self.metadata = metadata
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: CodingKey {
@@ -72,7 +76,6 @@ public struct EditMessageRequest: Encodable, UniqueIdProtocol {
         try container.encode(self.textMessage, forKey: .textMessage)
         try container.encodeIfPresent(self.metadata, forKey: .metadata)
         try container.encode(self.threadId, forKey: .threadId)
-        try container.encodeIfPresent(self.uniqueId, forKey: .uniqueId)
-        try container.encodeIfPresent(self.typeCode, forKey: .typeCode)
+//        try container.encodeIfPresent(self.uniqueId, forKey: .uniqueId)
     }
 }

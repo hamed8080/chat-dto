@@ -7,11 +7,13 @@
 import Foundation
 
 /// The request to fetch the list of user bots.
-public struct GetUserBotsRequest: Encodable, UniqueIdProtocol {
+public struct GetUserBotsRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init() {
+    public init(typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: CodingKey {

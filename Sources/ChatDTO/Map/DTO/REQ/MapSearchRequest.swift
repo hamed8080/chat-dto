@@ -6,20 +6,23 @@
 
 import Foundation
 
-public struct MapSearchRequest: Encodable, UniqueIdProtocol {
+public struct MapSearchRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let lat: Double
     public let lng: Double
     public let term: String
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     public init(lat: Double,
                 lng: Double,
-                term: String)
+                term: String,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.lat = lat
         self.lng = lng
         self.term = term
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -7,21 +7,22 @@
 import Foundation
 import ChatModels
 
-public struct ReplyPrivatelyRequest: Encodable, UniqueIdProtocol {
+public struct ReplyPrivatelyRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var queueTime: Date = .init()
     public var messageType: MessageType
     public var metadata: String?
     public let repliedTo: Int?
     public let systemMetadata: String?
     public var uniqueId: String
-    public var typeCode: String?
     public let replyContent: ReplyPrivatelyContent
+    public var typeCodeIndex: Index
 
     public init(repliedTo: Int,
                 messageType: MessageType,
                 metadata: String? = nil,
                 content: ReplyPrivatelyContent,
-                systemMetadata: String? = nil)
+                systemMetadata: String? = nil,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.messageType = messageType
         self.metadata = metadata
@@ -29,6 +30,7 @@ public struct ReplyPrivatelyRequest: Encodable, UniqueIdProtocol {
         self.systemMetadata = systemMetadata
         self.uniqueId = UUID().uuidString
         self.replyContent = content
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: CodingKey {
@@ -50,7 +52,7 @@ public struct ReplyPrivatelyRequest: Encodable, UniqueIdProtocol {
         try container.encodeIfPresent(self.repliedTo, forKey: .repliedTo)
         try container.encodeIfPresent(self.systemMetadata, forKey: .systemMetadata)
         try container.encodeIfPresent(self.uniqueId, forKey: .uniqueId)
-        try container.encodeIfPresent(self.typeCode, forKey: .typeCode)
+//        try container.encodeIfPresent(self.typeCode, forKey: .typeCode)
     }
 }
 

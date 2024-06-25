@@ -7,25 +7,28 @@
 import Foundation
 import ChatModels
 
-public struct AddCallParticipantsRequest: Encodable, UniqueIdProtocol {
+public struct AddCallParticipantsRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let callId: Int
     public var contactIds: [Int]?
     public var userNames: [Invitee]?
     public var coreuserIds: [Invitee]?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(callId: Int) {
+    public init(callId: Int, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.callId = callId
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
-    public init(callId: Int, contactIds: [Int]) {
+    public init(callId: Int, contactIds: [Int], typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.callId = callId
         self.contactIds = contactIds
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
-    public init(callId: Int, userNames: [String]) {
+    public init(callId: Int, userNames: [String], typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.callId = callId
         var invitess: [Invitee] = []
         userNames.forEach { userame in
@@ -33,9 +36,10 @@ public struct AddCallParticipantsRequest: Encodable, UniqueIdProtocol {
         }
         self.userNames = invitess
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
-    public init(callId: Int, coreUserIds: [Int]) {
+    public init(callId: Int, coreUserIds: [Int], typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.callId = callId
         var invitess: [Invitee] = []
         coreUserIds.forEach { coreuserId in
@@ -43,6 +47,7 @@ public struct AddCallParticipantsRequest: Encodable, UniqueIdProtocol {
         }
         coreuserIds = invitess
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     public func encode(to encoder: Encoder) throws {

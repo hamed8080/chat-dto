@@ -7,7 +7,7 @@
 import Foundation
 import ChatModels
 
-public struct CallsHistoryRequest: Encodable, UniqueIdProtocol {
+public struct CallsHistoryRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let count: Int
     public let offset: Int
     public let callIds: [Int]?
@@ -17,6 +17,7 @@ public struct CallsHistoryRequest: Encodable, UniqueIdProtocol {
     public let creatorSsoId: Int?
     public let threadId: Int?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     public init(count: Int = 50,
                 offset: Int = 0,
@@ -25,7 +26,8 @@ public struct CallsHistoryRequest: Encodable, UniqueIdProtocol {
                 name: String? = nil,
                 creatorCoreUserId: Int? = nil,
                 creatorSsoId: Int? = nil,
-                threadId: Int? = nil
+                threadId: Int? = nil,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0
     )
     {
         self.count = count
@@ -37,6 +39,7 @@ public struct CallsHistoryRequest: Encodable, UniqueIdProtocol {
         self.creatorSsoId = creatorSsoId
         self.threadId = threadId
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -6,17 +6,19 @@
 
 import Foundation
 
-public struct AssistantsRequest: Encodable, UniqueIdProtocol {
+public struct AssistantsRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let contactType: String
     public let count: Int
     public let offset: Int
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(contactType: String = "default", count: Int = 25, offset: Int = 0) {
+    public init(contactType: String = "default", count: Int = 25, offset: Int = 0, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.contactType = contactType
         self.count = count
         self.offset = offset
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

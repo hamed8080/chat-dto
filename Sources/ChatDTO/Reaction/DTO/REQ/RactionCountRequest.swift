@@ -6,14 +6,16 @@
 
 import Foundation
 
-public struct RactionCountRequest: Encodable, UniqueIdProtocol {
+public struct RactionCountRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var messageIds: [Int]
     public let conversationId: Int
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(messageIds: [Int], conversationId: Int) {
+    public init(messageIds: [Int], conversationId: Int, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.messageIds = messageIds
         self.conversationId = conversationId
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 }

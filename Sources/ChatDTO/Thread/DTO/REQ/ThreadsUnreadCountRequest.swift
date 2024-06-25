@@ -6,13 +6,15 @@
 
 import Foundation
 
-public struct ThreadsUnreadCountRequest: Encodable, UniqueIdProtocol {
+public struct ThreadsUnreadCountRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let threadIds: [Int]
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(threadIds: [Int]) {
+    public init(threadIds: [Int], typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.threadIds = threadIds
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     public func encode(to _: Encoder) throws {}

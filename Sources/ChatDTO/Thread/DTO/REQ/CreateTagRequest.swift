@@ -6,13 +6,15 @@
 
 import Foundation
 
-public struct CreateTagRequest: Encodable, UniqueIdProtocol {
+public struct CreateTagRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var name: String
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(tagName: String) {
+    public init(tagName: String, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         name = tagName
         uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

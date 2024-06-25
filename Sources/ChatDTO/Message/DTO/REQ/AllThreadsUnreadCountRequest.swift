@@ -6,13 +6,15 @@
 
 import Foundation
 
-public struct AllThreadsUnreadCountRequest: Encodable, UniqueIdProtocol {
+public struct AllThreadsUnreadCountRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     let mute: Bool
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(mute: Bool = false) {
+    public init(mute: Bool = false, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.mute = mute
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

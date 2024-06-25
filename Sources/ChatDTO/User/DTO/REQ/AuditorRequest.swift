@@ -6,15 +6,17 @@
 
 import Foundation
 
-public struct AuditorRequest: Encodable, UniqueIdProtocol {
+public struct AuditorRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let userRoles: [UserRoleRequest]
     public let threadId: Int
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(userRoleRequest: UserRoleRequest, threadId: Int) {
+    public init(userRoleRequest: UserRoleRequest, threadId: Int, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.userRoles = [userRoleRequest]
         self.threadId =  threadId
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: CodingKey {

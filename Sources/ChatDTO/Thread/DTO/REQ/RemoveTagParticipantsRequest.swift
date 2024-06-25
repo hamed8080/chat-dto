@@ -7,15 +7,17 @@
 import Foundation
 import ChatModels
 
-public struct RemoveTagParticipantsRequest: Encodable, UniqueIdProtocol {
+public struct RemoveTagParticipantsRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var tagId: Int
     public var tagParticipants: [TagParticipant]
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(tagId: Int, tagParticipants: [TagParticipant]) {
+    public init(tagId: Int, tagParticipants: [TagParticipant], typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.tagId = tagId
         self.tagParticipants = tagParticipants
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: CodingKey {

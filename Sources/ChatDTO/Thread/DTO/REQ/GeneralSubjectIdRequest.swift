@@ -6,18 +6,21 @@
 
 import Foundation
 
-public struct GeneralSubjectIdRequest: Encodable, UniqueIdProtocol {
+public struct GeneralSubjectIdRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var _subjectId: Int
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(subjectId: Int) {
+    public init(subjectId: Int, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self._subjectId = subjectId
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
-    internal init(subjectId: Int, uniqueId: String) {
+    internal init(subjectId: Int, uniqueId: String, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self._subjectId = subjectId
         self.uniqueId = uniqueId
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: CodingKey {

@@ -7,19 +7,21 @@
 import Foundation
 import ChatModels
 
-public struct GetJoinCallsRequest: Encodable, UniqueIdProtocol {
+public struct GetJoinCallsRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let offset: Int
     public let count: Int
     public let name: String?
     public let type: CallType?
     public let threadIds: [Int]
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
     public init(threadIds: [Int],
                 offset: Int = 0,
                 count: Int = 50,
                 name: String? = nil,
-                type: CallType? = nil)
+                type: CallType? = nil,
+                typeCodeIndex: TypeCodeIndexProtocol.Index = 0)
     {
         self.offset = offset
         self.count = count
@@ -27,6 +29,7 @@ public struct GetJoinCallsRequest: Encodable, UniqueIdProtocol {
         self.type = type
         self.threadIds = threadIds
         self.uniqueId = UUID().uuidString
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: String, CodingKey {

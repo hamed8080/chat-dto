@@ -6,29 +6,31 @@
 
 import Foundation
 
-public struct ForwardMessageRequest: Encodable, UniqueIdProtocol {
+public struct ForwardMessageRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var queueTime: Date = .init()
     public let messageIds: [Int]
     public let fromThreadId: Int
     public let threadId: Int
     public var uniqueIds: [String]
-    public var typeCode: String?
     public let uniqueId: String
+    public var typeCodeIndex: Index
 
-    public init(fromThreadId: Int, threadId: Int, messageIds: [Int]) {
+    public init(fromThreadId: Int, threadId: Int, messageIds: [Int], typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.fromThreadId = fromThreadId
         self.threadId = threadId
         self.messageIds = messageIds
         self.uniqueIds = messageIds.map{_ in UUID().uuidString}
         self.uniqueId = "\(self.uniqueIds)"
+        self.typeCodeIndex = typeCodeIndex
     }
 
-    internal init(fromThreadId: Int, threadId: Int, messageIds: [Int], uniqueIds: [String]) {
+    internal init(fromThreadId: Int, threadId: Int, messageIds: [Int], uniqueIds: [String], typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.fromThreadId = fromThreadId
         self.threadId = threadId
         self.messageIds = messageIds
         self.uniqueIds = uniqueIds
         self.uniqueId = "\(self.uniqueIds)"
+        self.typeCodeIndex = typeCodeIndex
     }
 
     private enum CodingKeys: CodingKey {
@@ -48,7 +50,7 @@ public struct ForwardMessageRequest: Encodable, UniqueIdProtocol {
         try container.encode(self.fromThreadId, forKey: .fromThreadId)
         try container.encode(self.threadId, forKey: .threadId)
         try container.encode(self.uniqueIds, forKey: .uniqueIds)
-        try container.encodeIfPresent(self.typeCode, forKey: .typeCode)
+//        try container.encodeIfPresent(self.typeCode, forKey: .typeCode)
         try container.encode(self.uniqueId, forKey: .uniqueId)
     }
 }
