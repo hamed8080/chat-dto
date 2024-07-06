@@ -6,16 +6,20 @@
 
 import Foundation
 
-public struct FileRequest: Encodable, UniqueIdProtocol {
+public struct FileRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let hashCode: String
     public let checkUserGroupAccess: Bool
     public var forceToDownloadFromServer: Bool
+    public var conversationId: Int?
+    public var typeCodeIndex: Index
     public let uniqueId: String
 
-    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false) {
+    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false, conversationId: Int? = nil, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.hashCode = hashCode
         self.forceToDownloadFromServer = forceToDownloadFromServer
         self.checkUserGroupAccess = checkUserGroupAccess
+        self.conversationId = conversationId
+        self.typeCodeIndex = typeCodeIndex
         self.uniqueId = UUID().uuidString
     }
 

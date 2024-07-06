@@ -6,18 +6,20 @@
 
 import Foundation
 
-public struct ImageRequest: Encodable, UniqueIdProtocol {
+public struct ImageRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let hashCode: String
     public var forceToDownloadFromServer: Bool
     public let quality: Float?
     public let size: ImageSize?
     public let crop: Bool?
     public let checkUserGroupAccess: Bool
-    /// Setting this property to true leads to the thumbnail image not save on the disk .
+    /// Setting this property to true leads to the thumbnail won't get stored on the disk.
     public let thumbnail: Bool
+    public let conversationId: Int?
+    public var typeCodeIndex: Index
     public let uniqueId: String
 
-    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false, quality: Float? = nil, size: ImageSize? = nil, crop: Bool? = nil, thumbnail: Bool = false) {
+    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false, quality: Float? = nil, size: ImageSize? = nil, crop: Bool? = nil, thumbnail: Bool = false, conversationId: Int? = nil, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.hashCode = hashCode
         self.forceToDownloadFromServer = forceToDownloadFromServer
         self.size = size
@@ -25,6 +27,8 @@ public struct ImageRequest: Encodable, UniqueIdProtocol {
         self.quality = quality ?? 1
         self.checkUserGroupAccess = checkUserGroupAccess
         self.thumbnail = thumbnail
+        self.conversationId = conversationId
+        self.typeCodeIndex = typeCodeIndex
         self.uniqueId = UUID().uuidString
     }
 
