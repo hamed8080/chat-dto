@@ -9,7 +9,7 @@ import Foundation
 public struct ImageRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let hashCode: String
     public var forceToDownloadFromServer: Bool
-    public let quality: Float?
+    public var quality: Float?
     public let size: ImageSize?
     public let crop: Bool?
     public let checkUserGroupAccess: Bool
