@@ -15,11 +15,12 @@ public struct ImageRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let checkUserGroupAccess: Bool
     /// Setting this property to true leads to the thumbnail won't get stored on the disk.
     public let thumbnail: Bool
+    public let withNewthumbnailAPI: Bool
     public let conversationId: Int?
     public var typeCodeIndex: Index
     public let uniqueId: String
 
-    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false, quality: Float? = nil, size: ImageSize? = nil, crop: Bool? = nil, thumbnail: Bool = false, conversationId: Int? = nil, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
+    public init(hashCode: String, checkUserGroupAccess: Bool = true, forceToDownloadFromServer: Bool = false, quality: Float? = nil, size: ImageSize? = nil, crop: Bool? = nil, thumbnail: Bool = false, withNewthumbnailAPI: Bool = false, conversationId: Int? = nil, typeCodeIndex: TypeCodeIndexProtocol.Index = 0) {
         self.hashCode = hashCode
         self.forceToDownloadFromServer = forceToDownloadFromServer
         self.size = size
@@ -27,6 +28,7 @@ public struct ImageRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
         self.quality = quality ?? 1
         self.checkUserGroupAccess = checkUserGroupAccess
         self.thumbnail = thumbnail
+        self.withNewthumbnailAPI = withNewthumbnailAPI
         self.conversationId = conversationId
         self.typeCodeIndex = typeCodeIndex
         self.uniqueId = UUID().uuidString
