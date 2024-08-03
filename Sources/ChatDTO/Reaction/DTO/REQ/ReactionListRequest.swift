@@ -1,5 +1,5 @@
 //
-// RactionListRequest.swift
+// ReactionListRequest.swift
 // Copyright (c) 2022 ChatDTO
 //
 // Created by Hamed Hosseini on 12/14/22
@@ -7,7 +7,7 @@
 import Foundation
 import ChatModels
 
-public struct RactionListRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
+public struct ReactionListRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public let messageId: Int
     public var offset: Int
     public let count: Int
