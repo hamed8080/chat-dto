@@ -1,12 +1,12 @@
 //
-// RactionCountRequest.swift
+// ReactionCountRequest.swift
 // Copyright (c) 2022 ChatDTO
 //
 // Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 
-public struct RactionCountRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
+public struct ReactionCountRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProtocol {
     public var messageIds: [Int]
     public let conversationId: Int
     public let uniqueId: String

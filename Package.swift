@@ -3,6 +3,18 @@
 
 import PackageDescription
 
+let useLocalDependency = true
+
+let local: [Package.Dependency] = [
+    .package(path: "../ChatModels"),
+    .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
+]
+
+let remote: [Package.Dependency] = [
+    .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-models", from: "2.1.0"),
+    .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
+]
+
 let package = Package(
     name: "ChatDTO",
     defaultLocalization: "en",
@@ -16,24 +28,18 @@ let package = Package(
             name: "ChatDTO",
             targets: ["ChatDTO"]),
     ],
-    dependencies: [
-//        .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-models", from: "2.1.0"),
-        .package(path: "../ChatModels"),
-        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
-    ],
+    dependencies: useLocalDependency ? local : remote,
     targets: [
         .target(
             name: "ChatDTO",
             dependencies: [
-//                .product(name: "ChatModels", package: "chat-models"),
-                .product(name: "ChatModels", package: "ChatModels"),
+                .product(name: "ChatModels", package: useLocalDependency ? "ChatModels" : "chat-models"),
             ]
         ),
         .testTarget(
             name: "ChatDTOTests",
             dependencies: [
-//                .product(name: "ChatModels", package: "chat-models"),
-                .product(name: "ChatModels", package: "ChatModels"),
+                .product(name: "ChatModels", package: useLocalDependency ? "ChatModels" : "chat-models"),
             ],
             resources: []
         ),
