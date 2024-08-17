@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-let useLocalDependency = true
+let useLocalDependency = false
 
 let local: [Package.Dependency] = [
     .package(path: "../ChatModels"),
@@ -11,7 +11,7 @@ let local: [Package.Dependency] = [
 ]
 
 let remote: [Package.Dependency] = [
-    .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-models", from: "2.1.0"),
+    .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-models", from: "2.2.0"),
     .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
 ]
 

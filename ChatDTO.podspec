@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ChatDTO"
-  s.version      = "2.1.0"
+  s.version      = "2.2.0"
   s.summary      = "ChatDTO"
   s.description  = "ChatDTO consists of requests and responses data object transfers for coding and encoding purposes only."
   s.homepage     = "https://pubgi.sandpod.ir/chat/ios/chat-dto"
