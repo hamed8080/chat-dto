@@ -80,7 +80,7 @@ public struct UploadFileRequest: Encodable, UniqueIdProtocol, TypeCodeIndexProto
     static func guessMimeType(_ fileExtension: String?, _ fileName: String?) -> String {
         let ext = fileExtension ?? URL(fileURLWithPath: fileName ?? "").pathExtension
         #if canImport(UniformTypeIdentifiers)
-        if #available(iOS 14.0, *) {
+        if #available(macOS 11.0, iOS 14.0, watchOS 7.0, tvOS 14.0, *) {
             return UTType(filenameExtension: ext)?.preferredMIMEType ?? "application/octet-stream"
         }
         #endif
